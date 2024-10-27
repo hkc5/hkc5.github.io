@@ -22,7 +22,7 @@ highlight_name: false
 
 # EDUCATION
 education:
-  - area: MSc in Applied Computational Science and Engineering
+  - area: MSc in Applied Computational Science and Engineering - TEST- TEST
     institution: Imperial College London
     date_start: 2023-09-30
     date_end: 2024-09-30
