@@ -14,41 +14,10 @@ status:
   icon: ☕️
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Highlight the author in author lists? (true/false)
-highlight_name: true
-
-# Role/position/tagline
-role: Machine Learning Engineer
-
-# Organizations/Affiliations to display in Biography blox
-organizations:
-  - name: Albus Technologies
-    url: https://albus.org/
-
-# Social network links
-# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
-profiles:
-  - icon: at-symbol
-    url: 'mailto:hakancanozturk23@gmail.com'
-    label: E-mail Me
-  - icon: brands/github
-    url: https://github.com/hkc01
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/hakancan
-  - icon: academicons/google-scholar
-    url: https://scholar.google.co.uk/citations?user=FPx_wTQAAAAJ
-  - icon: resume
-    link: uploads/resume.pdf
-
-
-# INTERESTS
-interests:
-  - Artificial Intelligence
-  - Computational Modelling
-  - Information Retrieval
-  - Fluid Dynamics
+highlight_name: false
 
 
 # EDUCATION
