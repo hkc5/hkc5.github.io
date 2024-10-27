@@ -1,28 +1,8 @@
 ---
-# Display name
-title: Hakancan Ozturk
-
-# Name pronunciation (optional)
-name_pronunciation: 
-
-# Full name (for SEO)
-first_name: Hakancan
-last_name: Ozturk
-
-# Status emoji
-status:
-  icon: ☕️
-
-# Is this the primary user of the site?
-superuser: false
-
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
 
 # EDUCATION
 education:
-  - area: MSc in Applied Computational Science and Engineering - TEST- TEST
+  - area: MSc in Applied Computational Science and Engineering
     institution: Imperial College London
     date_start: 2023-09-30
     date_end: 2024-09-30
@@ -30,9 +10,7 @@ education:
       Class representative | Dissertation awarded 90.0% Distinction (78.27%)
 
       Modules:
-      - Machine/Deep Learning
-      - Numerical Methods & Modelling
-      - Inversion and Optimization
+      - Machine/Deep Learning | Numerical Methods & Modelling | Inversion and Optimization
 
   - area: BSc in Mechanical Engineering
     institution: Koc University
@@ -42,15 +20,10 @@ education:
       Ranked 1st in class | Graduated one year early | Merit scholarship ($30k annually) GPA: 3.99/4.00
 
       Tutor/Assistant for:
-      - Introduction to Engineering
-      - Fluid Mechanics
-      - Numerical Methods
+      - Introduction to Engineering | Fluid Mechanics | Numerical Methods
 
       Modules:
-      - Propulsion Systems
-      - Microsensors
-      - Makerspace
-      - Finite Element Method
+      - Propulsion Systems | Microsensors | Makerspace | Finite Element Method
 
   - area: Highschool
     institution: American Robert College
