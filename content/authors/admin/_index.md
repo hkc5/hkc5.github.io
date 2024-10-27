@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: Hakancan Ozturk
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: 
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Hakancan
+last_name: Ozturk
 
 # Status emoji
 status:
@@ -20,134 +20,159 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: Machine Learning Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: OpenAI
-    url: https://openai.com/
+  - name: Albus Technologies
+    url: https://albus.org/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
+    url: 'mailto:hakancanozturk23@gmail.com'
     label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
-  - icon: brands/instagram
-    url: https://www.instagram.com/
   - icon: brands/github
-    url: https://github.com/gcushen
+    url: https://github.com/hkc01
   - icon: brands/linkedin
-    url: https://www.linkedin.com/
+    url: https://www.linkedin.com/in/hakancan
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/
-  - icon: academicons/orcid
-    url: https://orcid.org/
+    url: https://scholar.google.co.uk/citations?user=FPx_wTQAAAAJ
+  - icon: resume
+    link: uploads/resume.pdf
 
+
+# INTERESTS
 interests:
   - Artificial Intelligence
-  - Computational Linguistics
+  - Computational Modelling
   - Information Retrieval
+  - Fluid Dynamics
 
+
+# EDUCATION
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: MSc in Applied Computational Science and Engineering
+    institution: Imperial College London
+    date_start: 2023-09-30
+    date_end: 2024-09-30
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      GPA: 3.8/4.0
+      Class representative | Dissertation awarded 90.0% Distinction (78.27%)
 
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+      Modules:
+      - Machine/Deep Learning
+      - Numerical Methods & Modelling
+      - Inversion and Optimization
+
+  - area: BSc in Mechanical Engineering
+    institution: Koc University
+    date_start: 2020-09-30
+    date_end: 2023-09-30
     summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Ranked 1st in class | Graduated one year early | Merit scholarship ($30k annually) GPA: 3.99/4.00
+
+      Tutor/Assistant for:
+      - Introduction to Engineering
+      - Fluid Mechanics
+      - Numerical Methods
+
+      Modules:
+      - Propulsion Systems
+      - Microsensors
+      - Makerspace
+      - Finite Element Method
+
+  - area: Highschool
+    institution: American Robert College
+    date_start: 2015-09-30
+    date_end: 2020-09-30
+    summary: |
+      Ranked 1st in Highschool Entrance Exam
+      AP Chemistry(5/5), AP Calculus(5/5)
+      Volleyball team, Ultimate Frisbee team
+
+
+# WORK
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
-    company_logo: ''
-    date_start: 2021-01-01
+  - position: Machine Learning Engineer
+    company_name: Albus Technologies Limited
+    company_url: 'https://albus.org/'
+    date_start: 2024-06-01
     date_end: ''
     summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
+      - Built Retrieval-Augmented Generation (RAG) framework with vector search, improving LLM output relevance by 40%.
+      - Set up CI/CD with Docker and GitHub Actions for FastAPI deployment on Azure.
+      - Trained LoRA models for generative AI, boosting quality by 20% and reducing training time by 10%.
+
+  - position: Production Engineer
+    company_name: SU-TAS Mining Corporation
     company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    date_start: 2023-02-01
+    date_end: 2023-08-01
+    summary: |2-
+      - Led quarry operations, reducing explosive costs by 20% through optimized placement.
+      - Improved resource allocation and safety in daily operations.
+
+  - position: Guest Researcher
+    company_name: Max Planck Institute for Intelligent Systems
+    company_url: 'https://pi.is.mpg.de/person/hakancan'
+    date_start: 2022-06-01
+    date_end: 2022-12-01
+    summary: |2-
+      - Conducted high-efficiency CFD simulations for biomedical micro-robots, optimizing COMSOL in a cluster.
+      - Published two papers on microrobotic locomotion.
+      - Applied SVMs to 10TB micro-robot data, boosting predictive accuracy.
+
+
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Programming Languages & Libraries
     items:
       - name: Python
-        description: ''
-        percent: 80
         icon: code-bracket
-      - name: Data Science
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
+      - name: MATLAB
+        icon: calculator
+      - name: C++
+        icon: cplusplus
+      - name: PyTorch
+        icon: brain
+
+  - name: Engineering Software
     items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
+      - name: COMSOL (CFD, Mechanics)
+        icon: tools
+      - name: ANSYS (Fluent)
+        icon: chart-bar
+      - name: Siemens NX
+        icon: cog
+      - name: Fusion 360
+        icon: wrench
+
+  - name: DevOps & Cloud
+    items:
+      - name: Docker
+        icon: docker
+      - name: GitHub Actions
+        icon: github
+      - name: HPC & Cluster Computing
+        icon: cloud
+
+  - name: Additional Skills
+    items:
+      - name: Parallel Computing
+      - name: Data Analysis & Visualization
+      - name: Prototyping & Simulation
+
 
 languages:
   - name: English
+    percent: 90
+  - name: Turkish
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -161,26 +186,9 @@ awards:
     icon: coursera
     summary: |
       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
-    summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
-    awarder: datacamp
-    icon: datacamp
-    summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+  
 ---
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a machine learning engineer with a background in applied computational science and mechanical engineering. My expertise spans AI, computational modeling, and data-driven solutions, with a focus on fluid dynamics and information retrieval. I have extensive hands-on experience with both research and production environments, working on projects involving Retrieval-Augmented Generation (RAG) frameworks, AI-driven flow simulations, and innovative engineering designs. My work is guided by a passion for leveraging AI to solve complex, real-world problems and a commitment to continuous learning.
