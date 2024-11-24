@@ -32,12 +32,12 @@ sections:
           parallax: false
 
 
-  - block: resume-skills
-    content:
-      title: Skills & Hobbies
-      username: admin
-    design:
-      show_skill_percentage: false
+  # - block: resume-skills
+  #   content:
+  #     title: Skills & Hobbies
+  #     username: admin
+  #   design:
+  #     show_skill_percentage: false
 
 
   - block: markdown
@@ -55,16 +55,6 @@ sections:
 
 
 
-  - block: collection
-    content:
-      title: Academic Publications
-      text: ""
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
       
 
 ---
