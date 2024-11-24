@@ -45,13 +45,14 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        Welcome to my research corner! I am a Machine Learning Engineer with expertise in Retrieval-Augmented Generation (RAG), computational fluid dynamics (CFD), and generative AI.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
-        Please reach out to collaborate 😃
+        My work spans advanced topics like hybrid retrieval systems, biomedical analysis, and AI-driven physics modeling. I blog about machine learning, computational modeling, and cutting-edge AI applications.
+
+        Let's collaborate on innovative projects that push boundaries! 😃
     design:
       columns: '1'
+
 
 
   - block: collection
