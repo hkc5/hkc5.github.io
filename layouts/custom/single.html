@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="custom-page">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  
+  <section class="page-content">
+    {{ .Content }}
+  </section>
+
+  <div id="custom-functionality">
+    <!-- Custom functionality will be injected here -->
+  </div>
+</article>
+
+{{ $js := resources.Get "js/custom.js" | minify | fingerprint }}
+<script src="{{ $js.Permalink }}" defer></script>
+
+{{ $css := resources.Get "css/custom.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
+{{ end }}

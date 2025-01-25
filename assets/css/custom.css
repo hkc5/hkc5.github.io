@@ -1,0 +1,21 @@
+.custom-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-content {
+  line-height: 1.6;
+}
+
+#custom-functionality {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
