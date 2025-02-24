@@ -1,14 +1,14 @@
 ---
-title: MSc Dissertation: AI Surrogate Modeling for Turbulent Flow Simulations
+title: "MSc Dissertation: AI Surrogate Modeling for Turbulent Flow Simulations"
 date: 2024-02-24
 tags:
   - Machine Learning
   - Computational Fluid Dynamics
   - High-Performance Computing
   - AI Research
-external_link: ''
-location: Imperial College London
-period: 2024 - 2025
+external_link: ""
+location: "Imperial College London"
+period: "2024 - 2025"
 ---
 
 Discovered a novel Grid-Invariant AI architecture combining convolutional autoencoders and adversarial networks to simulate high-fidelity turbulent flows, achieving unprecedented grid independence and scalability.

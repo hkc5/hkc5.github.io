@@ -1,14 +1,14 @@
 ---
-title: Advanced Collagen Fiber Orientation Analysis
+title: "Advanced Collagen Fiber Orientation Analysis"
 date: 2024-02-24
 tags:
   - Biomedical Imaging
   - Machine Learning
   - Data Augmentation
   - Computer Vision
-external_link: ''
-location: Pekkan Biofluid Mechanics Laboratory
-period: 2023 – 2024
+external_link: ""
+location: "Pekkan Biofluid Mechanics Laboratory"
+period: "2023 – 2024"
 ---
 
 Led advanced bio-imaging analysis using sophisticated machine learning techniques to predict collagen fiber orientation with high precision and innovative data augmentation methods.
