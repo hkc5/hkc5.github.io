@@ -20,21 +20,21 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Machine Learning Engineer
+role: Software Development Engineer
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Albus Technologies
-    url: https://albus.org/
+  - name: Amazon
+    url: https://www.amazon.com/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:hakancanozturk23@gmail.com'
+    url: 'mailto:hakancan.ozturk23@gmail.com'
     label: E-mail Me
   - icon: brands/github
-    url: https://github.com/hkc01
+    url: https://github.com/hkc5
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/hakancan
   - icon: academicons/google-scholar
@@ -42,29 +42,38 @@ profiles:
   - icon: resume
     link: uploads/resume.pdf
 
-
 # INTERESTS
 interests:
   - Artificial Intelligence
+  - Machine Learning
+  - Computational Modeling
+  - High-Performance Computing
   - Computational Modelling
   - Information Retrieval
   - Fluid Dynamics
-
-
 # EDUCATION - leave empty as the other user uses it
-
 
 # WORK
 work:
-  - position: Machine Learning Engineer
-    company_name: Albus Technologies Limited
-    company_url: 'https://albus.org/'
-    date_start: 2024-06-01
+  - position: Software Development Engineer
+    company_name: Amazon
+    company_url: 'https://www.amazon.com/'
+    date_start: 2025-01-01
     date_end: ''
     summary: |2-
-      - Built Retrieval-Augmented Generation (RAG) framework with vector search, improving LLM output relevance by 40%.
-      - Set up CI/CD with Docker and GitHub Actions for FastAPI deployment on Azure.
-      - Trained LoRA models for generative AI, boosting quality by 20% and reducing training time by 10%.
+      - Migrating Prime Video UI elements from React to SolidJS to enhance performance
+      - Leveraging LLM-powered automation pipelines for efficient component refactoring
+      - Developing features for Prime Video Client Software Development Kit (SDK)
+
+  - position: Machine Learning Engineer
+    company_name: Albus Technologies
+    company_url: 'https://albus.org/'
+    date_start: 2024-05-01
+    date_end: 2025-01-01
+    summary: |2-
+      - Designed a Retrieval-Augmented Generation (RAG) framework with context-enriched vector search
+      - Developed scalable real-time Document Semantic Extraction pipelines using AWS
+      - Established automated CI/CD workflows for FastAPI and Lambda endpoints
 
   - position: Production Engineer
     company_name: SU-TAS Mining Corporation
@@ -75,17 +84,15 @@ work:
       - Led quarry operations, reducing explosive costs by 20% through optimized placement.
       - Improved resource allocation and safety in daily operations.
 
-  - position: Guest Researcher
-    company_name: Max Planck Institute for Intelligent Systems
-    company_url: 'https://pi.is.mpg.de/person/hakancan'
+  - position: Computing Researcher
+    company_name: Max Planck Institute
+    company_url: 'https://www.is.mpg.de/'
     date_start: 2022-06-01
     date_end: 2022-12-01
     summary: |2-
-      - Conducted high-efficiency CFD simulations for biomedical micro-robots, optimizing COMSOL in a cluster.
-      - Published two papers on microrobotic locomotion.
-      - Applied SVMs to 10TB micro-robot data, boosting predictive accuracy.
-
-
+      - Conducted computational fluid dynamics (CFD) simulations for biomedical micro-robots
+      - Achieved 200x efficiency gains through optimized COMSOL simulations in HPC environments
+      - Deployed advanced data processing pipelines using curve fits and support vector machines
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -94,12 +101,33 @@ skills:
     items:
       - name: Python
         icon: code-bracket
+      - name: JavaScript
+        icon: brands/javascript
+      - name: C++
+        icon: cplusplus
       - name: MATLAB
         icon: calculator
       - name: C++
         icon: cplusplus
       - name: PyTorch
         icon: brain
+      - name: React
+        icon: brands/react
+      - name: FastAPI
+        icon: code-bracket
+
+  - name: Cloud & DevOps
+    items:
+      - name: Docker
+        icon: docker
+      - name: AWS
+        icon: brands/aws
+      - name: GitHub Actions
+        icon: github
+      - name: High-Performance Computing
+        icon: cloud
+      - name: Parallel Computing
+        icon: chart-bar
 
   - name: Engineering Software
     items:
@@ -109,31 +137,12 @@ skills:
         icon: chart-bar
       - name: Siemens NX
         icon: cog
-      - name: Fusion 360
-        icon: wrench
-
-  - name: DevOps & Cloud
-    items:
-      - name: Docker
-        icon: docker
-      - name: GitHub Actions
-        icon: github
-      - name: HPC & Cluster Computing
-        icon: cloud
-
-  - name: Additional Skills
-    items:
-      - name: Parallel Computing
-      - name: Data Analysis & Visualization
-      - name: Prototyping & Simulation
-
 
 languages:
   - name: English
     percent: 100
   - name: Turkish
     percent: 100
-
 
 # Awards - leave empty
 

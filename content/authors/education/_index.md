@@ -1,5 +1,4 @@
 ---
-
 # EDUCATION
 education:
   - area: MSc in Applied Computational Science and Engineering
@@ -7,20 +6,27 @@ education:
     date_start: 2023-09-30
     date_end: 2024-09-30
     summary: |
-      Class representative | Dissertation awarded 90.0% Distinction (78.27%)
+      Highest overall grade in class | Class representative
+      Distinction (78.27%)
 
       Modules:
-      - Machine/Deep Learning | Numerical Methods & Modelling | Inversion and Optimization
+      - Machine/Deep Learning
+      - Numerical Methods
+      - Computational Maths
+      - Optimization
 
   - area: BSc in Mechanical Engineering
     institution: Koc University
     date_start: 2020-09-30
     date_end: 2023-09-30
     summary: |
-      Ranked 1st in class | Graduated one year early | Merit scholarship ($30k annually) GPA: 3.99/4.00
+      Ranked 1st in class | Graduated one year early | Merit scholarship ($30k annually)
+      GPA: 3.99/4.00
 
-      Tutor/Assistant for:
-      - Introduction to Engineering | Fluid Mechanics | Numerical Methods
+      Teaching Assistant for:
+      - Introduction to Engineering
+      - Fluid Mechanics
+      - Numerical Methods
 
       Modules:
       - Propulsion Systems | Microsensors | Makerspace | Finite Element Method
@@ -46,7 +52,6 @@ awards:
     awarder: Coursera
     icon: coursera
     summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-
+      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network's architecture; and apply deep learning to your own applications.
 
 ---
