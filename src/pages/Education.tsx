@@ -1,34 +1,262 @@
-import MarkdownRenderer from '../components/MarkdownRenderer'
-import { useMarkdownContent } from '../hooks/useMarkdownContent'
+import { motion } from 'framer-motion'
+import { GraduationCap, Award, BookOpen, Users, Star, Calendar, MapPin, Trophy, Target } from 'lucide-react'
 
 const Education = () => {
-  const { content, loading, error } = useMarkdownContent('education')
+  const educationData = [
+    {
+      id: 1,
+      degree: 'MSc in Applied Computational Science and Engineering',
+      institution: 'Imperial College London',
+      location: 'London, UK',
+      period: '2023 - 2024',
+      grade: 'Distinction (78.27%)',
+      achievement: 'Highest overall grade in class',
+      type: 'Masters',
+      status: 'completed',
+      highlights: [
+        'Class representative',
+        'Specialized in ML for computational problems',
+        'Distinction with highest grade',
+        'Advanced research in AI-CFD integration'
+      ],
+      modules: [
+        'Machine Learning & Deep Learning',
+        'Numerical Methods for PDEs',
+        'Computational Mathematics',
+        'Optimization Techniques',
+        'High-Performance Computing'
+      ],
+      skills: ['Python', 'TensorFlow', 'MATLAB', 'C++', 'HPC', 'CFD'],
+      color: 'from-blue-500 to-indigo-600'
+    },
+    {
+      id: 2,
+      degree: 'BSc in Mechanical Engineering',
+      institution: 'Koç University',
+      location: 'Istanbul, Turkey',
+      period: '2020 - 2023',
+      grade: 'GPA: 3.99/4.00',
+      achievement: 'Ranked 1st in class',
+      type: 'Bachelors',
+      status: 'completed',
+      highlights: [
+        'Graduated one year early',
+        'Merit scholarship ($30,000 annually)',
+        'Teaching Assistant for multiple courses',
+        'Perfect academic standing'
+      ],
+      modules: [
+        'Propulsion Systems',
+        'Microsensors and Nanotechnology',
+        'Makerspace and Design',
+        'Finite Element Method',
+        'Fluid Mechanics',
+        'Numerical Methods'
+      ],
+      skills: ['SolidWorks', 'ANSYS', 'MATLAB', 'AutoCAD', 'FEA', 'CFD'],
+      color: 'from-purple-500 to-pink-600'
+    }
+  ]
 
-  if (loading) {
-    return (
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-300">Loading content...</p>
-        </div>
-      </div>
-    )
-  }
+  const teachingExperience = [
+    {
+      course: 'Introduction to Engineering',
+      role: 'Teaching Assistant',
+      description: 'Guided first-year students through fundamental engineering concepts',
+      icon: BookOpen
+    },
+    {
+      course: 'Fluid Mechanics',
+      role: 'Teaching Assistant', 
+      description: 'Assisted students with complex fluid dynamics problems',
+      icon: Target
+    },
+    {
+      course: 'Numerical Methods',
+      role: 'Teaching Assistant',
+      description: 'Helped students understand computational approaches to engineering',
+      icon: Users
+    }
+  ]
 
-  if (error) {
-    return (
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-red-600 dark:text-red-400">Error: {error}</p>
-        </div>
-      </div>
-    )
-  }
+  const achievements = [
+    { title: 'Highest MSc Grade', description: '78.27% Distinction at Imperial College', icon: Trophy },
+    { title: 'Class Representative', description: 'Student-faculty communication facilitator', icon: Users },
+    { title: 'Perfect GPA', description: '3.99/4.00 at Koç University', icon: Star },
+    { title: 'Early Graduation', description: 'Completed BSc one year ahead', icon: Calendar }
+  ]
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <MarkdownRenderer content={content} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-900 transition-colors duration-300">
+      <div className="container mx-auto px-4 py-12">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Education
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Academic journey focused on computational science, machine learning, and mechanical engineering with outstanding performance
+          </p>
+        </motion.div>
+
+        {/* Achievements Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+        >
+          {achievements.map((achievement, index) => (
+            <motion.div
+              key={achievement.title}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center"
+            >
+              <achievement.icon className="text-blue-500 mx-auto mb-3" size={32} />
+              <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
+                {achievement.title}
+              </h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                {achievement.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Education Cards */}
+        <div className="grid gap-12">
+          {educationData.map((edu, index) => (
+            <motion.div
+              key={edu.id}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="relative"
+            >
+              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden">
+                <div className={`bg-gradient-to-r ${edu.color} p-8 text-white`}>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-4">
+                      <GraduationCap size={48} />
+                      <div>
+                        <h2 className="text-2xl lg:text-3xl font-bold mb-2">{edu.degree}</h2>
+                        <div className="flex items-center gap-2 text-blue-100">
+                          <MapPin size={16} />
+                          <span className="text-lg">{edu.institution}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-blue-100 mt-1">
+                          <Calendar size={16} />
+                          <span>{edu.period}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="bg-white bg-opacity-20 rounded-lg p-3">
+                        <p className="text-sm font-medium">{edu.grade}</p>
+                        <p className="text-xs text-blue-100">{edu.achievement}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-8">
+                  <div className="grid lg:grid-cols-3 gap-8">
+                    {/* Highlights */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <Award className="text-yellow-500" size={20} />
+                        Highlights
+                      </h3>
+                      <ul className="space-y-3">
+                        {edu.highlights.map((highlight, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <Star className="text-yellow-500 flex-shrink-0 mt-1" size={16} />
+                            <span className="text-gray-700 dark:text-gray-300 text-sm">{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Key Modules */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <BookOpen className="text-blue-500" size={20} />
+                        Key Modules
+                      </h3>
+                      <div className="space-y-2">
+                        {edu.modules.map((module, idx) => (
+                          <span
+                            key={idx}
+                            className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
+                          >
+                            {module}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Skills Developed */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <Target className="text-green-500" size={20} />
+                        Skills Developed
+                      </h3>
+                      <div className="space-y-2">
+                        {edu.skills.map((skill, idx) => (
+                          <span
+                            key={idx}
+                            className="inline-block bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Teaching Experience */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Teaching Experience
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {teachingExperience.map((exp, index) => (
+              <motion.div
+                key={exp.course}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <exp.icon className="text-purple-500" size={24} />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">{exp.course}</h3>
+                    <p className="text-sm text-purple-600 dark:text-purple-400">{exp.role}</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">{exp.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   )
