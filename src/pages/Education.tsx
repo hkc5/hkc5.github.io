@@ -123,7 +123,7 @@ const Education = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="bg-gray-200 dark:bg-gray-600 rounded-lg p-3">
+                      <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
                         <p className="text-sm font-medium text-gray-950 dark:text-white">{edu.grade}</p>
                         <p className="text-xs text-gray-700 dark:text-gray-300">{edu.achievement}</p>
                       </div>

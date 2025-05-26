@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
+import { Github, Linkedin, Mail, Download, ArrowDown, User } from 'lucide-react'
 
 const Home = () => {
   return (
@@ -12,6 +12,21 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Profile Picture */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6 relative">
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                  <User size={64} className="text-white" />
+                </div>
+                <div className="absolute inset-0 rounded-full ring-4 ring-blue-500/20 ring-offset-4 ring-offset-white dark:ring-offset-gray-900"></div>
+              </div>
+            </motion.div>
+
             <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
