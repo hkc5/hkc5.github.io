@@ -20,12 +20,13 @@ const Home = () => {
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-              PhD Candidate in Biomedical Engineering
+              Software Development Engineer at Amazon
             </p>
             
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-              Passionate about computational fluid dynamics, machine learning, and biomedical applications. 
-              Currently researching cardiovascular simulations and AI-powered medical solutions.
+              Machine learning engineer with expertise in Retrieval-Augmented Generation (RAG), 
+              computational fluid dynamics (CFD), and generative AI. Currently working on Prime Video 
+              infrastructure and UI optimization at Amazon.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -61,7 +62,7 @@ const Home = () => {
                 <Github size={24} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/hakancanozturk"
+                href="https://linkedin.com/in/hakancan"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -70,7 +71,7 @@ const Home = () => {
                 <Linkedin size={24} />
               </motion.a>
               <motion.a
-                href="mailto:hakan@example.com"
+                href="mailto:hakancan.ozturk23@gmail.com"
                 whileHover={{ scale: 1.1 }}
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
               >

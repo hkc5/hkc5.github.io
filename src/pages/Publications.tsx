@@ -4,44 +4,44 @@ import { BookOpen, ExternalLink, Calendar, Users } from 'lucide-react'
 const Publications = () => {
   const publications = [
     {
-      title: 'Machine Learning Approaches for Cardiovascular Flow Prediction',
-      authors: 'H.C. Ozturk, J. Smith, M. Johnson',
-      journal: 'Journal of Biomedical Engineering',
+      title: 'Microrobotic Locomotion in Blood Vessels: A Computational Study on the Performance of Surface Microrollers in the Cardiovascular System',
+      authors: 'Ugur Bozuyuk, Hakancan Ozturk, Metin Sitti',
+      journal: 'Advanced Intelligent Systems',
+      year: '2023',
+      type: 'Journal Article',
+      doi: 'https://doi.org/10.1002/aisy.202300099',
+      abstract: 'Magnetic surface microrollers possess a significant potential for controlled navigation in blood vessels owing to their strong locomotion capability and minimized flow velocities at the vessel walls to revolutionize localized drug/gene delivery. However, the circulatory system consists of many vessels significantly different from each other in terms of dimensions and flow speeds. There are different flow regimes (i.e., laminar or turbulent), types (pulsatile or continuous), and dimensions (cell-sized or macroscopic), which render different fluidic effects in blood vessels. Overall, understanding the navigation capability of surface microrollers in various types of vessels is crucial for the practical implementation of the system for future biomedical applications. Here, we investigated the upstream locomotion potential of surface microrollers inside different blood vessels with computational fluid dynamics (CFD) analyses. We studied all vessel types in the systemic circulation except the aorta and vena cava. The microrollers demonstrate successful upstream locomotion ability in veins and partially in arteries but fail to perform in smaller blood vessels due to significant confinement and flow effects. Overall, the results presented here establish a preliminary result for the future in vivo use of surface microrollers.',
+      tags: ['Microrobotics', 'CFD', 'Biomedical Engineering', 'Drug Delivery']
+    },
+    {
+      title: 'The Mismatch Between Experimental and Computational Fluid Dynamics Analyses for Magnetic Surface Microrollers',
+      authors: 'Ugur Bozuyuk, Hakancan Ozturk, Metin Sitti',
+      journal: 'Scientific Reports',
+      year: '2023',
+      type: 'Journal Article',
+      doi: 'https://doi.org/10.1038/s41598-023-37332-5',
+      abstract: 'Magnetically actuated Janus surface microrollers show promise for biomedical applications, such as cargo delivery in blood flow. Theories about their locomotion are based on models of a "rotating sphere on a nearby wall." However, significant mismatches have been found between computational fluid dynamics (CFD) simulations and experimental results for microrollers of different sizes. This study highlights an unaccounted-for force in the direction of lift, particularly for smaller microrollers, which is not included in CFD simulations. Understanding these dynamics is crucial for improving practical applications in biomedical engineering.',
+      tags: ['Microrobotics', 'CFD', 'Experimental Validation', 'Surface Microrollers']
+    },
+    {
+      title: 'AI Surrogate Modeling for Turbulent Flow Simulations: A Grid-Invariant Approach',
+      authors: 'Hakancan Ozturk',
+      journal: 'Imperial College London - MSc Dissertation',
       year: '2024',
-      type: 'Journal Article',
-      doi: '10.1234/jbe.2024.001',
-      abstract: 'This study presents novel machine learning approaches for predicting cardiovascular flow patterns using computational fluid dynamics data.',
-      tags: ['Machine Learning', 'CFD', 'Cardiovascular']
+      type: 'Thesis',
+      doi: 'In Preparation',
+      abstract: 'This dissertation presents a novel Grid-Invariant AI architecture combining convolutional autoencoders and adversarial networks to simulate high-fidelity turbulent flows. The approach achieves unprecedented grid independence and scalability, with 35% improvement in long-term stability and 50% increase in prediction accuracy. Over 1000 GPU hours of High-Performance Computing were utilized for model optimization, leading to significant advances in AI-driven fluid dynamics modeling.',
+      tags: ['AI', 'Turbulent Flow', 'Grid-Invariant Networks', 'High-Performance Computing']
     },
     {
-      title: 'AI-Powered Surrogate Models for Real-time Medical Simulations',
-      authors: 'H.C. Ozturk, A. Brown, K. Davis',
-      journal: 'International Conference on Biomedical Engineering',
-      year: '2023',
+      title: 'Advanced Collagen Fiber Orientation Analysis Using Machine Learning and Generative Models',
+      authors: 'Hakancan Ozturk, Kerem Pekkan',
+      journal: 'In Preparation',
+      year: '2024',
       type: 'Conference Paper',
-      doi: '10.1234/icbe.2023.045',
-      abstract: 'We develop AI-powered surrogate models that enable real-time medical simulations with high accuracy and reduced computational cost.',
-      tags: ['AI', 'Surrogate Modeling', 'Real-time Simulation']
-    },
-    {
-      title: 'Computational Analysis of Blood Flow in Stenotic Arteries',
-      authors: 'H.C. Ozturk, L. Wilson, R. Taylor',
-      journal: 'Computational Biology and Medicine',
-      year: '2023',
-      type: 'Journal Article',
-      doi: '10.1234/cbm.2023.078',
-      abstract: 'Comprehensive computational analysis of blood flow patterns in stenotic arteries using advanced CFD techniques.',
-      tags: ['CFD', 'Blood Flow', 'Stenosis']
-    },
-    {
-      title: 'Deep Learning for Medical Image Segmentation in Cardiovascular Applications',
-      authors: 'H.C. Ozturk, S. Garcia, T. Lee',
-      journal: 'IEEE Transactions on Medical Imaging',
-      year: '2022',
-      type: 'Journal Article',
-      doi: '10.1234/tmi.2022.156',
-      abstract: 'Novel deep learning architectures for accurate medical image segmentation in cardiovascular diagnostic applications.',
-      tags: ['Deep Learning', 'Medical Imaging', 'Segmentation']
+      doi: 'In Preparation',
+      abstract: 'This study presents advanced bio-imaging analysis techniques using Fast Fourier Transform (FFT), Support Vector Regression (SVR), and Convolutional Neural Networks (CNNs) to achieve 95% accuracy in collagen fiber orientation prediction. The research introduces a novel method leveraging Generative Diffusion Models in PyTorch for biological data augmentation, increasing dataset size by 10x while preserving accuracy.',
+      tags: ['Machine Learning', 'Biomedical Imaging', 'Generative Models', 'Data Augmentation']
     }
   ]
 
@@ -51,6 +51,8 @@ const Publications = () => {
         return 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
       case 'Conference Paper':
         return 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
+      case 'Thesis':
+        return 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200'
       case 'Preprint':
         return 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200'
       default:
