@@ -7,7 +7,7 @@ const Experience = () => {
       id: 1,
       title: 'Software Development Engineer',
       company: 'Amazon',
-      location: 'Seattle, WA',
+      location: 'London, UK',
       period: 'January 2025 - Present',
       type: 'Full-time',
       status: 'current',
@@ -114,16 +114,7 @@ const Experience = () => {
     }
   }
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'current':
-        return 'bg-green-500'
-      case 'completed':
-        return 'bg-gray-400'
-      default:
-        return 'bg-gray-400'
-    }
-  }
+
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -143,120 +134,107 @@ const Experience = () => {
           </p>
         </motion.div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-600"></div>
-          
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative"
-              >
-                {/* Timeline dot */}
-                <div className={`absolute left-6 w-4 h-4 ${getStatusColor(exp.status)} rounded-full border-4 border-white dark:border-gray-900 z-10`}></div>
-                
-                {/* Content card */}
-                <div className="ml-20">
-                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                    <div className="bg-gray-100 dark:bg-gray-700 p-6 border-b dark:border-gray-600">
-                      <div className="flex items-start justify-between">
-                        <div className="flex items-center gap-4">
-                          <exp.icon size={32} className="text-blue-600 dark:text-blue-400" />
-                          <div>
-                            <h3 className="text-xl font-bold mb-1 text-gray-950 dark:text-white">{exp.title}</h3>
-                            <p className="text-lg font-medium text-gray-800 dark:text-gray-300">{exp.company}</p>
-                            <div className="flex items-center gap-4 mt-2 text-sm text-gray-700 dark:text-gray-400">
-                              <div className="flex items-center gap-1">
-                                <MapPin size={14} />
-                                {exp.location}
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <Calendar size={14} />
-                                {exp.period}
-                              </div>
-                            </div>
-                          </div>
+        {/* Experience Cards */}
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+            >
+              <div className="bg-gray-100 dark:bg-gray-700 p-6 border-b dark:border-gray-600">
+                <div className="flex items-start justify-between">
+                  <div className="flex items-center gap-4">
+                    <exp.icon size={32} className="text-blue-600 dark:text-blue-400" />
+                    <div>
+                      <h3 className="text-xl font-bold mb-1 text-gray-950 dark:text-white">{exp.title}</h3>
+                      <p className="text-lg font-medium text-gray-800 dark:text-gray-300">{exp.company}</p>
+                      <div className="flex items-center gap-4 mt-2 text-sm text-gray-700 dark:text-gray-400">
+                        <div className="flex items-center gap-1">
+                          <MapPin size={14} />
+                          {exp.location}
                         </div>
-                        <div className="flex gap-2">
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(exp.type)}`}>
-                            {exp.type}
-                          </span>
-                          {exp.status === 'current' && (
-                            <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
-                              Current
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="p-6">
-                      <p className="text-gray-700 dark:text-gray-300 mb-6 text-lg">
-                        {exp.description}
-                      </p>
-
-                      <div className="grid lg:grid-cols-2 gap-6">
-                        {/* Responsibilities */}
-                        <div>
-                          <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                            Key Responsibilities
-                          </h4>
-                          <ul className="space-y-2">
-                            {exp.responsibilities.map((resp, idx) => (
-                              <li key={idx} className="flex items-start gap-2">
-                                <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
-                                <span className="text-gray-700 dark:text-gray-300 text-sm">{resp}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {/* Achievements & Technologies */}
-                        <div className="space-y-6">
-                          <div>
-                            <h4 className="text-lg font-semibold text-gray-950 dark:text-white mb-4">
-                              Key Achievements
-                            </h4>
-                            <div className="space-y-2">
-                              {exp.achievements.map((achievement, idx) => (
-                                <span
-                                  key={idx}
-                                  className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
-                                >
-                                  {achievement}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div>
-                            <h4 className="text-lg font-semibold text-gray-950 dark:text-white mb-4">
-                              Technologies
-                            </h4>
-                            <div className="space-y-2">
-                              {exp.technologies.map((tech, idx) => (
-                                <span
-                                  key={idx}
-                                  className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
-                                >
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar size={14} />
+                          {exp.period}
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div className="flex gap-2">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(exp.type)}`}>
+                      {exp.type}
+                    </span>
+                    {exp.status === 'current' && (
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200">
+                        Current
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+
+              <div className="p-6">
+                <p className="text-gray-700 dark:text-gray-300 mb-6 text-lg">
+                  {exp.description}
+                </p>
+
+                <div className="grid lg:grid-cols-2 gap-6">
+                  {/* Responsibilities */}
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                      Key Responsibilities
+                    </h4>
+                    <ul className="space-y-2">
+                      {exp.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
+                          <span className="text-gray-700 dark:text-gray-300 text-sm">{resp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Achievements & Technologies */}
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-950 dark:text-white mb-4">
+                        Key Achievements
+                      </h4>
+                      <div className="space-y-2">
+                        {exp.achievements.map((achievement, idx) => (
+                          <span
+                            key={idx}
+                            className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
+                          >
+                            {achievement}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-950 dark:text-white mb-4">
+                        Technologies
+                      </h4>
+                      <div className="space-y-2">
+                        {exp.technologies.map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         {/* Research Highlights */}
