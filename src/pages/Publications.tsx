@@ -81,19 +81,6 @@ const Publications = () => {
     }
   }
 
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'High':
-        return 'text-red-600 dark:text-red-400'
-      case 'Medium':
-        return 'text-yellow-600 dark:text-yellow-400'
-      case 'Low':
-        return 'text-green-600 dark:text-green-400'
-      default:
-        return 'text-gray-600 dark:text-gray-400'
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300">
       <div className="container mx-auto px-4 py-12">
