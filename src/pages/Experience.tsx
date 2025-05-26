@@ -135,7 +135,7 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-5xl font-bold text-gray-950 dark:text-white mb-4">
             Professional Experience
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -163,14 +163,14 @@ const Experience = () => {
                 {/* Content card */}
                 <div className="ml-20">
                   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                    <div className="bg-gray-50 dark:bg-gray-700 p-6 border-b dark:border-gray-600">
+                    <div className="bg-gray-100 dark:bg-gray-700 p-6 border-b dark:border-gray-600">
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-4">
                           <exp.icon size={32} className="text-blue-600 dark:text-blue-400" />
                           <div>
-                            <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{exp.title}</h3>
-                            <p className="text-lg font-medium text-gray-700 dark:text-gray-300">{exp.company}</p>
-                            <div className="flex items-center gap-4 mt-2 text-sm text-gray-600 dark:text-gray-400">
+                            <h3 className="text-xl font-bold mb-1 text-gray-950 dark:text-white">{exp.title}</h3>
+                            <p className="text-lg font-medium text-gray-800 dark:text-gray-300">{exp.company}</p>
+                            <div className="flex items-center gap-4 mt-2 text-sm text-gray-700 dark:text-gray-400">
                               <div className="flex items-center gap-1">
                                 <MapPin size={14} />
                                 {exp.location}
@@ -219,7 +219,7 @@ const Experience = () => {
                         {/* Achievements & Technologies */}
                         <div className="space-y-6">
                           <div>
-                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                            <h4 className="text-lg font-semibold text-gray-950 dark:text-white mb-4">
                               Key Achievements
                             </h4>
                             <div className="space-y-2">
@@ -235,7 +235,7 @@ const Experience = () => {
                           </div>
 
                           <div>
-                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                            <h4 className="text-lg font-semibold text-gray-950 dark:text-white mb-4">
                               Technologies
                             </h4>
                             <div className="space-y-2">
@@ -266,12 +266,12 @@ const Experience = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">
             Research Highlights
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">MSc Dissertation - AI Surrogate Modeling</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-950 dark:text-white">MSc Dissertation - AI Surrogate Modeling</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">Imperial College London | 2024</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Novel Grid-Invariant AI architecture</li>
@@ -281,7 +281,7 @@ const Experience = () => {
               </ul>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-l-4 border-green-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Collagen Fiber Analysis Project</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-950 dark:text-white">Collagen Fiber Analysis Project</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">Pekkan Biofluid Mechanics Laboratory | 2023-2024</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• 95% accuracy in fiber orientation prediction</li>

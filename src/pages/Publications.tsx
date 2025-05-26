@@ -82,7 +82,7 @@ const Publications = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4 py-12">
         {/* Header Section */}
         <motion.div
@@ -91,7 +91,7 @@ const Publications = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-5xl font-bold text-gray-950 dark:text-white mb-4">
             Publications
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -108,19 +108,19 @@ const Publications = () => {
         >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <div>
-              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.totalCitations}</p>
+              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.totalCitations}</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">Total Citations</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.hIndex}</p>
+              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.hIndex}</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">h-index</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.i10Index}</p>
+              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.i10Index}</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">i10-index</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.publications}</p>
+              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.publications}</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">Publications</p>
             </div>
           </div>
@@ -155,7 +155,7 @@ const Publications = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-2">
                     {pub.title}
                   </h3>
                   
@@ -214,10 +214,10 @@ const Publications = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8"
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Current Research</h2>
+          <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-6">Current Research</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">PhD Thesis - Imperial College London</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-3">PhD Thesis - Imperial College London</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">Advanced Computational Methods for Biomedical Applications</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Retrieval-Augmented Generation (RAG) systems for biomedical knowledge</li>
@@ -227,7 +227,7 @@ const Publications = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Research Impact</h3>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-3">Research Impact</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">Collaborations with leading institutions worldwide</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Max Planck Institute for Intelligent Systems</li>

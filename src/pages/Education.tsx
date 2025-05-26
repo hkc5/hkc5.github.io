@@ -106,26 +106,26 @@ const Education = () => {
               className="relative"
             >
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                <div className="bg-gray-50 dark:bg-gray-700 p-6 border-b dark:border-gray-600">
+                <div className="bg-gray-100 dark:bg-gray-700 p-6 border-b dark:border-gray-600">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-4">
                       <GraduationCap size={32} className="text-blue-600 dark:text-blue-400" />
                       <div>
-                        <h2 className="text-xl lg:text-2xl font-bold mb-2 text-gray-900 dark:text-white">{edu.degree}</h2>
-                        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                        <h2 className="text-xl lg:text-2xl font-bold mb-2 text-gray-950 dark:text-white">{edu.degree}</h2>
+                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                           <MapPin size={16} />
                           <span>{edu.institution}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 mt-1">
+                        <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 mt-1">
                           <Calendar size={16} />
                           <span>{edu.period}</span>
                         </div>
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3">
-                        <p className="text-sm font-medium text-gray-900 dark:text-white">{edu.grade}</p>
-                        <p className="text-xs text-gray-600 dark:text-gray-400">{edu.achievement}</p>
+                      <div className="bg-gray-200 dark:bg-gray-600 rounded-lg p-3">
+                        <p className="text-sm font-medium text-gray-950 dark:text-white">{edu.grade}</p>
+                        <p className="text-xs text-gray-700 dark:text-gray-300">{edu.achievement}</p>
                       </div>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ const Education = () => {
                   <div className="grid lg:grid-cols-3 gap-8">
                     {/* Highlights */}
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                      <h3 className="text-xl font-semibold text-gray-950 dark:text-white mb-4">
                         Highlights
                       </h3>
                       <ul className="space-y-3">
@@ -150,8 +150,7 @@ const Education = () => {
 
                     {/* Key Modules */}
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                        <BookOpen className="text-blue-500" size={20} />
+                      <h3 className="text-xl font-semibold text-gray-950 dark:text-white mb-4">
                         Key Modules
                       </h3>
                       <div className="space-y-2">
@@ -168,7 +167,7 @@ const Education = () => {
 
                     {/* Skills Developed */}
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                      <h3 className="text-xl font-semibold text-gray-950 dark:text-white mb-4">
                         Skills Developed
                       </h3>
                       <div className="space-y-2">
@@ -196,7 +195,7 @@ const Education = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">
             Teaching Experience
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -211,7 +210,7 @@ const Education = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <BookOpen className="text-blue-500" size={24} />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">{exp.course}</h3>
+                    <h3 className="font-semibold text-gray-950 dark:text-white">{exp.course}</h3>
                     <p className="text-sm text-blue-600 dark:text-blue-400">{exp.role}</p>
                   </div>
                 </div>
