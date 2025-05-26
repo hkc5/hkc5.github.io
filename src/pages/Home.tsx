@@ -1,50 +1,55 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Download, ArrowDown, User } from 'lucide-react'
+import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
 
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16"
           >
             {/* Profile Picture */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-8"
+              className="flex-shrink-0"
             >
-              <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6 relative">
-                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                  <User size={64} className="text-white" />
-                </div>
-                <div className="absolute inset-0 rounded-full ring-4 ring-blue-500/20 ring-offset-4 ring-offset-white dark:ring-offset-gray-900"></div>
+              <div className="w-48 h-60 lg:w-56 lg:h-72 relative">
+                <img
+                  src="/profile.png"
+                  alt="Hakancan Ozturk"
+                  className="w-full h-full rounded-lg object-cover shadow-lg"
+                />
+                <div className="absolute inset-0 rounded-lg ring-4 ring-blue-500/20 ring-offset-4 ring-offset-white dark:ring-offset-gray-900"></div>
               </div>
             </motion.div>
 
-            <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Hi, I'm{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Hakancan Ozturk
-              </span>
-            </h1>
-            
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-              Software Development Engineer at Amazon
-            </p>
-            
-            <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-              Machine learning engineer with expertise in Retrieval-Augmented Generation (RAG), 
-              computational fluid dynamics (CFD), and generative AI. Currently working on Prime Video 
-              infrastructure and UI optimization at Amazon.
-            </p>
+            {/* Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+                Hi, I'm{' '}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Hakancan Ozturk
+                </span>
+              </h1>
+              
+              <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+                Software Development Engineer at Amazon
+              </p>
+              
+              <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl lg:max-w-none">
+                Machine learning engineer with expertise in Retrieval-Augmented Generation (RAG), 
+                computational fluid dynamics (CFD), and generative AI. Currently working on Prime Video 
+                infrastructure and UI optimization at Amazon.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
               <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
@@ -66,7 +71,7 @@ const Home = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center gap-6">
+            <div className="flex justify-center lg:justify-start gap-6">
               <motion.a
                 href="https://github.com/hkc5"
                 target="_blank"
@@ -92,6 +97,7 @@ const Home = () => {
               >
                 <Mail size={24} />
               </motion.a>
+            </div>
             </div>
           </motion.div>
         </div>
