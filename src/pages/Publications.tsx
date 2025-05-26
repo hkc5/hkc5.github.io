@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { BookOpen, ExternalLink, Calendar, Users, TrendingUp, Award, Zap } from 'lucide-react'
+import { ExternalLink, Calendar, Users } from 'lucide-react'
 
 const Publications = () => {
   const publications = [
@@ -112,57 +112,39 @@ const Publications = () => {
           </p>
         </motion.div>
 
-        {/* Metrics Cards */}
+        {/* Metrics Summary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-12"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Total Citations</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">{metrics.totalCitations}</p>
-              </div>
-              <TrendingUp className="text-blue-500" size={24} />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            <div>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.totalCitations}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Total Citations</p>
             </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">h-index</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">{metrics.hIndex}</p>
-              </div>
-              <Award className="text-green-500" size={24} />
+            <div>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.hIndex}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">h-index</p>
             </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">i10-index</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">{metrics.i10Index}</p>
-              </div>
-              <Zap className="text-yellow-500" size={24} />
+            <div>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.i10Index}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">i10-index</p>
             </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Publications</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">{metrics.publications}</p>
-              </div>
-              <BookOpen className="text-purple-500" size={24} />
+            <div>
+              <p className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{metrics.publications}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Publications</p>
             </div>
           </div>
         </motion.div>
 
-        {/* Publications Grid */}
+        {/* Publications List */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid gap-8"
+          className="space-y-6"
         >
           {publications.map((pub, index) => (
             <motion.div
@@ -170,34 +152,28 @@ const Publications = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-200 dark:border-gray-700"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6"
             >
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex-1">
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <BookOpen className="text-blue-600 dark:text-blue-400 flex-shrink-0" size={24} />
-                      <div className="flex gap-2">
-                        <span className={`px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(pub.type)}`}>
-                          {pub.type}
-                        </span>
-                        <span className={`px-3 py-1 rounded-full text-sm font-medium ${getImpactColor(pub.impact)} bg-gray-100 dark:bg-gray-700`}>
-                          {pub.impact} Impact
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                      <Calendar size={16} />
-                      {pub.year}
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${getTypeColor(pub.type)}`}>
+                        {pub.type}
+                      </span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                        <Calendar size={14} />
+                        {pub.year}
+                      </span>
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     {pub.title}
                   </h3>
                   
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-3">
-                    <Users size={16} />
+                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2">
+                    <Users size={14} />
                     <span className="text-sm">{pub.authors}</span>
                   </div>
                   
@@ -205,15 +181,15 @@ const Publications = () => {
                     {pub.journal}
                   </p>
                   
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
                     {pub.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2">
                     {pub.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-xs font-medium"
+                        className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs"
                       >
                         {tag}
                       </span>
@@ -221,21 +197,21 @@ const Publications = () => {
                   </div>
                 </div>
                 
-                <div className="lg:w-48 flex flex-col gap-4">
-                  <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 text-center">
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Citations</p>
-                    <p className="text-2xl font-bold text-gray-900 dark:text-white">{pub.citations}</p>
-                  </div>
+                <div className="lg:w-32 flex flex-col gap-3">
+                  {pub.citations > 0 && (
+                    <div className="text-center">
+                      <p className="text-lg font-semibold text-gray-900 dark:text-white">{pub.citations}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Citations</p>
+                    </div>
+                  )}
                   
                   <motion.a
                     href={pub.doi}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
+                    className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors"
                   >
-                    <ExternalLink size={16} />
+                    <ExternalLink size={14} />
                     View Paper
                   </motion.a>
                 </div>
@@ -249,14 +225,14 @@ const Publications = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
+          className="mt-16 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8"
         >
-          <h2 className="text-3xl font-bold mb-4">Current Research</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Current Research</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-3">PhD Thesis - Imperial College London</h3>
-              <p className="text-blue-100 mb-4">Advanced Computational Methods for Biomedical Applications</p>
-              <ul className="space-y-2 text-blue-100">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">PhD Thesis - Imperial College London</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">Advanced Computational Methods for Biomedical Applications</p>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Retrieval-Augmented Generation (RAG) systems for biomedical knowledge</li>
                 <li>• Machine learning applications in computational fluid dynamics</li>
                 <li>• AI-driven optimization of cardiovascular simulations</li>
@@ -264,9 +240,9 @@ const Publications = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-3">Research Impact</h3>
-              <p className="text-blue-100 mb-4">Collaborations with leading institutions worldwide</p>
-              <ul className="space-y-2 text-blue-100">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Research Impact</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">Collaborations with leading institutions worldwide</p>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Max Planck Institute for Intelligent Systems</li>
                 <li>• Koç University Biomedical Engineering</li>
                 <li>• Imperial College London Applied Computational Science</li>

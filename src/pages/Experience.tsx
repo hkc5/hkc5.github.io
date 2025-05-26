@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Briefcase, Calendar, MapPin, TrendingUp, Code, Award, Zap, Building, Microscope, GraduationCap } from 'lucide-react'
+import { Calendar, MapPin, Code, Building, Microscope, GraduationCap } from 'lucide-react'
 
 const Experience = () => {
   const experiences = [
@@ -20,7 +20,6 @@ const Experience = () => {
       ],
       technologies: ['SolidJS', 'React', 'TypeScript', 'AWS', 'LLM automation'],
       icon: Code,
-      color: 'from-orange-500 to-red-600',
       achievements: ['Leading UI migration project', 'Implementing LLM automation', 'SDK development']
     },
     {
@@ -39,8 +38,7 @@ const Experience = () => {
         'Built production-ready ML systems serving thousands of daily queries'
       ],
       technologies: ['Python', 'FastAPI', 'AWS Lambda', 'Vector Databases', 'PyTorch', 'Docker'],
-      icon: Zap,
-      color: 'from-blue-500 to-purple-600',
+      icon: Code,
       achievements: ['RAG framework design', 'Thousands of daily queries', 'Production ML systems']
     },
     {
@@ -60,7 +58,6 @@ const Experience = () => {
       ],
       technologies: ['MATLAB', 'Excel', 'Operations Research', 'Data Analysis'],
       icon: Building,
-      color: 'from-green-500 to-teal-600',
       achievements: ['20% cost reduction', 'Safety protocol improvements', 'Team coordination']
     },
     {
@@ -81,7 +78,6 @@ const Experience = () => {
       ],
       technologies: ['COMSOL Multiphysics', 'MATLAB', 'Python', 'High-Performance Computing', 'CFD'],
       icon: Microscope,
-      color: 'from-purple-500 to-indigo-600',
       achievements: ['200x efficiency gains', 'Top-tier publications', 'International collaboration']
     },
     {
@@ -101,7 +97,6 @@ const Experience = () => {
       ],
       technologies: ['MATLAB', 'Python', 'Excel', 'Educational Technology'],
       icon: GraduationCap,
-      color: 'from-yellow-500 to-orange-600',
       achievements: ['50+ students mentored', 'Curriculum development', 'Academic excellence']
     }
   ]
@@ -131,7 +126,7 @@ const Experience = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50 dark:from-gray-900 dark:to-purple-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <motion.div
@@ -167,15 +162,15 @@ const Experience = () => {
                 
                 {/* Content card */}
                 <div className="ml-20">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <div className={`bg-gradient-to-r ${exp.color} p-6 text-white`}>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+                    <div className="bg-gray-50 dark:bg-gray-700 p-6 border-b dark:border-gray-600">
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-4">
-                          <exp.icon size={32} />
+                          <exp.icon size={32} className="text-blue-600 dark:text-blue-400" />
                           <div>
-                            <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
-                            <p className="text-lg font-medium text-white/90">{exp.company}</p>
-                            <div className="flex items-center gap-4 mt-2 text-sm text-white/80">
+                            <h3 className="text-xl font-bold mb-1 text-gray-900 dark:text-white">{exp.title}</h3>
+                            <p className="text-lg font-medium text-gray-700 dark:text-gray-300">{exp.company}</p>
+                            <div className="flex items-center gap-4 mt-2 text-sm text-gray-600 dark:text-gray-400">
                               <div className="flex items-center gap-1">
                                 <MapPin size={14} />
                                 {exp.location}
@@ -208,14 +203,13 @@ const Experience = () => {
                       <div className="grid lg:grid-cols-2 gap-6">
                         {/* Responsibilities */}
                         <div>
-                          <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                            <Briefcase className="text-blue-500" size={20} />
+                          <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                             Key Responsibilities
                           </h4>
                           <ul className="space-y-2">
                             {exp.responsibilities.map((resp, idx) => (
                               <li key={idx} className="flex items-start gap-2">
-                                <TrendingUp className="text-green-500 flex-shrink-0 mt-1" size={16} />
+                                <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
                                 <span className="text-gray-700 dark:text-gray-300 text-sm">{resp}</span>
                               </li>
                             ))}
@@ -225,15 +219,14 @@ const Experience = () => {
                         {/* Achievements & Technologies */}
                         <div className="space-y-6">
                           <div>
-                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                              <Award className="text-yellow-500" size={20} />
+                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                               Key Achievements
                             </h4>
                             <div className="space-y-2">
                               {exp.achievements.map((achievement, idx) => (
                                 <span
                                   key={idx}
-                                  className="inline-block bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
+                                  className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
                                 >
                                   {achievement}
                                 </span>
@@ -242,15 +235,14 @@ const Experience = () => {
                           </div>
 
                           <div>
-                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                              <Code className="text-purple-500" size={20} />
+                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                               Technologies
                             </h4>
                             <div className="space-y-2">
                               {exp.technologies.map((tech, idx) => (
                                 <span
                                   key={idx}
-                                  className="inline-block bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
+                                  className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
                                 >
                                   {tech}
                                 </span>
@@ -278,20 +270,20 @@ const Experience = () => {
             Research Highlights
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">MSc Dissertation - AI Surrogate Modeling</h3>
-              <p className="text-blue-100 mb-4">Imperial College London | 2024</p>
-              <ul className="space-y-2 text-blue-100">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-l-4 border-blue-500">
+              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">MSc Dissertation - AI Surrogate Modeling</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">Imperial College London | 2024</p>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Novel Grid-Invariant AI architecture</li>
                 <li>• 1000+ GPU hours of optimization</li>
                 <li>• 35% improvement in stability</li>
                 <li>• 50% increase in accuracy</li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Collagen Fiber Analysis Project</h3>
-              <p className="text-green-100 mb-4">Pekkan Biofluid Mechanics Laboratory | 2023-2024</p>
-              <ul className="space-y-2 text-green-100">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-l-4 border-green-500">
+              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Collagen Fiber Analysis Project</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">Pekkan Biofluid Mechanics Laboratory | 2023-2024</p>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• 95% accuracy in fiber orientation prediction</li>
                 <li>• Generative Diffusion Models implementation</li>
                 <li>• 10x dataset size increase</li>
