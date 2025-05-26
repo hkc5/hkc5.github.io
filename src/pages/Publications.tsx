@@ -155,7 +155,7 @@ const Publications = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {pub.title}
                   </h3>
                   
@@ -217,7 +217,7 @@ const Publications = () => {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Current Research</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">PhD Thesis - Imperial College London</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">PhD Thesis - Imperial College London</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">Advanced Computational Methods for Biomedical Applications</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Retrieval-Augmented Generation (RAG) systems for biomedical knowledge</li>
@@ -227,7 +227,7 @@ const Publications = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Research Impact</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Research Impact</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">Collaborations with leading institutions worldwide</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Max Planck Institute for Intelligent Systems</li>
