@@ -15,7 +15,7 @@ const Home = () => {
             <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Hakan Can Ozturk
+                Hakancan Ozturk
               </span>
             </h1>
             

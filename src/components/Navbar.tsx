@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="text-xl font-bold text-gray-900 dark:text-white">
-            Hakan Can Ozturk
+            Hakancan Ozturk
           </Link>
 
           {/* Desktop Navigation */}
