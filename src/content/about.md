@@ -24,27 +24,6 @@ My work spans advanced topics including:
 3. **Machine Learning Applications** - Deep learning for biomedical analysis and turbulent flow
 4. **High-Performance Computing** - GPU-accelerated simulations and parallel computing
 
-## Education
-
-### MSc in Applied Computational Science and Engineering
-**Imperial College London** | *2023 - 2024*
-- **Distinction (78.27%)** - Highest overall grade in class
-- Class representative
-- **Modules:** Machine/Deep Learning, Numerical Methods, Computational Maths, Optimization
-
-### BSc in Mechanical Engineering  
-**Koc University** | *2020 - 2023*
-- **GPA: 3.99/4.00** - Ranked 1st in class
-- Graduated one year early with Merit scholarship ($30k annually)
-- **Teaching Assistant** for Introduction to Engineering, Fluid Mechanics, Numerical Methods
-- **Modules:** Propulsion Systems, Microsensors, Makerspace, Finite Element Method
-
-### High School
-**American Robert College** | *2015 - 2020*
-- Ranked 1st in High School Entrance Exam
-- AP Chemistry (5/5), AP Calculus (5/5)
-- Volleyball team, Ultimate Frisbee team
-
 ## Technical Skills
 
 ### Programming Languages
