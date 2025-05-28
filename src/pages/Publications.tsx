@@ -1,72 +1,11 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Calendar, Users } from 'lucide-react'
+import { getPublications, getPublicationMetrics, getCurrentResearch } from '../utils/loadData'
 
 const Publications = () => {
-  const publications = [
-    {
-      id: 1,
-      title: 'Learning-enhanced 3D fiber orientation mapping in thick cardiac tissues',
-      authors: 'E. Saruhan, H. Ozturk, D. Kul, B. Sevgin, M.N. Coban, K. Pekkan',
-      journal: 'Optica Open',
-      year: '2025',
-      type: 'Journal Article',
-      status: 'Published',
-      citations: 0,
-      doi: 'https://opg.optica.org/opticaopen',
-      tags: ['Machine Learning', 'Biomedical Imaging', '3D Mapping', 'Cardiac Tissue'],
-      impact: 'High',
-      description: 'Advanced computational methods for analyzing fiber orientation in cardiac tissues using machine learning techniques.'
-    },
-    {
-      id: 2,
-      title: 'Anisotropic Surface Microrollers for Endovascular Navigation: A Computational Analysis with a Case Study in Hepatic Perfusion',
-      authors: 'B. Arslan, U. Bozuyuk, K. Gorgulu, E. Yildiz, H. Ozturk, L. Liotta, V. Heinemann, et al.',
-      journal: 'Advanced Theory and Simulations',
-      year: '2025',
-      type: 'Journal Article',
-      status: 'Published',
-      citations: 0,
-      doi: '10.1002/adts.202400387',
-      tags: ['Microrobotics', 'CFD', 'Medical Devices', 'Drug Delivery'],
-      impact: 'High',
-      description: 'Computational analysis of surface microrollers for targeted endovascular navigation with hepatic perfusion case study.'
-    },
-    {
-      id: 3,
-      title: 'Microrobotic locomotion in blood vessels: a computational study on the performance of surface microrollers in the cardiovascular system',
-      authors: 'U. Bozuyuk, H. Ozturk, M. Sitti',
-      journal: 'Advanced Intelligent Systems',
-      year: '2023',
-      type: 'Journal Article',
-      status: 'Published',
-      citations: 13,
-      doi: 'https://doi.org/10.1002/aisy.202300099',
-      tags: ['Microrobotics', 'CFD', 'Biomedical Engineering', 'Drug Delivery'],
-      impact: 'High',
-      description: 'Comprehensive CFD analysis of magnetic surface microrollers navigation in various blood vessel types for biomedical applications.'
-    },
-    {
-      id: 4,
-      title: 'The mismatch between experimental and computational fluid dynamics analyses for magnetic surface microrollers',
-      authors: 'U. Bozuyuk, H. Ozturk, M. Sitti',
-      journal: 'Scientific Reports',
-      year: '2023',
-      type: 'Journal Article',
-      status: 'Published',
-      citations: 8,
-      doi: 'https://doi.org/10.1038/s41598-023-37179-4',
-      tags: ['Microrobotics', 'CFD', 'Experimental Validation', 'Surface Microrollers'],
-      impact: 'Medium',
-      description: 'Investigation of discrepancies between computational simulations and experimental results for magnetic microroller dynamics.'
-    }
-  ]
-
-  const metrics = {
-    totalCitations: 21,
-    hIndex: 2,
-    i10Index: 1,
-    publications: 4
-  }
+  const publications = getPublications()
+  const metrics = getPublicationMetrics()
+  const currentResearch = getCurrentResearch()
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -171,17 +110,6 @@ const Publications = () => {
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
                     {pub.description}
                   </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {pub.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
                 </div>
                 
                 <div className="lg:w-32 flex flex-col gap-3">
@@ -217,23 +145,21 @@ const Publications = () => {
           <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-6">Current Research</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-3">MSc Thesis - Imperial College London</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">Advanced Computational Methods for Biomedical Applications</p>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-3">{currentResearch.thesis.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{currentResearch.thesis.topic}</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• Retrieval-Augmented Generation (RAG) systems for biomedical knowledge</li>
-                <li>• Machine learning applications in computational fluid dynamics</li>
-                <li>• AI-driven optimization of cardiovascular simulations</li>
-                <li>• High-performance computing for biomedical modeling</li>
+                {currentResearch.thesis.highlights.map((highlight, index) => (
+                  <li key={index}>• {highlight}</li>
+                ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-3">Research Impact</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">Collaborations with leading institutions worldwide</p>
+              <h3 className="text-xl font-bold text-gray-950 dark:text-white mb-3">{currentResearch.impact.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{currentResearch.impact.description}</p>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• Max Planck Institute for Intelligent Systems</li>
-                <li>• Koç University Biomedical Engineering</li>
-                <li>• Imperial College London Applied Computational Science</li>
-                <li>• Growing citation impact in microrobotics field</li>
+                {currentResearch.impact.institutions.map((institution, index) => (
+                  <li key={index}>• {institution}</li>
+                ))}
               </ul>
             </div>
           </div>

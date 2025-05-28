@@ -101,32 +101,7 @@ const About = () => {
           </blockquote>
         </motion.div>
 
-        {/* Current Role */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-12"
-        >
-          <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-6">Current Role</h2>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            Currently at <strong>Amazon</strong> as a Software Development Engineer, where I focus on:
-          </p>
-          <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-            <li className="flex items-start gap-2">
-              <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
-              <span>Migrating Prime Video UI elements from React to SolidJS to enhance performance</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
-              <span>Leveraging LLM-powered automation pipelines for efficient component refactoring</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
-              <span>Developing features for Prime Video Client Software Development Kit (SDK)</span>
-            </li>
-          </ul>
-        </motion.div>
+
 
         {/* Research Interests */}
         <motion.div

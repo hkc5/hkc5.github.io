@@ -1,0 +1,80 @@
+{
+  "publications": [
+    {
+      "id": 1,
+      "title": "Learning-enhanced 3D fiber orientation mapping in thick cardiac tissues",
+      "authors": "E. Saruhan, H. Ozturk, D. Kul, B. Sevgin, M.N. Coban, K. Pekkan",
+      "journal": "Optica Open",
+      "year": "2025",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 0,
+      "doi": "https://opg.optica.org/opticaopen",
+      "description": "Advanced computational methods for analyzing fiber orientation in cardiac tissues using machine learning techniques."
+    },
+    {
+      "id": 2,
+      "title": "Anisotropic Surface Microrollers for Endovascular Navigation: A Computational Analysis with a Case Study in Hepatic Perfusion",
+      "authors": "B. Arslan, U. Bozuyuk, K. Gorgulu, E. Yildiz, H. Ozturk, L. Liotta, V. Heinemann, et al.",
+      "journal": "Advanced Theory and Simulations",
+      "year": "2025",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 0,
+      "doi": "10.1002/adts.202400387",
+      "description": "Computational analysis of surface microrollers for targeted endovascular navigation with hepatic perfusion case study."
+    },
+    {
+      "id": 3,
+      "title": "Microrobotic locomotion in blood vessels: a computational study on the performance of surface microrollers in the cardiovascular system",
+      "authors": "U. Bozuyuk, H. Ozturk, M. Sitti",
+      "journal": "Advanced Intelligent Systems",
+      "year": "2023",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 13,
+      "doi": "https://doi.org/10.1002/aisy.202300099",
+      "description": "Comprehensive CFD analysis of magnetic surface microrollers navigation in various blood vessel types for biomedical applications."
+    },
+    {
+      "id": 4,
+      "title": "The mismatch between experimental and computational fluid dynamics analyses for magnetic surface microrollers",
+      "authors": "U. Bozuyuk, H. Ozturk, M. Sitti",
+      "journal": "Scientific Reports",
+      "year": "2023",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 8,
+      "doi": "https://doi.org/10.1038/s41598-023-37179-4",
+      "description": "Investigation of discrepancies between computational simulations and experimental results for magnetic microroller dynamics."
+    }
+  ],
+  "metrics": {
+    "totalCitations": 21,
+    "hIndex": 2,
+    "i10Index": 1,
+    "publications": 4
+  },
+  "currentResearch": {
+    "thesis": {
+      "title": "MSc Thesis - Imperial College London",
+      "topic": "Advanced Computational Methods for Biomedical Applications",
+      "highlights": [
+        "Retrieval-Augmented Generation (RAG) systems for biomedical knowledge",
+        "Machine learning applications in computational fluid dynamics",
+        "AI-driven optimization of cardiovascular simulations",
+        "High-performance computing for biomedical modeling"
+      ]
+    },
+    "impact": {
+      "title": "Research Impact",
+      "description": "Collaborations with leading institutions worldwide",
+      "institutions": [
+        "Max Planck Institute for Intelligent Systems",
+        "Koç University Biomedical Engineering",
+        "Imperial College London Applied Computational Science",
+        "Growing citation impact in microrobotics field"
+      ]
+    }
+  }
+}

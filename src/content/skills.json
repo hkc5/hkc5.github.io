@@ -1,0 +1,65 @@
+{
+  "skillCategories": [
+    {
+      "title": "Programming Languages",
+      "icon": "Code",
+      "skills": [
+        { "name": "Python", "description": "NumPy, SciPy, PyTorch, TensorFlow" },
+        { "name": "JavaScript/TypeScript", "description": "React, Node.js, Modern web development" },
+        { "name": "C++", "description": "High-performance computing applications" },
+        { "name": "MATLAB", "description": "Scientific computing and analysis" }
+      ]
+    },
+    {
+      "title": "Machine Learning & AI",
+      "icon": "Cpu",
+      "skills": [
+        { "name": "PyTorch & TensorFlow", "description": "Deep learning frameworks" },
+        { "name": "RAG Systems", "description": "Advanced retrieval-augmented generation" },
+        { "name": "Computer Vision", "description": "CNNs, diffusion models" },
+        { "name": "FastAPI", "description": "ML API development" }
+      ]
+    },
+    {
+      "title": "Cloud & DevOps",
+      "icon": "Cloud",
+      "skills": [
+        { "name": "AWS", "description": "Lambda, cloud computing" },
+        { "name": "Docker", "description": "Containerization" },
+        { "name": "GitHub Actions", "description": "CI/CD workflows" },
+        { "name": "High-Performance Computing", "description": "GPU clusters, parallel computing" }
+      ]
+    },
+    {
+      "title": "Engineering Software",
+      "icon": "Database",
+      "skills": [
+        { "name": "COMSOL", "description": "CFD and mechanics simulations" },
+        { "name": "ANSYS Fluent", "description": "Computational fluid dynamics" },
+        { "name": "Siemens NX", "description": "CAD and engineering design" }
+      ]
+    }
+  ],
+  "researchInterests": [
+    {
+      "title": "Retrieval-Augmented Generation (RAG)",
+      "description": "Advanced AI frameworks for knowledge retrieval",
+      "icon": "Target"
+    },
+    {
+      "title": "Computational Fluid Dynamics",
+      "description": "Biomedical simulations and AI-driven physics modeling",
+      "icon": "Database"
+    },
+    {
+      "title": "Machine Learning Applications",
+      "description": "Deep learning for biomedical analysis and turbulent flow",
+      "icon": "Cpu"
+    },
+    {
+      "title": "High-Performance Computing",
+      "description": "GPU-accelerated simulations and parallel computing",
+      "icon": "Award"
+    }
+  ]
+}
