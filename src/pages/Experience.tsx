@@ -1,105 +1,21 @@
 import { motion } from 'framer-motion'
 import { Calendar, MapPin, Code, Building, Microscope, GraduationCap } from 'lucide-react'
+import experienceData from '../content/experience.json'
 
 const Experience = () => {
-  const experiences = [
-    {
-      id: 1,
-      title: 'Software Development Engineer',
-      company: 'Amazon',
-      location: 'London, UK',
-      period: 'January 2025 - Present',
-      type: 'Full-time',
-      status: 'current',
-      description: 'Working on Prime Video infrastructure and user interface optimization.',
-      responsibilities: [
-        'Migrating Prime Video UI elements from React to SolidJS to enhance performance',
-        'Leveraging LLM-powered automation pipelines for efficient component refactoring',
-        'Developing features for Prime Video Client Software Development Kit (SDK)',
-        'Collaborating with cross-functional teams on scalable video streaming solutions'
-      ],
-      technologies: ['SolidJS', 'React', 'TypeScript', 'AWS', 'LLM automation'],
-      icon: Code,
-      achievements: ['Leading UI migration project', 'Implementing LLM automation', 'SDK development']
-    },
-    {
-      id: 2,
-      title: 'Machine Learning Engineer',
-      company: 'Albus Technologies',
-      location: 'Remote',
-      period: 'May 2024 - January 2025',
-      type: 'Full-time',
-      status: 'completed',
-      description: 'Led development of advanced AI systems focusing on Retrieval-Augmented Generation and document processing pipelines.',
-      responsibilities: [
-        'Designed a Retrieval-Augmented Generation (RAG) framework with context-enriched vector search',
-        'Developed scalable real-time Document Semantic Extraction pipelines using AWS',
-        'Established automated CI/CD workflows for FastAPI and Lambda endpoints',
-        'Built production-ready ML systems serving thousands of daily queries'
-      ],
-      technologies: ['Python', 'FastAPI', 'AWS Lambda', 'Vector Databases', 'PyTorch', 'Docker'],
-      icon: Code,
-      achievements: ['RAG framework design', 'Thousands of daily queries', 'Production ML systems']
-    },
-    {
-      id: 3,
-      title: 'Production Engineer',
-      company: 'SU-TAS Mining Corporation',
-      location: 'Turkey',
-      period: 'February 2023 - August 2023',
-      type: 'Full-time',
-      status: 'completed',
-      description: 'Optimized quarry operations through data-driven approaches and operational excellence.',
-      responsibilities: [
-        'Led quarry operations, reducing explosive costs by 20% through optimized placement algorithms',
-        'Improved resource allocation and safety protocols in daily mining operations',
-        'Implemented data analysis systems for operational efficiency tracking',
-        'Coordinated cross-functional teams for project execution'
-      ],
-      technologies: ['MATLAB', 'Excel', 'Operations Research', 'Data Analysis'],
-      icon: Building,
-      achievements: ['20% cost reduction', 'Safety protocol improvements', 'Team coordination']
-    },
-    {
-      id: 4,
-      title: 'Computing Researcher',
-      company: 'Max Planck Institute for Intelligent Systems',
-      location: 'Stuttgart, Germany',
-      period: 'June 2022 - December 2022',
-      type: 'Research',
-      status: 'completed',
-      description: 'Conducted cutting-edge research in computational fluid dynamics for biomedical micro-robotics applications.',
-      responsibilities: [
-        'Conducted computational fluid dynamics (CFD) simulations for biomedical micro-robots',
-        'Achieved 200x efficiency gains through optimized COMSOL simulations in HPC environments',
-        'Deployed advanced data processing pipelines using curve fits and support vector machines',
-        'Published research findings in top-tier scientific journals',
-        'Collaborated with international research teams on microrobotics projects'
-      ],
-      technologies: ['COMSOL Multiphysics', 'MATLAB', 'Python', 'High-Performance Computing', 'CFD'],
-      icon: Microscope,
-      achievements: ['200x efficiency gains', 'Top-tier publications', 'International collaboration']
-    },
-    {
-      id: 5,
-      title: 'Teaching Assistant',
-      company: 'Koç University',
-      location: 'Istanbul, Turkey',
-      period: '2020 - 2023',
-      type: 'Part-time',
-      status: 'completed',
-      description: 'Supported undergraduate engineering education while completing bachelor\'s degree.',
-      responsibilities: [
-        'Conducted lab sessions and tutorials for 50+ students per semester',
-        'Developed course materials and problem sets',
-        'Provided academic support and mentoring to undergraduate students',
-        'Assisted in curriculum development and assessment'
-      ],
-      technologies: ['MATLAB', 'Python', 'Excel', 'Educational Technology'],
-      icon: GraduationCap,
-      achievements: ['50+ students mentored', 'Curriculum development', 'Academic excellence']
-    }
-  ]
+  // Icon mapping for JSON data
+  const iconMap = {
+    Code: Code,
+    Building: Building,
+    Microscope: Microscope,
+    GraduationCap: GraduationCap
+  }
+
+  // Map experiences with proper icon components
+  const experiences = (experienceData as any).experiences.map((exp: any) => ({
+    ...exp,
+    icon: iconMap[exp.icon as keyof typeof iconMap]
+  }))
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -136,7 +52,7 @@ const Experience = () => {
 
         {/* Experience Cards */}
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp: any, index: number) => (
             <motion.div
               key={exp.id}
               initial={{ opacity: 0, y: 30 }}
@@ -188,7 +104,7 @@ const Experience = () => {
                       Key Responsibilities
                     </h4>
                     <ul className="space-y-2">
-                      {exp.responsibilities.map((resp, idx) => (
+                      {exp.responsibilities.map((resp: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-2">
                           <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
                           <span className="text-gray-700 dark:text-gray-300 text-sm">{resp}</span>
@@ -204,7 +120,7 @@ const Experience = () => {
                         Key Achievements
                       </h4>
                       <div className="space-y-2">
-                        {exp.achievements.map((achievement, idx) => (
+                        {exp.achievements.map((achievement: string, idx: number) => (
                           <span
                             key={idx}
                             className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
@@ -220,7 +136,7 @@ const Experience = () => {
                         Technologies
                       </h4>
                       <div className="space-y-2">
-                        {exp.technologies.map((tech, idx) => (
+                        {exp.technologies.map((tech: string, idx: number) => (
                           <span
                             key={idx}
                             className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
@@ -248,26 +164,22 @@ const Experience = () => {
             Research Highlights
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-950 dark:text-white">MSc Dissertation - AI Surrogate Modeling</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">Imperial College London | 2024</p>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• Novel Grid-Invariant AI architecture</li>
-                <li>• 1000+ GPU hours of optimization</li>
-                <li>• 35% improvement in stability</li>
-                <li>• 50% increase in accuracy</li>
-              </ul>
-            </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-l-4 border-green-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-950 dark:text-white">Collagen Fiber Analysis Project</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">Pekkan Biofluid Mechanics Laboratory | 2023-2024</p>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• 95% accuracy in fiber orientation prediction</li>
-                <li>• Generative Diffusion Models implementation</li>
-                <li>• 10x dataset size increase</li>
-                <li>• Novel ML techniques for biological data</li>
-              </ul>
-            </div>
+            {(experienceData as any).researchHighlights.map((research: any) => (
+              <div 
+                key={research.title}
+                className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border-l-4 ${
+                  research.borderColor === 'blue' ? 'border-blue-500' : 'border-green-500'
+                }`}
+              >
+                <h3 className="text-xl font-bold mb-4 text-gray-950 dark:text-white">{research.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">{research.institution} | {research.year}</p>
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                  {research.highlights.map((highlight: string, idx: number) => (
+                    <li key={idx}>• {highlight}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

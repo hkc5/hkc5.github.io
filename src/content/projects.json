@@ -1,0 +1,114 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI Surrogate Modeling for Turbulent Flow Simulations",
+      "type": "MSc Dissertation",
+      "organization": "Imperial College London",
+      "period": "2024",
+      "description": "Discovered a novel Grid-Invariant AI architecture combining convolutional autoencoders and adversarial networks to simulate high-fidelity turbulent flows, achieving unprecedented grid independence and scalability.",
+      "achievements": [
+        "Novel Grid-Invariant AI architecture",
+        "35% enhanced long-term stability",
+        "50% improved prediction accuracy",
+        "1000+ GPU hours of HPC optimization"
+      ],
+      "technologies": ["Python", "PyTorch", "COMSOL Multiphysics", "High-Performance Computing", "Neural Networks"],
+      "icon": "Zap",
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "title": "Advanced Collagen Fiber Orientation Analysis",
+      "type": "Research Project",
+      "organization": "Pekkan Biofluid Mechanics Laboratory",
+      "period": "2023-2024",
+      "description": "Led advanced bio-imaging analysis using sophisticated machine learning techniques to predict collagen fiber orientation with high precision and innovative data augmentation methods.",
+      "achievements": [
+        "95% accuracy in fiber orientation prediction",
+        "Implemented Generative Diffusion Models",
+        "10x dataset size increase",
+        "Advanced bio-imaging analysis with FFT and SVR"
+      ],
+      "technologies": ["Python", "PyTorch", "Computer Vision", "FFT", "SVR", "CNNs", "Generative Diffusion Models"],
+      "icon": "Award",
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "title": "RAG Framework Development",
+      "type": "Production System",
+      "organization": "Albus Technologies",
+      "period": "2024-2025",
+      "description": "Designed and implemented a production-ready Retrieval-Augmented Generation framework with context-enriched vector search capabilities for enterprise document processing.",
+      "achievements": [
+        "Context-enriched vector search",
+        "Real-time Document Semantic Extraction",
+        "Automated CI/CD workflows",
+        "Thousands of daily queries served"
+      ],
+      "technologies": ["Python", "FastAPI", "AWS Lambda", "Vector Databases", "Docker", "CI/CD"],
+      "icon": "Code",
+      "status": "completed"
+    },
+    {
+      "id": 4,
+      "title": "Microrobotic Locomotion in Blood Vessels",
+      "type": "Research Project",
+      "organization": "Max Planck Institute for Intelligent Systems",
+      "period": "2022",
+      "description": "Conducted computational fluid dynamics simulations for biomedical micro-robots, focusing on magnetic surface microrollers in cardiovascular applications.",
+      "achievements": [
+        "200x efficiency gains in CFD simulations",
+        "Published in Advanced Intelligent Systems",
+        "Published in Scientific Reports",
+        "HPC-optimized COMSOL simulations"
+      ],
+      "technologies": ["COMSOL Multiphysics", "MATLAB", "High-Performance Computing", "CFD Analysis"],
+      "icon": "Award",
+      "status": "completed",
+      "links": [
+        { "type": "publication", "url": "https://doi.org/10.1002/aisy.202300099", "label": "Advanced Intelligent Systems" },
+        { "type": "publication", "url": "https://doi.org/10.1038/s41598-023-37332-5", "label": "Scientific Reports" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Modern React Portfolio Website",
+      "type": "Personal Project",
+      "organization": "Personal Project",
+      "period": "2024",
+      "description": "This website! Transformed from a Hugo-based static site to a modern React application with TypeScript, featuring responsive design, dark mode, and markdown-based content management.",
+      "achievements": [
+        "Modern tech stack implementation",
+        "Responsive design with mobile-first approach",
+        "Dark/light mode toggle",
+        "Automated GitHub Pages deployment"
+      ],
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router"],
+      "icon": "Code",
+      "status": "completed",
+      "links": [
+        { "type": "github", "url": "https://github.com/hkc5/hkc5.github.io", "label": "View on GitHub" },
+        { "type": "live", "url": "https://hkc5.github.io", "label": "Live Site" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Prime Video UI Migration",
+      "type": "Production System",
+      "organization": "Amazon",
+      "period": "2025",
+      "description": "Leading the migration of Prime Video UI elements from React to SolidJS to enhance performance, utilizing LLM-powered automation for efficient component refactoring.",
+      "achievements": [
+        "Performance optimization through SolidJS",
+        "LLM-powered automation pipelines",
+        "SDK development for Prime Video",
+        "Cross-platform compatibility"
+      ],
+      "technologies": ["SolidJS", "React", "TypeScript", "LLM Automation", "AWS Infrastructure"],
+      "icon": "Zap",
+      "status": "current"
+    }
+  ]
+}

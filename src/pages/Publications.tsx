@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import { ExternalLink, Calendar, Users } from 'lucide-react'
-import { getPublications, getPublicationMetrics, getCurrentResearch } from '../utils/loadData'
+import publicationsData from '../content/publications.json'
 
 const Publications = () => {
-  const publications = getPublications()
-  const metrics = getPublicationMetrics()
-  const currentResearch = getCurrentResearch()
+  const publications = publicationsData.publications
+  const metrics = publicationsData.metrics
+  const currentResearch = publicationsData.currentResearch
 
   const getTypeColor = (type: string) => {
     switch (type) {

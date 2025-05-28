@@ -1,0 +1,126 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Software Development Engineer",
+      "company": "Amazon",
+      "location": "London, UK",
+      "period": "January 2025 - Present",
+      "type": "Full-time",
+      "status": "current",
+      "description": "Working on Prime Video infrastructure and user interface optimization.",
+      "responsibilities": [
+        "Migrating Prime Video UI elements from React to SolidJS to enhance performance",
+        "Leveraging LLM-powered automation pipelines for efficient component refactoring",
+        "Developing features for Prime Video Client Software Development Kit (SDK)",
+        "Collaborating with cross-functional teams on scalable video streaming solutions"
+      ],
+      "technologies": ["SolidJS", "React", "TypeScript", "AWS", "LLM automation"],
+      "icon": "Code",
+      "achievements": ["Leading UI migration project", "Implementing LLM automation", "SDK development"]
+    },
+    {
+      "id": 2,
+      "title": "Machine Learning Engineer",
+      "company": "Albus Technologies",
+      "location": "Remote",
+      "period": "May 2024 - January 2025",
+      "type": "Full-time",
+      "status": "completed",
+      "description": "Led development of advanced AI systems focusing on Retrieval-Augmented Generation and document processing pipelines.",
+      "responsibilities": [
+        "Designed a Retrieval-Augmented Generation (RAG) framework with context-enriched vector search",
+        "Developed scalable real-time Document Semantic Extraction pipelines using AWS",
+        "Established automated CI/CD workflows for FastAPI and Lambda endpoints",
+        "Built production-ready ML systems serving thousands of daily queries"
+      ],
+      "technologies": ["Python", "FastAPI", "AWS Lambda", "Vector Databases", "PyTorch", "Docker"],
+      "icon": "Code",
+      "achievements": ["RAG framework design", "Thousands of daily queries", "Production ML systems"]
+    },
+    {
+      "id": 3,
+      "title": "Production Engineer",
+      "company": "SU-TAS Mining Corporation",
+      "location": "Turkey",
+      "period": "February 2023 - August 2023",
+      "type": "Full-time",
+      "status": "completed",
+      "description": "Optimized quarry operations through data-driven approaches and operational excellence.",
+      "responsibilities": [
+        "Led quarry operations, reducing explosive costs by 20% through optimized placement algorithms",
+        "Improved resource allocation and safety protocols in daily mining operations",
+        "Implemented data analysis systems for operational efficiency tracking",
+        "Coordinated cross-functional teams for project execution"
+      ],
+      "technologies": ["MATLAB", "Excel", "Operations Research", "Data Analysis"],
+      "icon": "Building",
+      "achievements": ["20% cost reduction", "Safety protocol improvements", "Team coordination"]
+    },
+    {
+      "id": 4,
+      "title": "Computing Researcher",
+      "company": "Max Planck Institute for Intelligent Systems",
+      "location": "Stuttgart, Germany",
+      "period": "June 2022 - December 2022",
+      "type": "Research",
+      "status": "completed",
+      "description": "Conducted cutting-edge research in computational fluid dynamics for biomedical micro-robotics applications.",
+      "responsibilities": [
+        "Conducted computational fluid dynamics (CFD) simulations for biomedical micro-robots",
+        "Achieved 200x efficiency gains through optimized COMSOL simulations in HPC environments",
+        "Deployed advanced data processing pipelines using curve fits and support vector machines",
+        "Published research findings in top-tier scientific journals",
+        "Collaborated with international research teams on microrobotics projects"
+      ],
+      "technologies": ["COMSOL Multiphysics", "MATLAB", "Python", "High-Performance Computing", "CFD"],
+      "icon": "Microscope",
+      "achievements": ["200x efficiency gains", "Top-tier publications", "International collaboration"]
+    },
+    {
+      "id": 5,
+      "title": "Teaching Assistant",
+      "company": "Koç University",
+      "location": "Istanbul, Turkey",
+      "period": "2020 - 2023",
+      "type": "Part-time",
+      "status": "completed",
+      "description": "Supported undergraduate engineering education while completing bachelor's degree.",
+      "responsibilities": [
+        "Conducted lab sessions and tutorials for 50+ students per semester",
+        "Developed course materials and problem sets",
+        "Provided academic support and mentoring to undergraduate students",
+        "Assisted in curriculum development and assessment"
+      ],
+      "technologies": ["MATLAB", "Python", "Excel", "Educational Technology"],
+      "icon": "GraduationCap",
+      "achievements": ["50+ students mentored", "Curriculum development", "Academic excellence"]
+    }
+  ],
+  "researchHighlights": [
+    {
+      "title": "MSc Dissertation - AI Surrogate Modeling",
+      "institution": "Imperial College London",
+      "year": "2024",
+      "highlights": [
+        "Novel Grid-Invariant AI architecture",
+        "1000+ GPU hours of optimization",
+        "35% improvement in stability",
+        "50% increase in accuracy"
+      ],
+      "borderColor": "blue"
+    },
+    {
+      "title": "Collagen Fiber Analysis Project",
+      "institution": "Pekkan Biofluid Mechanics Laboratory",
+      "year": "2023-2024",
+      "highlights": [
+        "95% accuracy in fiber orientation prediction",
+        "Generative Diffusion Models implementation",
+        "10x dataset size increase",
+        "Novel ML techniques for biological data"
+      ],
+      "borderColor": "green"
+    }
+  ]
+}

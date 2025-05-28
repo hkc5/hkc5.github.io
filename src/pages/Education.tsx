@@ -1,80 +1,8 @@
 import { motion } from 'framer-motion'
 import { GraduationCap, BookOpen, Calendar, MapPin } from 'lucide-react'
+import educationData from '../content/education.json'
 
 const Education = () => {
-  const educationData = [
-    {
-      id: 1,
-      degree: 'MSc in Applied Computational Science and Engineering',
-      institution: 'Imperial College London',
-      location: 'London, UK',
-      period: '2023 - 2024',
-      grade: 'Distinction (78.27%)',
-      achievement: 'Highest overall grade in class',
-      type: 'Masters',
-      status: 'completed',
-      highlights: [
-        'Class representative',
-        'Specialized in ML for computational problems',
-        'Distinction with highest grade',
-        'Advanced research in AI-CFD integration'
-      ],
-      modules: [
-        'Machine Learning & Deep Learning',
-        'Numerical Methods for PDEs',
-        'Computational Mathematics',
-        'Optimization Techniques',
-        'High-Performance Computing'
-      ],
-      skills: ['Python', 'TensorFlow', 'MATLAB', 'C++', 'HPC', 'CFD'],
-      color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      id: 2,
-      degree: 'BSc in Mechanical Engineering',
-      institution: 'Koç University',
-      location: 'Istanbul, Turkey',
-      period: '2020 - 2023',
-      grade: 'GPA: 3.99/4.00',
-      achievement: 'Ranked 1st in class',
-      type: 'Bachelors',
-      status: 'completed',
-      highlights: [
-        'Graduated one year early',
-        'Merit scholarship ($30,000 annually)',
-        'Teaching Assistant for multiple courses',
-        'Perfect academic standing'
-      ],
-      modules: [
-        'Propulsion Systems',
-        'Microsensors and Nanotechnology',
-        'Makerspace and Design',
-        'Finite Element Method',
-        'Fluid Mechanics',
-        'Numerical Methods'
-      ],
-      skills: ['SolidWorks', 'ANSYS', 'MATLAB', 'AutoCAD', 'FEA', 'CFD'],
-      color: 'from-purple-500 to-pink-600'
-    }
-  ]
-
-  const teachingExperience = [
-    {
-      course: 'Introduction to Engineering',
-      role: 'Teaching Assistant',
-      description: 'Guided first-year students through fundamental engineering concepts'
-    },
-    {
-      course: 'Fluid Mechanics',
-      role: 'Teaching Assistant', 
-      description: 'Assisted students with complex fluid dynamics problems'
-    },
-    {
-      course: 'Numerical Methods',
-      role: 'Teaching Assistant',
-      description: 'Helped students understand computational approaches to engineering'
-    }
-  ]
 
 
   return (
@@ -97,7 +25,7 @@ const Education = () => {
 
         {/* Education Cards */}
         <div className="grid gap-12">
-          {educationData.map((edu, index) => (
+          {(educationData as any).educationData.map((edu: any, index: number) => (
             <motion.div
               key={edu.id}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -139,7 +67,7 @@ const Education = () => {
                         Highlights
                       </h3>
                       <ul className="space-y-3">
-                        {edu.highlights.map((highlight, idx) => (
+                        {edu.highlights.map((highlight: string, idx: number) => (
                           <li key={idx} className="flex items-start gap-2">
                             <span className="text-blue-500 flex-shrink-0 mt-1">•</span>
                             <span className="text-gray-700 dark:text-gray-300 text-sm">{highlight}</span>
@@ -154,7 +82,7 @@ const Education = () => {
                         Key Modules
                       </h3>
                       <div className="space-y-2">
-                        {edu.modules.map((module, idx) => (
+                        {edu.modules.map((module: string, idx: number) => (
                           <span
                             key={idx}
                             className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
@@ -171,7 +99,7 @@ const Education = () => {
                         Skills Developed
                       </h3>
                       <div className="space-y-2">
-                        {edu.skills.map((skill, idx) => (
+                        {edu.skills.map((skill: string, idx: number) => (
                           <span
                             key={idx}
                             className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2"
@@ -199,7 +127,7 @@ const Education = () => {
             Teaching Experience
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {teachingExperience.map((exp, index) => (
+            {(educationData as any).teachingExperience.map((exp: any, index: number) => (
               <motion.div
                 key={exp.course}
                 initial={{ opacity: 0, y: 20 }}

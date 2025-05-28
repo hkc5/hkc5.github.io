@@ -1,0 +1,74 @@
+{
+  "educationData": [
+    {
+      "id": 1,
+      "degree": "MSc in Applied Computational Science and Engineering",
+      "institution": "Imperial College London",
+      "location": "London, UK",
+      "period": "2023 - 2024",
+      "grade": "Distinction (78.27%)",
+      "achievement": "Highest overall grade in class",
+      "type": "Masters",
+      "status": "completed",
+      "highlights": [
+        "Class representative",
+        "Specialized in ML for computational problems",
+        "Distinction with highest grade",
+        "Advanced research in AI-CFD integration"
+      ],
+      "modules": [
+        "Machine Learning & Deep Learning",
+        "Numerical Methods for PDEs",
+        "Computational Mathematics",
+        "Optimization Techniques",
+        "High-Performance Computing"
+      ],
+      "skills": ["Python", "TensorFlow", "MATLAB", "C++", "HPC", "CFD"],
+      "color": "from-blue-500 to-indigo-600"
+    },
+    {
+      "id": 2,
+      "degree": "BSc in Mechanical Engineering",
+      "institution": "Koç University",
+      "location": "Istanbul, Turkey",
+      "period": "2020 - 2023",
+      "grade": "GPA: 3.99/4.00",
+      "achievement": "Ranked 1st in class",
+      "type": "Bachelors",
+      "status": "completed",
+      "highlights": [
+        "Graduated one year early",
+        "Merit scholarship ($30,000 annually)",
+        "Teaching Assistant for multiple courses",
+        "Perfect academic standing"
+      ],
+      "modules": [
+        "Propulsion Systems",
+        "Microsensors and Nanotechnology",
+        "Makerspace and Design",
+        "Finite Element Method",
+        "Fluid Mechanics",
+        "Numerical Methods"
+      ],
+      "skills": ["SolidWorks", "ANSYS", "MATLAB", "AutoCAD", "FEA", "CFD"],
+      "color": "from-purple-500 to-pink-600"
+    }
+  ],
+  "teachingExperience": [
+    {
+      "course": "Introduction to Engineering",
+      "role": "Teaching Assistant",
+      "description": "Guided first-year students through fundamental engineering concepts"
+    },
+    {
+      "course": "Fluid Mechanics",
+      "role": "Teaching Assistant", 
+      "description": "Assisted students with complex fluid dynamics problems"
+    },
+    {
+      "course": "Numerical Methods",
+      "role": "Teaching Assistant",
+      "description": "Helped students understand computational approaches to engineering"
+    }
+  ]
+}
