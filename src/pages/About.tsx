@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { Code, Database, Cloud, Cpu, Award, Target } from 'lucide-react'
 import skillsData from '../content/skills.json'
+import SimpleCard from '../components/SimpleCard'
+import { animations } from '../utils/theme'
 
 const About = () => {
   const skillCategories = skillsData.skillCategories
@@ -57,19 +59,13 @@ const About = () => {
             {researchInterests.map((interest, index) => {
               const IconComponent = iconMap[interest.icon as keyof typeof iconMap]
               return (
-                <motion.div
+                <SimpleCard
                   key={interest.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <IconComponent className="text-blue-500" size={24} />
-                    <h3 className="text-xl font-bold text-gray-950 dark:text-white">{interest.title}</h3>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300">{interest.description}</p>
-                </motion.div>
+                  {...animations.fadeInWithDelay(index)}
+                  icon={IconComponent}
+                  title={interest.title}
+                  description={interest.description}
+                />
               )
             })}
           </div>
@@ -86,17 +82,12 @@ const About = () => {
             {skillCategories.map((category, categoryIndex) => {
               const IconComponent = iconMap[category.icon as keyof typeof iconMap]
               return (
-                <motion.div
+                <SimpleCard
                   key={category.title}
-                  initial={{ opacity: 0, x: categoryIndex % 2 === 0 ? -20 : 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * categoryIndex }}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6"
+                  {...animations.fadeInWithDelay(categoryIndex)}
+                  icon={IconComponent}
+                  title={category.title}
                 >
-                  <div className="flex items-center gap-3 mb-6">
-                    <IconComponent className="text-blue-600 dark:text-blue-400" size={28} />
-                    <h3 className="text-xl font-bold text-gray-950 dark:text-white">{category.title}</h3>
-                  </div>
                   <div className="space-y-4">
                     {category.skills.map((skill) => (
                       <div key={skill.name} className="border-l-2 border-blue-100 dark:border-blue-800 pl-4">
@@ -105,7 +96,7 @@ const About = () => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </SimpleCard>
               )
             })}
           </div>

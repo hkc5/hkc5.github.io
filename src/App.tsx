@@ -7,6 +7,8 @@ import Education from './pages/Education'
 import Experience from './pages/Experience'
 import Projects from './pages/Projects'
 import Publications from './pages/Publications'
+import Awards from './pages/Awards'
+// import PublicProfile from './pages/PublicProfile.tsx'
 import Contact from './pages/Contact'
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/publications" element={<Publications />} />
+            <Route path="/awards" element={<Awards />} />
+            {/* <Route path="/public-profile" element={<PublicProfile />} /> */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </motion.main>

@@ -1,0 +1,72 @@
+{
+  "awards": {
+    "title": "Awards & Achievements",
+    "description": "Recognition for academic excellence, hackathon victories, and competitive achievements.",
+    "categories": {
+      "hackathons": {
+        "title": "Hackathon Victories",
+        "items": [
+          {
+            "name": "Imperial College London AI Hackathon",
+            "position": "1st Place",
+            "year": "2024",
+            "description": "Developed an AI-powered medical diagnosis assistant using computer vision and NLP",
+            "teamSize": 4,
+            "technologies": ["Python", "TensorFlow", "FastAPI", "React"],
+            "prize": "£2,000 + Mentorship Program",
+            "achievement": "Built a working prototype in 48 hours that achieved 92% accuracy on medical image classification"
+          },
+          {
+            "name": "London Tech Week Hackathon",
+            "position": "2nd Place",
+            "year": "2024",
+            "description": "Created a sustainability-focused app for carbon footprint tracking with real-time recommendations",
+            "teamSize": 3,
+            "technologies": ["React Native", "Node.js", "MongoDB", "Google Maps API"],
+            "prize": "£1,000 + Startup Incubator Access",
+            "achievement": "Gained 500+ beta users within the first week of launch"
+          },
+          {
+            "name": "Koç University Innovation Challenge",
+            "position": "1st Place",
+            "year": "2023",
+            "description": "Designed an IoT-based smart irrigation system for agricultural optimization",
+            "teamSize": 5,
+            "technologies": ["Arduino", "Python", "Machine Learning", "IoT Sensors"],
+            "prize": "₺15,000 + Patent Support",
+            "achievement": "Prototype showed 35% water usage reduction in field tests"
+          }
+        ]
+      },
+      "academicExcellence": {
+        "title": "Academic Excellence",
+        "items": [
+          {
+            "name": "Imperial College London MSc Distinction",
+            "type": "Academic Achievement",
+            "year": "2024",
+            "description": "Achieved the highest overall grade (78.27%) in Applied Computational Science and Engineering",
+            "details": "Class representative and distinction with highest performance across all modules",
+            "recognition": "Highest Grade in Class"
+          },
+          {
+            "name": "First Ranking in Department",
+            "type": "Academic Achievement",
+            "year": "2023",
+            "description": "Graduated with first ranking in Mechanical Engineering Department with GPA 3.99/4.00",
+            "details": "Completed degree one year early while maintaining perfect academic standing",
+            "recognition": "Ranked 1st in Department"
+          },
+          {
+            "name": "Merit Scholarship",
+            "type": "Scholarship",
+            "year": "2020-2023",
+            "description": "Full merit scholarship of $30,000 annually at Koç University",
+            "details": "Awarded based on academic excellence and maintained throughout undergraduate studies",
+            "recognition": "$90,000 Total Value"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+// Theme configuration for consistent styling across the application
+
+export const colors = {
+  // Type colors for badges
+  type: {
+    'Full-time': 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    'Part-time': 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    'Research': 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
+    'MSc Dissertation': 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
+    'Research Project': 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    'Production System': 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    'Personal Project': 'bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200',
+    'Journal Article': 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
+    'Conference Paper': 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
+    'Thesis': 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
+    default: 'bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'
+  },
+  
+  // Status colors
+  status: {
+    current: 'bg-green-500',
+    completed: 'bg-blue-500',
+    default: 'bg-gray-400'
+  },
+  
+  // Position colors for awards
+  position: {
+    '1st Place': 'text-yellow-600 dark:text-yellow-400',
+    '2nd Place': 'text-gray-500 dark:text-gray-400',
+    '3rd Place': 'text-orange-600 dark:text-orange-400',
+    'Winner': 'text-green-600 dark:text-green-400',
+    'Finalist': 'text-blue-600 dark:text-blue-400',
+    default: 'text-gray-600 dark:text-gray-400'
+  }
+}
+
+export const getTypeColor = (type: string): string => {
+  return colors.type[type as keyof typeof colors.type] || colors.type.default
+}
+
+export const getStatusColor = (status: string): string => {
+  return colors.status[status as keyof typeof colors.status] || colors.status.default
+}
+
+export const getPositionColor = (position: string): string => {
+  return colors.position[position as keyof typeof colors.position] || colors.position.default
+}
+
+// Common styles
+export const cardStyles = {
+  base: 'bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden',
+  header: 'bg-gray-100 dark:bg-gray-700 p-6',
+  content: 'p-6',
+  badge: 'px-3 py-1 rounded-full text-xs font-medium',
+  skillTag: 'inline-block px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2',
+  techTag: 'inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2',
+  achievementTag: 'inline-block bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2'
+}
+
+// Animation variants
+export const animations = {
+  fadeInUp: {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  },
+  
+  fadeInWithDelay: (index: number) => ({
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, delay: index * 0.1 }
+  }),
+  
+  staggeredFadeIn: (index: number) => ({
+    initial: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.6, delay: index * 0.2 }
+  })
+}

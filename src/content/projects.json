@@ -2,6 +2,22 @@
   "projects": [
     {
       "id": 1,
+      "title": "X-Ray Hand Image Generation and Classification",
+      "type": "Research Project",
+      "organization": "Imperial College London",
+      "period": "Nov 2023 - Dec 2023",
+      "description": "Leveraged Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs) using PyTorch for X-Ray hand image generation. Trained on a dataset of 8000 images, this approach successfully synthesized high-quality, unique hand samples.",
+      "achievements": [
+        "Developed a ResNet-inspired neural network to accurately classify images as either VAE-generated, GAN-generated, or real",
+        "Achieved a remarkable 96% accuracy by training on a diverse dataset combining synthetic images from classroom projects with real images",
+        "Demonstrated advanced proficiency in image classification and deep learning techniques"
+      ],
+      "technologies": ["PyTorch", "Artificial Intelligence (AI)", "Python (Programming Language)", "Deep Learning", "Generative Modeling"],
+      "icon": "Image",
+      "status": "completed"
+    },
+    {
+      "id": 2,
       "title": "AI Surrogate Modeling for Turbulent Flow Simulations",
       "type": "MSc Dissertation",
       "organization": "Imperial College London",
@@ -18,7 +34,7 @@
       "status": "completed"
     },
     {
-      "id": 2,
+      "id": 10,
       "title": "Advanced Collagen Fiber Orientation Analysis",
       "type": "Research Project",
       "organization": "Pekkan Biofluid Mechanics Laboratory",
@@ -36,6 +52,40 @@
     },
     {
       "id": 3,
+      "title": "Strengthening Structures against Earthquakes: Viscous Wall Dampers",
+      "type": "Graduation Project",
+      "organization": "Koç University",
+      "period": "Jan 2023 - Jun 2023",
+      "description": "Ranked 2nd in the department among all graduation projects. Prototyped and assessed a Viscous Wall Damper system for seismic resilience, utilizing experimentation, simulation, and theoretical data.",
+      "achievements": [
+        "Achieved 60% structural damage reduction in earthquakes",
+        "Implemented physical system modeling with validated COMSOL simulations",
+        "Ranked 2nd in the department among all graduation projects",
+        "Comprehensive analysis through combined experimentation and simulation"
+      ],
+      "technologies": ["Dynamic Modeling", "Simulink", "COMSOL", "MATLAB"],
+      "icon": "Building",
+      "status": "completed"
+    },
+    {
+      "id": 11,
+      "title": "Lunar Descent Vehicle Design with Reinforcement Learning",
+      "type": "Research Project",
+      "organization": "Koç University",
+      "period": "Sep 2022 - Jan 2023",
+      "description": "Designed a lunar descent vehicle for payload transportation from lunar orbit to the moon's surface, with a focus on safety, minimizing hardware mass, and ensuring robustness under lunar conditions.",
+      "achievements": [
+        "Addressed constraints in trajectory optimization using PDEs",
+        "Optimized fuel and oxidizer selection for lunar conditions",
+        "Focused on safety, efficiency, and operational effectiveness",
+        "Designed for the unique challenges of the lunar environment"
+      ],
+      "technologies": ["Space Systems", "Propulsion", "MATLAB", "Reinforcement Learning"],
+      "icon": "Rocket",
+      "status": "completed"
+    },
+    {
+      "id": 4,
       "title": "RAG Framework Development",
       "type": "Production System",
       "organization": "Albus Technologies",
@@ -52,7 +102,41 @@
       "status": "completed"
     },
     {
-      "id": 4,
+      "id": 5,
+      "title": "Automated Bag Valve Mask",
+      "type": "Engineering Project",
+      "organization": "Koç University",
+      "period": "Jan 2021 - Jun 2022",
+      "description": "Conceived an innovative automation approach for the Bag Valve Mask, integrating advanced compliance mechanisms, which resulted in a successfully tested prototype demonstrating improved efficacy and performance.",
+      "achievements": [
+        "Successfully tested functional prototype",
+        "Improved efficacy and performance over manual operation",
+        "Innovative compliance mechanisms integration",
+        "Complete end-to-end automation solution"
+      ],
+      "technologies": ["Computer-Aided Design (CAD)", "Mechanical Engineering", "Prototyping"],
+      "icon": "HeartPulse",
+      "status": "completed"
+    },
+    {
+      "id": 6,
+      "title": "Structural Health Monitoring of The Wing Spar",
+      "type": "Research Project",
+      "organization": "Koç University",
+      "period": "Jan 2021 - Jun 2021",
+      "description": "Ranked 2nd in the department among all projects. Developed a robust K-Nearest Neighbors (KNN) model to anticipate crack developments in the primary spar of a training aircraft using data from ANSYS Solid/Crack Mechanics module.",
+      "achievements": [
+        "Achieved 92.7% accuracy in forecasting crack occurrences",
+        "Enhanced model for predictive analysis beyond crack formations",
+        "Ranked 2nd in the department among all projects",
+        "Integrated ANSYS simulation data with machine learning"
+      ],
+      "technologies": ["Ansys Mechanical", "Machine Learning", "MATLAB", "Structural Analysis"],
+      "icon": "Plane",
+      "status": "completed"
+    },
+    {
+      "id": 7,
       "title": "Microrobotic Locomotion in Blood Vessels",
       "type": "Research Project",
       "organization": "Max Planck Institute for Intelligent Systems",
@@ -73,7 +157,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "Modern React Portfolio Website",
       "type": "Personal Project",
       "organization": "Personal Project",
@@ -92,23 +176,6 @@
         { "type": "github", "url": "https://github.com/hkc5/hkc5.github.io", "label": "View on GitHub" },
         { "type": "live", "url": "https://hkc5.github.io", "label": "Live Site" }
       ]
-    },
-    {
-      "id": 6,
-      "title": "Prime Video UI Migration",
-      "type": "Production System",
-      "organization": "Amazon",
-      "period": "2025",
-      "description": "Leading the migration of Prime Video UI elements from React to SolidJS to enhance performance, utilizing LLM-powered automation for efficient component refactoring.",
-      "achievements": [
-        "Performance optimization through SolidJS",
-        "LLM-powered automation pipelines",
-        "SDK development for Prime Video",
-        "Cross-platform compatibility"
-      ],
-      "technologies": ["SolidJS", "React", "TypeScript", "LLM Automation", "AWS Infrastructure"],
-      "icon": "Zap",
-      "status": "current"
     }
   ]
 }

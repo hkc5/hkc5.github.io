@@ -5,13 +5,13 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-0">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16"
+            className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 mt-8 sm:mt-0"
           >
             {/* Profile Picture */}
             <motion.div
@@ -20,7 +20,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex-shrink-0"
             >
-              <div className="w-48 h-60 lg:w-56 lg:h-72 relative">
+              <div className="w-48 h-60 lg:w-56 lg:h-72 relative mt-4 sm:mt-0">
                 <img
                   src="/profile.png"
                   alt="Hakancan Ozturk"
