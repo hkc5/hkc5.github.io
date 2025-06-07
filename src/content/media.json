@@ -1,0 +1,70 @@
+[
+  {
+    "id": "1",
+    "cardType": "video",
+    "type": "interview",
+    "title": "Academic Journey & Machine Learning Career Path",
+    "description": "Interview discussing my academic journey from mechanical engineering at Koç University to computational science at Imperial College London, research experiences in biomedical engineering and micro-robotics, and transition to machine learning engineering. Also covers advice on university life, building relationships with professors, and career decisions between academia and industry.",
+    "date": "2024-12-01",
+    "venue": "University Podcast Series",
+    "videoId": "3_oIuB2kRCE",
+    "tags": ["Academic Journey", "Machine Learning", "Career Advice", "University Life", "Research Experience"]
+  },
+  {
+    "id": "2",
+    "cardType": "image",
+    "type": "article",
+    "title": "Machine Learning Applications in Healthcare: A Comprehensive Review",
+    "description": "Published article exploring the current state and future potential of machine learning applications in healthcare, covering diagnostic imaging, drug discovery, and personalized medicine.",
+    "date": "2024-02-20",
+    "venue": "Journal of Medical AI",
+    "externalUrl": "https://example.com/ml-healthcare-review",
+    "imageUrl": "https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=Healthcare+ML+Research",
+    "tags": ["Machine Learning", "Healthcare", "Research", "Published Work"]
+  },
+  {
+    "id": "3",
+    "cardType": "text",
+    "type": "podcast",
+    "title": "Building Scalable Data Pipelines for Biomedical Research",
+    "description": "Podcast episode exploring best practices for designing and implementing robust data infrastructure in biomedical research environments.",
+    "date": "2024-01-10",
+    "venue": "DataEngineering Podcast",
+    "externalUrl": "https://example.com/data-pipelines-podcast",
+    "tags": ["Data Engineering", "Biomedical", "Infrastructure", "Scalability"]
+  },
+  {
+    "id": "4",
+    "cardType": "video",
+    "type": "talk",
+    "title": "Ethical Considerations in AI-Driven Healthcare",
+    "description": "Conference presentation examining the ethical implications of implementing AI systems in healthcare, including bias, privacy, and accountability concerns.",
+    "date": "2023-11-28",
+    "venue": "AI Ethics Conference",
+    "videoId": "dQw4w9WgXcQ",
+    "tags": ["AI Ethics", "Healthcare", "Privacy", "Bias"]
+  },
+  {
+    "id": "5",
+    "cardType": "image",
+    "type": "featured",
+    "title": "Featured in TechCrunch: Young Innovators in Healthcare AI",
+    "description": "Featured article highlighting my work in applying machine learning to healthcare challenges and the journey from academic research to industry innovation.",
+    "date": "2023-10-15",
+    "venue": "TechCrunch",
+    "externalUrl": "https://example.com/techcrunch-feature",
+    "imageUrl": "https://via.placeholder.com/600x400/10B981/FFFFFF?text=TechCrunch+Feature",
+    "tags": ["Featured", "Healthcare AI", "Innovation", "Industry Recognition"]
+  },
+  {
+    "id": "6",
+    "cardType": "text",
+    "type": "article",
+    "title": "The Future of Personalized Medicine Through AI",
+    "description": "Opinion piece discussing how artificial intelligence is revolutionizing personalized medicine, from genomic analysis to treatment optimization. Published in leading healthcare technology magazine.",
+    "date": "2023-08-22",
+    "venue": "Healthcare Tech Magazine",
+    "externalUrl": "https://example.com/personalized-medicine-ai",
+    "tags": ["Personalized Medicine", "AI", "Healthcare", "Opinion"]
+  }
+]
