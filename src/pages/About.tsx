@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion'
 import { Code, Database, Cloud, Cpu, Award, Target } from 'lucide-react'
 import skillsData from '../content/skills.json'
 import SimpleCard from '../components/SimpleCard'
-import { animations } from '../utils/theme'
+import { animations, pageStyles } from '../utils/theme'
 
 const About = () => {
   const skillCategories = skillsData.skillCategories
@@ -14,30 +13,20 @@ const About = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12">
+    <div className={pageStyles.standardPage.container}>
+      <div className={pageStyles.standardPage.wrapper}>
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-5xl font-bold text-gray-950 dark:text-white mb-6">
+        <div className={pageStyles.standardPage.header}>
+          <h1 className={pageStyles.standardPage.title}>
             About Me
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className={pageStyles.standardPage.description}>
             Hi! I'm <strong>Hakancan Ozturk</strong>, a Software Development Engineer at Amazon with a background in machine learning and computational science. I specialize in Retrieval-Augmented Generation (RAG), computational fluid dynamics (CFD), and generative AI.
           </p>
-        </motion.div>
+        </div>
 
         {/* Background Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-12"
-        >
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-12">
           <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-6">Background</h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
             I am a machine learning engineer with a background in applied computational science and mechanical engineering. My expertise spans AI, computational modeling, and data-driven solutions, with a focus on fluid dynamics and information retrieval. I have extensive hands-on experience with both research and production environments, working on projects involving Retrieval-Augmented Generation (RAG) frameworks, AI-driven flow simulations, and innovative engineering designs.
@@ -45,15 +34,10 @@ const About = () => {
           <blockquote className="border-l-4 border-blue-500 pl-6 italic text-gray-600 dark:text-gray-400">
             "My work is guided by a passion for leveraging AI to solve complex, real-world problems and a commitment to continuous learning."
           </blockquote>
-        </motion.div>
+        </div>
 
         {/* Research Interests */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-8 text-center">Research Interests</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {researchInterests.map((interest, index) => {
@@ -69,14 +53,10 @@ const About = () => {
               )
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Technical Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
+        <div>
           <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-8 text-center">Technical Skills</h2>
           <div className="grid lg:grid-cols-2 gap-8">
             {skillCategories.map((category, categoryIndex) => {
@@ -100,7 +80,7 @@ const About = () => {
               )
             })}
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { pageStyles } from '../utils/theme'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ const Contact = () => {
             timeZoneName: 'short'
           })
         },
-        'LAUPhjUhVErKdrDOd' // Your public key
+        'W3VpwCiTjfQPDfgBa' // Your public key
       )
       
       console.log('Email sent successfully:', result)
@@ -61,22 +61,20 @@ const Contact = () => {
   }
 
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-8">
+    <div className={pageStyles.standardPage.container}>
+      <div className={pageStyles.standardPage.wrapper}>
+        <div className={pageStyles.standardPage.header}>
+          <h1 className={pageStyles.standardPage.title}>
             Get In Touch
           </h1>
           
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl">
+          <p className={pageStyles.standardPage.description}>
             I'm always open to discussing new opportunities, collaborations, and innovative 
             projects. Feel free to reach out!
           </p>
-          
+        </div>
+        
+        <div className={pageStyles.standardPage.content}>
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
@@ -85,12 +83,7 @@ const Contact = () => {
               </h2>
               
               <div className="space-y-6">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                  className="flex items-center gap-4"
-                >
+                <div className="flex items-center gap-4">
                   <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
                     <Mail className="text-blue-600 dark:text-blue-400" size={24} />
                   </div>
@@ -98,143 +91,146 @@ const Contact = () => {
                     <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
                     <p className="text-gray-600 dark:text-gray-300">hakancan.ozturk23@gmail.com</p>
                   </div>
-                </motion.div>
+                </div>
                 
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="flex items-center gap-4"
-                >
+                <div className="flex items-center gap-4">
                   <div className="bg-purple-100 dark:bg-purple-900 p-3 rounded-lg">
                     <MapPin className="text-purple-600 dark:text-purple-400" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">Location</h3>
-                    <p className="text-gray-600 dark:text-gray-300">London, UK / Istanbul, Turkey</p>
+                    <p className="text-gray-600 dark:text-gray-300">London, UK</p>
                   </div>
-                </motion.div>
+                </div>
+              </div>
+              
+              {/* Quick Connect */}
+              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Quick Connect</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Looking for a quick chat? Feel free to send me a direct email or connect with me on social media.
+                </p>
+                <a
+                  href="mailto:hakancan.ozturk23@gmail.com"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <Mail size={16} />
+                  Send Email
+                </a>
               </div>
             </div>
             
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Send a Message
               </h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {submitStatus === 'success' && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="bg-green-100 dark:bg-green-900 border border-green-200 dark:border-green-800 rounded-lg p-4 flex items-center gap-3"
-                  >
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                  <div className="flex items-center gap-2">
                     <CheckCircle className="text-green-600 dark:text-green-400" size={20} />
-                    <p className="text-green-800 dark:text-green-200">
-                      Message sent successfully! I'll get back to you as soon as possible.
+                    <p className="text-green-800 dark:text-green-200 font-medium">
+                      Message sent successfully! I'll get back to you soon.
                     </p>
-                  </motion.div>
-                )}
-                
-                {submitStatus === 'error' && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="bg-red-100 dark:bg-red-900 border border-red-200 dark:border-red-800 rounded-lg p-4 flex items-center gap-3"
-                  >
-                    <AlertCircle className="text-red-600 dark:text-red-400" size={20} />
-                    <p className="text-red-800 dark:text-red-200">
-                      There was an error sending your message. Please try again or email me directly.
-                    </p>
-                  </motion.div>
-                )}
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                    placeholder="Your full name"
-                  />
+                  </div>
                 </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                    placeholder="your.email@example.com"
-                  />
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                  <div className="flex items-center gap-2">
+                    <AlertCircle className="text-red-600 dark:text-red-400" size={20} />
+                    <p className="text-red-800 dark:text-red-200 font-medium">
+                      Failed to send message. Please try again or send me an email directly.
+                    </p>
+                  </div>
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Subject
+                    Subject *
                   </label>
                   <input
                     type="text"
                     id="subject"
                     name="subject"
+                    required
                     value={formData.subject}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                    placeholder="Research collaboration, project inquiry, etc."
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white"
+                    placeholder="What's this about?"
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Message
+                    Message *
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
-                    placeholder="Tell me about your project, research interests, or how we might collaborate..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white resize-none"
+                    placeholder="Tell me about your project, opportunity, or just say hello!"
                   />
                 </div>
                 
-                <motion.button
+                <button
                   type="submit"
                   disabled={isSubmitting}
-                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                  className={`w-full px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 ${
+                  className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-lg transition-colors ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed text-white'
-                      : 'bg-blue-600 hover:bg-blue-700 text-white'
+                      : 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
                   }`}
                 >
-                  <Send size={20} />
+                  <Send size={16} />
                   {isSubmitting ? 'Sending...' : 'Send Message'}
-                </motion.button>
+                </button>
               </form>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

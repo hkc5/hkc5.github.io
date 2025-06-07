@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion'
 import { ExternalLink, Users, BookOpen, Award } from 'lucide-react'
 import publicationsData from '../content/publications.json'
 import experienceData from '../content/experience.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import BulletList from '../components/BulletList'
-import { animations, getTypeColor } from '../utils/theme'
+import { animations, getTypeColor, pageStyles } from '../utils/theme'
 
 const Publications = () => {
   const publications = publicationsData.publications
@@ -13,30 +12,20 @@ const Publications = () => {
   const currentResearch = publicationsData.currentResearch
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12">
+    <div className={pageStyles.standardPage.container}>
+      <div className={pageStyles.standardPage.wrapper}>
         {/* Header Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-5xl font-bold text-gray-950 dark:text-white mb-4">
+        <div className={pageStyles.standardPage.header}>
+          <h1 className={pageStyles.standardPage.title}>
             Publications
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className={pageStyles.standardPage.description}>
             Research contributions in computational fluid dynamics, microrobotics, and machine learning applications in biomedical engineering
           </p>
-        </motion.div>
+        </div>
 
         {/* Metrics Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-12"
-        >
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.totalCitations}</p>
@@ -55,10 +44,10 @@ const Publications = () => {
               <p className="text-sm text-gray-600 dark:text-gray-400">Publications</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Publications List */}
-        <div className="space-y-8">
+        <div className={pageStyles.standardPage.content}>
           {publications.map((pub, index) => (
             <Card
               key={pub.id}
@@ -112,12 +101,7 @@ const Publications = () => {
         </div>
 
         {/* Current Research Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16"
-        >
+        <div className="mt-16">
           <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">Current Research</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <SimpleCard
@@ -142,15 +126,10 @@ const Publications = () => {
               />
             </SimpleCard>
           </div>
-        </motion.div>
+        </div>
 
         {/* Research Highlights */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16"
-        >
+        <div className="mt-16">
           <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">
             Research Highlights
           </h2>
@@ -171,7 +150,7 @@ const Publications = () => {
               </SimpleCard>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

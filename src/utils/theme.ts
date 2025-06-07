@@ -87,12 +87,45 @@ export const buttonStyles = {
 }
 
 export const pageStyles = {
+  // Container backgrounds
   container: 'min-h-screen bg-gray-50 dark:bg-gray-900 py-8',
-  maxWidth: 'max-w-6xl mx-auto px-4 sm:px-6 lg:px-8',
+  containerWithTransition: 'min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300',
+  
+  // Width variations - standardized wider for better card display
+  standardWidth: 'max-w-6xl mx-auto px-4 sm:px-6 lg:px-8',  // Wider for better card layout
+  mediaWidth: 'max-w-6xl mx-auto px-4 sm:px-6 lg:px-8',     // Same width for consistency
+  
+  // Common header styles
   header: 'text-center mb-12',
-  title: 'text-4xl font-bold text-gray-900 dark:text-white mb-4',
-  description: 'text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto',
-  grid: 'grid gap-8 lg:gap-12 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1'
+  headerTitle: 'text-4xl font-bold text-gray-900 dark:text-white mb-4',
+  headerTitleLarge: 'text-5xl font-bold text-gray-900 dark:text-white mb-4',
+  headerDescription: 'text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto',
+  headerDescriptionLarge: 'text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto',
+  
+  // Grid layouts
+  singleColumnGrid: 'space-y-8',
+  standardGrid: 'grid gap-8 lg:gap-12 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1',
+  wideGrid: 'grid gap-8 lg:gap-12',
+  twoColumnGrid: 'grid md:grid-cols-2 gap-8',
+  
+  // Complete page templates
+  standardPage: {
+    container: 'min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300',
+    wrapper: 'max-w-6xl mx-auto px-4 py-12',
+    header: 'text-center mb-12',
+    title: 'text-5xl font-bold text-gray-900 dark:text-white mb-4',
+    description: 'text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto',
+    content: 'space-y-8'
+  },
+  
+  mediaPage: {
+    container: 'min-h-screen bg-gray-50 dark:bg-gray-900 py-8',
+    wrapper: 'max-w-6xl mx-auto px-4 sm:px-6 lg:px-8',
+    header: 'text-center mb-12',
+    title: 'text-4xl font-bold text-gray-900 dark:text-white mb-4',
+    description: 'text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto',
+    content: 'grid gap-8 lg:gap-12'
+  }
 }
 
 // Animation variants

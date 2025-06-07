@@ -1,35 +1,29 @@
-import { motion } from 'framer-motion'
 import { GraduationCap, BookOpen } from 'lucide-react'
 import educationData from '../content/education.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations } from '../utils/theme'
+import { animations, pageStyles } from '../utils/theme'
 
 const Education = () => {
 
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12">
+    <div className={pageStyles.standardPage.container}>
+      <div className={pageStyles.standardPage.wrapper}>
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className={pageStyles.standardPage.header}>
+          <h1 className={pageStyles.standardPage.title}>
             Education
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className={pageStyles.standardPage.description}>
             Academic journey focused on computational science, machine learning, and mechanical engineering with outstanding performance
           </p>
-        </motion.div>
+        </div>
 
         {/* Education Cards */}
-        <div className="grid gap-12">
+        <div className={pageStyles.standardPage.content}>
           {(educationData as any).educationData.map((edu: any, index: number) => (
             <Card
               key={edu.id}
@@ -72,12 +66,7 @@ const Education = () => {
         </div>
 
         {/* Teaching Experience */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16"
-        >
+        <div className="mt-16">
           <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">
             Teaching Experience
           </h2>
@@ -93,7 +82,7 @@ const Education = () => {
               />
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

@@ -82,21 +82,21 @@ const Media: React.FC = () => {
   );
 
   return (
-    <div className={pageStyles.container}>
-      <div className={pageStyles.maxWidth}>
+    <div className={pageStyles.mediaPage.container}>
+      <div className={pageStyles.mediaPage.wrapper}>
         {/* Header */}
-        <div className={pageStyles.header}>
-          <h1 className={pageStyles.title}>
+        <div className={pageStyles.mediaPage.header}>
+          <h1 className={pageStyles.mediaPage.title}>
             Media & Speaking
           </h1>
-          <p className={pageStyles.description}>
+          <p className={pageStyles.mediaPage.description}>
             A collection of my public speaking engagements, video collaborations, talks, and interviews 
             covering topics in data science, healthcare technology, and AI ethics.
           </p>
         </div>
 
         {/* Media Grid */}
-        <div className={pageStyles.grid}>
+        <div className={pageStyles.mediaPage.content}>
           {sortedMedia.map((item: MediaItem) => renderMediaCard(item))}
         </div>
 

@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion'
 import { Trophy, Medal, BookOpen, Users } from 'lucide-react'
 import awardsData from '../content/awards.json'
 import skillsData from '../content/skills.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
-import { animations, getPositionColor } from '../utils/theme'
+import { getPositionColor, pageStyles } from '../utils/theme'
 
 const Awards = () => {
   const data = awardsData as any
@@ -23,34 +22,25 @@ const Awards = () => {
   }
 
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+    <div className={pageStyles.standardPage.container}>
+      <div className={pageStyles.standardPage.wrapper}>
+        <div className={pageStyles.standardPage.header}>
+          <h1 className={pageStyles.standardPage.title}>
             {data.awards.title}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className={pageStyles.standardPage.description}>
             {data.awards.description}
           </p>
-        </motion.div>
+        </div>
 
-        {/* Categories */}
-        <div className="space-y-16">
-          {Object.entries(data.awards.categories).map(([categoryKey, category]: [string, any], categoryIndex) => {
+        <div className={pageStyles.standardPage.content}>
+          {Object.entries(data.awards.categories).map(([categoryKey, category]: [string, any]) => {
             const CategoryIcon = getCategoryIcon(categoryKey)
             
             return (
-              <motion.section
+              <section
                 key={categoryKey}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                className="mb-16"
               >
                 {/* Category Header */}
                 <div className="flex items-center mb-8">
@@ -67,7 +57,6 @@ const Awards = () => {
                   {category.items.map((item: any, index: number) => (
                     <Card
                       key={index}
-                      {...animations.fadeInWithDelay(index)}
                       icon={CategoryIcon}
                       title={item.name}
                       period={item.year}
@@ -123,46 +112,40 @@ const Awards = () => {
                     </Card>
                   ))}
                 </div>
-              </motion.section>
+              </section>
             )
           })}
-        </div>
 
-        {/* Test Scores Section (Moved from About page) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16"
-        >
-          <div className="flex items-center mb-8 justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Standardized Test Scores
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {data.testScores && data.testScores.map((score: any, index: number) => (
-              <SimpleCard
-                key={score.name}
-                {...animations.fadeInWithDelay(index)}
-                title={score.name}
-                subtitle={score.date}
-                className="text-center"
-              >
-                <div className="space-y-2 mt-3">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    {score.score}
+          {/* Test Scores Section */}
+          <section className="mt-16">
+            <div className="flex items-center mb-8 justify-center">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Standardized Test Scores
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {data.testScores && data.testScores.map((score: any) => (
+                <SimpleCard
+                  key={score.name}
+                  title={score.name}
+                  subtitle={score.date}
+                  className="text-center"
+                >
+                  <div className="space-y-2 mt-3">
+                    <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                      {score.score}
+                    </div>
+                    {score.detail && (
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {score.detail}
+                      </p>
+                    )}
                   </div>
-                  {score.detail && (
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {score.detail}
-                    </p>
-                  )}
-                </div>
-              </SimpleCard>
-            ))}
-          </div>
-        </motion.div>
+                </SimpleCard>
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   )
