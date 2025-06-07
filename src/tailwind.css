@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Define custom variant for dark mode using class-based toggling */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* HTML base configuration */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles with standard Tailwind */
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}

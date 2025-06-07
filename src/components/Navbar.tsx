@@ -1,16 +1,33 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(() => {
+    // Check localStorage for saved preference or use system preference
+    const savedTheme = localStorage.getItem('theme')
+    return savedTheme === 'dark' || 
+           (savedTheme === null && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  })
   const location = useLocation()
 
+  // Apply dark class to HTML element on component mount and when isDark changes
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [isDark])
+
   const toggleTheme = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle('dark')
+    const newIsDark = !isDark
+    setIsDark(newIsDark)
+    
+    // Save to localStorage
+    localStorage.setItem('theme', newIsDark ? 'dark' : 'light')
   }
 
   const navigation = [
