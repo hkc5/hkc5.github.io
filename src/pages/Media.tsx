@@ -3,6 +3,7 @@ import { Card } from '../components/Card';
 import { VideoCard } from '../components/VideoCard';
 import { ImageCard } from '../components/ImageCard';
 import { TextCard } from '../components/TextCard';
+import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, pageStyles } from '../utils/theme';
 import mediaData from '../content/media.json';
 
 interface MediaItem {
@@ -22,51 +23,9 @@ interface MediaItem {
 
 // Sample media data - replace with actual content
 const Media: React.FC = () => {
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'talk':
-        return 'bg-blue-100 text-blue-800';
-      case 'interview':
-        return 'bg-green-100 text-green-800';
-      case 'collaboration':
-        return 'bg-purple-100 text-purple-800';
-      case 'article':
-        return 'bg-amber-100 text-amber-800';
-      case 'podcast':
-        return 'bg-rose-100 text-rose-800';
-      case 'video':
-        return 'bg-indigo-100 text-indigo-800';
-      case 'featured':
-        return 'bg-emerald-100 text-emerald-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'talk':
-        return 'Talk';
-      case 'interview':
-        return 'Interview';
-      case 'collaboration':
-        return 'Collaboration';
-      case 'article':
-        return 'Article';
-      case 'podcast':
-        return 'Podcast';
-      case 'video':
-        return 'Video';
-      case 'featured':
-        return 'Featured';
-      default:
-        return type;
-    }
-  };
-
   const renderMediaCard = (item: MediaItem) => {
     const typeColor = getTypeColor(item.type);
-    const typeLabel = getTypeLabel(item.type);
+    const typeLabel = getMediaTypeLabel(item.type);
 
     switch (item.cardType) {
       case 'video':
@@ -123,27 +82,27 @@ const Media: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className={pageStyles.container}>
+      <div className={pageStyles.maxWidth}>
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className={pageStyles.header}>
+          <h1 className={pageStyles.title}>
             Media & Speaking
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className={pageStyles.description}>
             A collection of my public speaking engagements, video collaborations, talks, and interviews 
             covering topics in data science, healthcare technology, and AI ethics.
           </p>
         </div>
 
         {/* Media Grid */}
-        <div className="grid gap-8 lg:gap-12 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1">
+        <div className={pageStyles.grid}>
           {sortedMedia.map((item: MediaItem) => renderMediaCard(item))}
         </div>
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <Card title="Speaking Opportunities" className="bg-gradient-to-r from-blue-50 to-indigo-50">
+          <Card title="Speaking Opportunities" className={cardStyles.callToAction}>
             <div className="py-8">
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
                 Interested in having me speak at your event or collaborate on a project? 
@@ -151,7 +110,7 @@ const Media: React.FC = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className={buttonStyles.primary}
               >
                 Get in Touch
               </a>
