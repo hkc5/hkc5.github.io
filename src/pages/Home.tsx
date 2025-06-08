@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
+import ParticleBackground from '../components/ParticleBackground'
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="relative min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      {/* Particle Background */}
+      <ParticleBackground />
+      
       {/* Hero Section */}
-      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-0">
+      <section className="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-0">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -21,11 +25,15 @@ const Home = () => {
               className="flex-shrink-0"
             >
               <div className="w-48 h-60 lg:w-56 lg:h-72 relative mt-4 sm:mt-0">
-                <img
-                  src="/profile.png"
-                  alt="Hakancan Ozturk"
-                  className="w-full h-full rounded-lg object-cover shadow-lg"
-                />
+                <picture>
+                  <source srcSet="/profile.webp" type="image/webp" />
+                  <img
+                    src="/profile.png"
+                    alt="Hakancan Ozturk"
+                    className="w-full h-full rounded-lg object-cover shadow-lg"
+                    loading="eager"
+                  />
+                </picture>
                 <div className="absolute inset-0 rounded-lg ring-4 ring-blue-500/20 ring-offset-4 ring-offset-white dark:ring-offset-gray-900"></div>
               </div>
             </motion.div>
@@ -107,7 +115,7 @@ const Home = () => {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="flex justify-center pb-8"
+        className="relative z-10 flex justify-center pb-8"
       >
         <ArrowDown className="text-gray-400 dark:text-gray-500" size={24} />
       </motion.div>

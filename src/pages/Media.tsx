@@ -103,8 +103,8 @@ const Media: React.FC = () => {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <Card title="Speaking Opportunities" className={cardStyles.callToAction}>
-            <div className="py-8">
-              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+            <div className="py-4">
+              <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
                 Interested in having me speak at your event or collaborate on a project? 
                 I'd love to discuss opportunities to share insights on data science, healthcare technology, and AI ethics.
               </p>
