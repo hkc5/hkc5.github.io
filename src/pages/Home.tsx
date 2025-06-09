@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
 import ParticleBackground from '../components/ParticleBackground'
+import SEO from '../components/SEO'
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <>
+      <SEO />
+      <div className="relative min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Particle Background */}
       <ParticleBackground />
       
@@ -119,7 +122,8 @@ const Home = () => {
       >
         <ArrowDown className="text-gray-400 dark:text-gray-500" size={24} />
       </motion.div>
-    </div>
+      </div>
+    </>
   )
 }
 

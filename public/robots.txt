@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hakancanozturk.com/sitemap.xml
+
+# Block development files
+Disallow: /src/
+Disallow: /*.json
+Disallow: /node_modules/
