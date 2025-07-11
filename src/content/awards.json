@@ -17,24 +17,14 @@
             "achievement": "Built a working prototype in 48 hours that achieved 92% accuracy on medical image classification"
           },
           {
-            "name": "London Tech Week Hackathon",
-            "position": "2nd Place",
-            "year": "2024",
-            "description": "Created a sustainability-focused app for carbon footprint tracking with real-time recommendations",
-            "teamSize": 3,
-            "technologies": ["React Native", "Node.js", "MongoDB", "Google Maps API"],
-            "prize": "£1,000 + Startup Incubator Access",
-            "achievement": "Gained 500+ beta users within the first week of launch"
-          },
-          {
-            "name": "Koç University Innovation Challenge",
-            "position": "1st Place",
-            "year": "2023",
-            "description": "Designed an IoT-based smart irrigation system for agricultural optimization",
-            "teamSize": 5,
-            "technologies": ["Arduino", "Python", "Machine Learning", "IoT Sensors"],
-            "prize": "₺15,000 + Patent Support",
-            "achievement": "Prototype showed 35% water usage reduction in field tests"
+            "name": "KPMG Ideation Challenge",
+            "position": "Global Finalist",
+            "year": "2021",
+            "description": "Recognized as the top team in Turkey for the KPMG Ideation Challenge. Developed CoPeer, a B2B wellness platform designed to connect therapists privately with employees, promoting workplace mental health.",
+            "teamSize": 4,
+            "technologies": ["B2B Platform Development", "Mental Health Tech", "MVP Development"],
+            "prize": "National Recognition",
+            "achievement": "Collaborated remotely with a Turkey-based team to create a minimum viable product in a competitive, innovation-focused environment. Presented our work to global KPMG executives as global finalists."
           }
         ]
       },
