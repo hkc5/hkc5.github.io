@@ -13,6 +13,10 @@ interface CardProps {
   icon?: React.ComponentType<{ size: number; className: string }>
   title: string
   subtitle?: string
+  subtitleBadge?: {
+    label: string
+    className: string
+  }
   organization?: string
   location?: string
   period?: string
@@ -40,6 +44,7 @@ export const Card: React.FC<CardProps> = ({
   icon: IconComponent,
   title,
   subtitle,
+  subtitleBadge,
   organization,
   location,
   period,
@@ -69,9 +74,16 @@ export const Card: React.FC<CardProps> = ({
                 {title}
               </h3>
               {subtitle && (
-                <p className="text-lg font-medium text-gray-800 dark:text-gray-300">
-                  {subtitle}
-                </p>
+                <div className="flex items-center gap-3">
+                  <p className="text-lg font-medium text-gray-800 dark:text-gray-300">
+                    {subtitle}
+                  </p>
+                  {subtitleBadge && (
+                    <span className={`${cardStyles.badge} ${subtitleBadge.className}`}>
+                      {subtitleBadge.label}
+                    </span>
+                  )}
+                </div>
               )}
               {organization && (
                 <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 mb-1">
@@ -96,7 +108,7 @@ export const Card: React.FC<CardProps> = ({
           
           {/* Badges */}
           {(type || status || customBadges.length > 0) && (
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center flex-shrink-0">
               {type && (
                 <span className={`${cardStyles.badge} ${getTypeColor(type)}`}>
                   {type}

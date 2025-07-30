@@ -56,14 +56,18 @@ const Publications = () => {
               icon={BookOpen}
               title={pub.title}
               subtitle={pub.journal}
+              subtitleBadge={{
+                label: pub.type,
+                className: getTypeColor(pub.type)
+              }}
               customBadges={[
-                {
-                  label: pub.type,
-                  className: getTypeColor(pub.type)
-                },
+                ...(pub.citations > 0 ? [{
+                  label: `${pub.citations} citations`,
+                  className: 'bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 text-blue-900 dark:text-blue-200 whitespace-nowrap'
+                }] : []),
                 {
                   label: pub.year.toString(),
-                  className: 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'
+                  className: 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 !font-bold'
                 }
               ]}
             >
