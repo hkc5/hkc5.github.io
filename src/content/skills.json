@@ -4,9 +4,18 @@
       "title": "Programming Languages",
       "icon": "Code",
       "skills": [
-        { "name": "Python", "description": "NumPy, SciPy, PyTorch, TensorFlow" },
-        { "name": "JavaScript/TypeScript", "description": "React, Node.js, Modern web development" },
-        { "name": "C++", "description": "High-performance computing applications" },
+        {
+          "name": "Python",
+          "description": "NumPy, SciPy, PyTorch, TensorFlow"
+        },
+        {
+          "name": "JavaScript/TypeScript",
+          "description": "React, Node.js, Modern web development"
+        },
+        {
+          "name": "C++",
+          "description": "High-performance computing applications"
+        },
         { "name": "MATLAB", "description": "Scientific computing and analysis" }
       ]
     },
@@ -14,8 +23,14 @@
       "title": "Machine Learning & AI",
       "icon": "Cpu",
       "skills": [
-        { "name": "PyTorch & TensorFlow", "description": "Deep learning frameworks" },
-        { "name": "RAG Systems", "description": "Advanced retrieval-augmented generation" },
+        {
+          "name": "PyTorch & TensorFlow",
+          "description": "Deep learning frameworks"
+        },
+        {
+          "name": "RAG Systems",
+          "description": "Advanced retrieval-augmented generation"
+        },
         { "name": "Computer Vision", "description": "CNNs, diffusion models" },
         { "name": "FastAPI", "description": "ML API development" }
       ]
@@ -27,7 +42,10 @@
         { "name": "AWS", "description": "Lambda, cloud computing" },
         { "name": "Docker", "description": "Containerization" },
         { "name": "GitHub Actions", "description": "CI/CD workflows" },
-        { "name": "High-Performance Computing", "description": "GPU clusters, parallel computing" }
+        {
+          "name": "High-Performance Computing",
+          "description": "GPU clusters, parallel computing"
+        }
       ]
     },
     {
@@ -35,7 +53,10 @@
       "icon": "Database",
       "skills": [
         { "name": "COMSOL", "description": "CFD and mechanics simulations" },
-        { "name": "ANSYS Fluent", "description": "Computational fluid dynamics" },
+        {
+          "name": "ANSYS Fluent",
+          "description": "Computational fluid dynamics"
+        },
         { "name": "Siemens NX", "description": "CAD and engineering design" }
       ]
     }
@@ -89,7 +110,7 @@
     },
     {
       "name": "AP Calculus",
-      "score": "5/5", 
+      "score": "5/5",
       "detail": "Perfect score",
       "date": "2019"
     }
@@ -97,8 +118,21 @@
   "volunteering": [
     {
       "role": "Mentor",
+      "organization": "Imperial College London",
+      "period": "June 2025 - Present",
+      "description": "Mentored 3 Imperial College London students in developing an AI-powered mobile app for GCSE test review.",
+      "activities": [
+        "Guided students on infrastructure setup for scalable mobile app development",
+        "Advised on AI integration for personalized test review and feedback",
+        "Enabled rapid prototyping and deployment using Amazon Web Services, Flutter, and FastAPI"
+      ],
+      "field": "Education",
+      "duration": "Completed"
+    },
+    {
+      "role": "Mentor",
       "organization": "Koç University",
-      "period": "Jan 2023 - Present",
+      "period": "Jan 2025 - Present",
       "description": "Mentoring two Koç University students - one studying Computer Science and another pursuing a double major in Economics & Electrical Engineering.",
       "activities": [
         "Providing guidance on academic and professional development",

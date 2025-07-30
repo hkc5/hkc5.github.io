@@ -12,7 +12,13 @@
         "Achieved a remarkable 96% accuracy by training on a diverse dataset combining synthetic images from classroom projects with real images",
         "Demonstrated advanced proficiency in image classification and deep learning techniques"
       ],
-      "technologies": ["PyTorch", "Artificial Intelligence (AI)", "Python (Programming Language)", "Deep Learning", "Generative Modeling"],
+      "technologies": [
+        "PyTorch",
+        "Artificial Intelligence (AI)",
+        "Python (Programming Language)",
+        "Deep Learning",
+        "Generative Modeling"
+      ],
       "icon": "Image",
       "status": "completed"
     },
@@ -29,7 +35,13 @@
         "50% improved prediction accuracy",
         "1000+ GPU hours of HPC optimization"
       ],
-      "technologies": ["Python", "PyTorch", "COMSOL Multiphysics", "High-Performance Computing", "Neural Networks"],
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "COMSOL Multiphysics",
+        "High-Performance Computing",
+        "Neural Networks"
+      ],
       "icon": "Zap",
       "status": "completed"
     },
@@ -46,9 +58,24 @@
         "10x dataset size increase",
         "Advanced bio-imaging analysis with FFT and SVR"
       ],
-      "technologies": ["Python", "PyTorch", "Computer Vision", "FFT", "SVR", "CNNs", "Generative Diffusion Models"],
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "Computer Vision",
+        "FFT",
+        "SVR",
+        "CNNs",
+        "Generative Diffusion Models"
+      ],
       "icon": "Award",
-      "status": "completed"
+      "status": "completed",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/hkc5/fiber-prediction",
+          "label": "View on GitHub"
+        }
+      ]
     },
     {
       "id": 3,
@@ -80,9 +107,21 @@
         "Focused on safety, efficiency, and operational effectiveness",
         "Designed for the unique challenges of the lunar environment"
       ],
-      "technologies": ["Space Systems", "Propulsion", "MATLAB", "Reinforcement Learning"],
+      "technologies": [
+        "Space Systems",
+        "Propulsion",
+        "MATLAB",
+        "Reinforcement Learning"
+      ],
       "icon": "Rocket",
-      "status": "completed"
+      "status": "completed",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/hkc5/lunar-landing",
+          "label": "View on GitHub"
+        }
+      ]
     },
     {
       "id": 4,
@@ -97,7 +136,14 @@
         "Automated CI/CD workflows",
         "Thousands of daily queries served"
       ],
-      "technologies": ["Python", "FastAPI", "AWS Lambda", "Vector Databases", "Docker", "CI/CD"],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "AWS Lambda",
+        "Vector Databases",
+        "Docker",
+        "CI/CD"
+      ],
       "icon": "Code",
       "status": "completed"
     },
@@ -114,7 +160,11 @@
         "Innovative compliance mechanisms integration",
         "Complete end-to-end automation solution"
       ],
-      "technologies": ["Computer-Aided Design (CAD)", "Mechanical Engineering", "Prototyping"],
+      "technologies": [
+        "Computer-Aided Design (CAD)",
+        "Mechanical Engineering",
+        "Prototyping"
+      ],
       "icon": "HeartPulse",
       "status": "completed"
     },
@@ -131,7 +181,12 @@
         "Ranked 2nd in the department among all projects",
         "Integrated ANSYS simulation data with machine learning"
       ],
-      "technologies": ["Ansys Mechanical", "Machine Learning", "MATLAB", "Structural Analysis"],
+      "technologies": [
+        "Ansys Mechanical",
+        "Machine Learning",
+        "MATLAB",
+        "Structural Analysis"
+      ],
       "icon": "Plane",
       "status": "completed"
     },
@@ -148,12 +203,25 @@
         "Published in Scientific Reports",
         "HPC-optimized COMSOL simulations"
       ],
-      "technologies": ["COMSOL Multiphysics", "MATLAB", "High-Performance Computing", "CFD Analysis"],
+      "technologies": [
+        "COMSOL Multiphysics",
+        "MATLAB",
+        "High-Performance Computing",
+        "CFD Analysis"
+      ],
       "icon": "Award",
       "status": "completed",
       "links": [
-        { "type": "publication", "url": "https://doi.org/10.1002/aisy.202300099", "label": "Advanced Intelligent Systems" },
-        { "type": "publication", "url": "https://doi.org/10.1038/s41598-023-37332-5", "label": "Scientific Reports" }
+        {
+          "type": "publication",
+          "url": "https://doi.org/10.1002/aisy.202300099",
+          "label": "Advanced Intelligent Systems"
+        },
+        {
+          "type": "publication",
+          "url": "https://doi.org/10.1038/s41598-023-37332-5",
+          "label": "Scientific Reports"
+        }
       ]
     },
     {
@@ -169,12 +237,27 @@
         "Dark/light mode toggle",
         "Automated GitHub Pages deployment"
       ],
-      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "React Router"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Router"
+      ],
       "icon": "Code",
       "status": "completed",
       "links": [
-        { "type": "github", "url": "https://github.com/hkc5/hkc5.github.io", "label": "View on GitHub" },
-        { "type": "live", "url": "https://hkc5.github.io", "label": "Live Site" }
+        {
+          "type": "github",
+          "url": "https://github.com/hkc5/hkc5.github.io",
+          "label": "View on GitHub"
+        },
+        {
+          "type": "live",
+          "url": "https://hkc5.github.io",
+          "label": "Live Site"
+        }
       ]
     }
   ]

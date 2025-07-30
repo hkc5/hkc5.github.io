@@ -7,22 +7,53 @@
         "title": "Hackathon Victories",
         "items": [
           {
-            "name": "Imperial College London AI Hackathon",
+            "name": "Riverflex Augmented Intelligence Hackathon",
+            "position": "Participant (Handpicked)",
+            "year": "2025",
+            "description": "Handpicked to participate in an exclusive AI hackathon with global retail clients. Developed an AI-native Customer Relationship Management prototype to tackle real-world business challenges.",
+            "teamSize": 3,
+            "technologies": [
+              "AI/ML",
+              "CRM Development",
+              "Prototype Development",
+              "Customer Intelligence"
+            ],
+            "prize": "Invitation-Only Event",
+            "achievement": "Created AI-native CRM prototype blending strategic creativity with engineering to solve retail industry challenges"
+          },
+          {
+            "name": "Imperial / Viriden Hackathon",
             "position": "1st Place",
             "year": "2024",
-            "description": "Developed an AI-powered medical diagnosis assistant using computer vision and NLP",
-            "teamSize": 4,
-            "technologies": ["Python", "TensorFlow", "FastAPI", "React"],
-            "prize": "£2,000 + Mentorship Program",
-            "achievement": "Built a working prototype in 48 hours that achieved 92% accuracy on medical image classification"
+            "description": "Developed a machine learning model for carbon capture analysis using 4D seismic data. Applied clustering algorithms to identify significant geological changes in CO2 reservoirs over time.",
+            "teamSize": 2,
+            "technologies": [
+              "Python",
+              "Machine Learning",
+              "KMeans Clustering",
+              "Seismic Data Analysis"
+            ],
+            "prize": "£200",
+            "achievement": "Built ML model to detect significant seismic changes and spatial patterns in carbon capture reservoirs using threshold-based analysis and clustering",
+            "links": [
+              {
+                "type": "github",
+                "url": "https://github.com/hkc5/HWH_CGG",
+                "label": "View on GitHub"
+              }
+            ]
           },
           {
             "name": "KPMG Ideation Challenge",
             "position": "Global Finalist",
             "year": "2021",
             "description": "Recognized as the top team in Turkey for the KPMG Ideation Challenge. Developed CoPeer, a B2B wellness platform designed to connect therapists privately with employees, promoting workplace mental health.",
-            "teamSize": 4,
-            "technologies": ["B2B Platform Development", "Mental Health Tech", "MVP Development"],
+            "teamSize": 5,
+            "technologies": [
+              "B2B Platform Development",
+              "Mental Health Tech",
+              "MVP Development"
+            ],
             "prize": "National Recognition",
             "achievement": "Collaborated remotely with a Turkey-based team to create a minimum viable product in a competitive, innovation-focused environment. Presented our work to global KPMG executives as global finalists."
           }
@@ -31,22 +62,6 @@
       "academicExcellence": {
         "title": "Academic Excellence",
         "items": [
-          {
-            "name": "Imperial College London MSc Distinction",
-            "type": "Academic Achievement",
-            "year": "2024",
-            "description": "Achieved the highest overall grade (78.27%) in Applied Computational Science and Engineering",
-            "details": "Class representative and distinction with highest performance across all modules",
-            "recognition": "Highest Grade in Class"
-          },
-          {
-            "name": "First Ranking in Department",
-            "type": "Academic Achievement",
-            "year": "2023",
-            "description": "Graduated with first ranking in Mechanical Engineering Department with GPA 3.99/4.00",
-            "details": "Completed degree one year early while maintaining perfect academic standing",
-            "recognition": "Ranked 1st in Department"
-          },
           {
             "name": "Merit Scholarship",
             "type": "Scholarship",

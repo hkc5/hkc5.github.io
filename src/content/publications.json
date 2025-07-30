@@ -4,12 +4,12 @@
       "id": 1,
       "title": "Learning-enhanced 3D fiber orientation mapping in thick cardiac tissues",
       "authors": "E. Saruhan, H. Ozturk, D. Kul, B. Sevgin, M.N. Coban, K. Pekkan",
-      "journal": "Optica Open",
+      "journal": "Biomedical Optics Express",
       "year": "2025",
       "type": "Journal Article",
       "status": "Published",
       "citations": 0,
-      "doi": "https://opg.optica.org/opticaopen",
+      "doi": "https://opg.optica.org/boe/fulltext.cfm?uri=boe-16-8-3315",
       "description": "Advanced computational methods for analyzing fiber orientation in cardiac tissues using machine learning techniques."
     },
     {
@@ -32,7 +32,7 @@
       "year": "2023",
       "type": "Journal Article",
       "status": "Published",
-      "citations": 13,
+      "citations": 17,
       "doi": "https://doi.org/10.1002/aisy.202300099",
       "description": "Comprehensive CFD analysis of magnetic surface microrollers navigation in various blood vessel types for biomedical applications."
     },
@@ -44,15 +44,15 @@
       "year": "2023",
       "type": "Journal Article",
       "status": "Published",
-      "citations": 8,
-      "doi": "https://doi.org/10.1038/s41598-023-37179-4",
+      "citations": 10,
+      "doi": "https://doi.org/10.1038/s41598-023-37332-5",
       "description": "Investigation of discrepancies between computational simulations and experimental results for magnetic microroller dynamics."
     }
   ],
   "metrics": {
-    "totalCitations": 21,
+    "totalCitations": 27,
     "hIndex": 2,
-    "i10Index": 1,
+    "i10Index": 2,
     "publications": 4
   },
   "currentResearch": {
