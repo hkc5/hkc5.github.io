@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
+import WanderingDuck from './WanderingDuck'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -43,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -174,6 +175,12 @@ const Navbar = () => {
             ))}
           </div>
         </motion.div>
+        
+        {/* Wandering Duck */}
+        <WanderingDuck 
+          containerBounds={{ width: 500, height: 64 }}
+          speed={25}
+        />
       </div>
     </nav>
   )
