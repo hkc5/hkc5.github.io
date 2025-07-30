@@ -1,0 +1,24 @@
+{
+  "currentResearch": {
+    "thesis": {
+      "title": "MSc Thesis - Imperial College London",
+      "topic": "Advanced Computational Methods for Biomedical Applications",
+      "highlights": [
+        "Retrieval-Augmented Generation (RAG) systems for biomedical knowledge",
+        "Machine learning applications in computational fluid dynamics",
+        "AI-driven optimization of cardiovascular simulations",
+        "High-performance computing for biomedical modeling"
+      ]
+    },
+    "impact": {
+      "title": "Research Impact",
+      "description": "Collaborations with leading institutions worldwide",
+      "institutions": [
+        "Max Planck Institute for Intelligent Systems",
+        "Koç University Biomedical Engineering",
+        "Imperial College London Applied Computational Science",
+        "Growing citation impact in microrobotics field"
+      ]
+    }
+  }
+}

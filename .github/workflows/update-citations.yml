@@ -1,0 +1,39 @@
+name: Update Citations
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # Run weekly on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Update Citations
+      run: npm run update-citations
+    
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Citation Update Bot"
+        git add src/content/scholar-publications.json
+        if git diff --staged --quiet; then
+          echo "No citation changes detected"
+        else
+          git commit -m "🤖 Update citation counts from Google Scholar"
+          git push
+        fi

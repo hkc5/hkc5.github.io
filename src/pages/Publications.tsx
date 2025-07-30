@@ -1,5 +1,6 @@
 import { ExternalLink, Users, BookOpen, Award } from 'lucide-react'
-import publicationsData from '../content/publications.json'
+import scholarData from '../content/scholar-publications.json'
+import publicationsExtra from '../content/publications-extra.json'
 import experienceData from '../content/experience.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
@@ -7,9 +8,9 @@ import BulletList from '../components/BulletList'
 import { animations, getTypeColor, pageStyles } from '../utils/theme'
 
 const Publications = () => {
-  const publications = publicationsData.publications
-  const metrics = publicationsData.metrics
-  const currentResearch = publicationsData.currentResearch
+  const publications = scholarData.publications
+  const metrics = scholarData.metrics
+  const currentResearch = publicationsExtra.currentResearch
 
   return (
     <div className={pageStyles.standardPage.container}>
