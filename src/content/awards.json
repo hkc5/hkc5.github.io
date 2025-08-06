@@ -1,0 +1,77 @@
+{
+  "awards": {
+    "title": "Awards & Achievements",
+    "description": "Recognition for academic excellence, hackathon victories, and competitive achievements.",
+    "categories": {
+      "hackathons": {
+        "title": "Hackathon Victories",
+        "items": [
+          {
+            "name": "Riverflex Augmented Intelligence Hackathon",
+            "position": "Participant (Handpicked)",
+            "year": "2025",
+            "description": "Handpicked to participate in an exclusive AI hackathon with global retail clients. Developed an AI-native Customer Relationship Management prototype to tackle real-world business challenges.",
+            "teamSize": 3,
+            "technologies": [
+              "AI/ML",
+              "CRM Development",
+              "Prototype Development",
+              "Customer Intelligence"
+            ],
+            "prize": "Invitation-Only Event",
+            "achievement": "Created AI-native CRM prototype blending strategic creativity with engineering to solve retail industry challenges"
+          },
+          {
+            "name": "Imperial / Viriden Hackathon",
+            "position": "1st Place",
+            "year": "2024",
+            "description": "Developed a machine learning model for carbon capture analysis using 4D seismic data. Applied clustering algorithms to identify significant geological changes in CO2 reservoirs over time.",
+            "teamSize": 2,
+            "technologies": [
+              "Python",
+              "Machine Learning",
+              "KMeans Clustering",
+              "Seismic Data Analysis"
+            ],
+            "prize": "£200",
+            "achievement": "Built ML model to detect significant seismic changes and spatial patterns in carbon capture reservoirs using threshold-based analysis and clustering",
+            "links": [
+              {
+                "type": "github",
+                "url": "https://github.com/hkc5/HWH_CGG",
+                "label": "View on GitHub"
+              }
+            ]
+          },
+          {
+            "name": "KPMG Ideation Challenge",
+            "position": "Global Finalist",
+            "year": "2021",
+            "description": "Recognized as the top team in Turkey for the KPMG Ideation Challenge. Developed CoPeer, a B2B wellness platform designed to connect therapists privately with employees, promoting workplace mental health.",
+            "teamSize": 5,
+            "technologies": [
+              "B2B Platform Development",
+              "Mental Health Tech",
+              "MVP Development"
+            ],
+            "prize": "National Recognition",
+            "achievement": "Collaborated remotely with a Turkey-based team to create a minimum viable product in a competitive, innovation-focused environment. Presented our work to global KPMG executives as global finalists."
+          }
+        ]
+      },
+      "academicExcellence": {
+        "title": "Academic Excellence",
+        "items": [
+          {
+            "name": "Merit Scholarship",
+            "type": "Scholarship",
+            "year": "2020-2023",
+            "description": "Full merit scholarship of $30,000 annually at Koç University",
+            "details": "Awarded based on academic excellence and maintained throughout undergraduate studies",
+            "recognition": "$90,000 Total Value"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "publications": [
+    {
+      "id": 1,
+      "title": "Microrobotic locomotion in blood vessels: a computational study on the performance of surface microrollers in the cardiovascular system",
+      "authors": "U Bozuyuk, H Ozturk, M Sitti",
+      "journal": "Advanced Intelligent Systems",
+      "year": "2023",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 17,
+      "doi": "",
+      "description": "Computational study on the performance of surface microrollers in cardiovascular system navigation."
+    },
+    {
+      "id": 2,
+      "title": "The mismatch between experimental and computational fluid dynamics analyses for magnetic surface microrollers",
+      "authors": "U Bozuyuk, H Ozturk, M Sitti",
+      "journal": "Scientific Reports",
+      "year": "2023",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 10,
+      "doi": "",
+      "description": "Investigation of discrepancies between experimental and CFD analyses for magnetic surface microrollers."
+    },
+    {
+      "id": 3,
+      "title": "Learning-enhanced 3D fiber orientation mapping in thick cardiac tissues",
+      "authors": "EN Saruhan, H Ozturk, D Kul, B Sevgin, MN Coban, K Pekkan",
+      "journal": "Biomedical Optics Express",
+      "year": "2025",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 0,
+      "doi": "",
+      "description": "Machine learning-enhanced approach for 3D fiber orientation mapping in thick cardiac tissue samples."
+    },
+    {
+      "id": 4,
+      "title": "Anisotropic Surface Microrollers for Endovascular Navigation: A Computational Analysis with a Case Study in Hepatic Perfusion",
+      "authors": "B Arslan, U Bozuyuk, K Görgülü, E Yildiz, H Ozturk, L Liotta, V Heinemann, H Algül, M Sitti",
+      "journal": "Advanced Theory and Simulations",
+      "year": "2025",
+      "type": "Journal Article",
+      "status": "Published",
+      "citations": 0,
+      "doi": "",
+      "description": "Computational analysis of anisotropic surface microrollers for endovascular navigation with hepatic perfusion case study."
+    }
+  ],
+  "metrics": {
+    "totalCitations": 27,
+    "hIndex": 2,
+    "i10Index": 2,
+    "publications": 4
+  },
+  "lastUpdated": "2025-07-30T22:26:35.675Z"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "cardType": "video",
+    "type": "interview",
+    "title": "Academic Journey & Machine Learning Career Path",
+    "description": "Interview discussing my academic journey from mechanical engineering at Koç University to computational science at Imperial College London, research experiences in biomedical engineering and micro-robotics, and transition to machine learning engineering. Also covers advice on university life, building relationships with professors, and career decisions between academia and industry.",
+    "date": "2024-12-01",
+    "venue": "University Podcast Series",
+    "videoId": "3_oIuB2kRCE",
+    "tags": ["Academic Journey", "Machine Learning", "Career Advice", "University Life", "Research Experience"]
+  }]
