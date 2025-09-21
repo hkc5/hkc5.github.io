@@ -13,7 +13,7 @@ const Home = () => {
       <ParticleBackground />
 
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-12 sm:pt-36 sm:pb-16">
+      <section className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-8 sm:pt-36">
         <div className={pageTemplates.home.heroContent}>
           <motion.div
             {...animations.fadeInUp}
@@ -35,7 +35,7 @@ const Home = () => {
                     src="/profile.png"
                     alt="Hakancan Ozturk"
                     className="w-full h-full rounded-lg object-cover shadow-lg"
-                    loading="eager"
+                    loading="lazy"
                   />
                 </picture>
                 <div className="absolute inset-0 rounded-lg ring-4 ring-blue-500/20 ring-offset-4 ring-offset-white dark:ring-offset-gray-900"></div>
@@ -61,7 +61,7 @@ const Home = () => {
                 infrastructure and UI optimization at Amazon.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-between items-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-between items-center">
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.a

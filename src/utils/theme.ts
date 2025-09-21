@@ -274,7 +274,7 @@ export const pageTemplates = {
   // Home page layout
   home: {
     container: 'relative transition-colors duration-300 bg-transparent',
-    hero: 'relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pt-48 sm:pb-16',
+    hero: 'relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-40 pb-8 sm:pt-48 sm:pb-12',
     heroContent: 'max-w-6xl mx-auto',
     heroCard: components.card.glass + ' ' + components.card.contentLarge,
   }
