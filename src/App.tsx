@@ -13,6 +13,7 @@ const Publications = lazy(() => import('./pages/Publications'))
 const Awards = lazy(() => import('./pages/Awards'))
 const Media = lazy(() => import('./pages/Media'))
 const Contact = lazy(() => import('./pages/Contact'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -51,6 +52,7 @@ function App() {
               <Route path="/awards" element={<Awards />} />
               <Route path="/media" element={<Media />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </motion.main>
