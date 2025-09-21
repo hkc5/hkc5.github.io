@@ -1,7 +1,8 @@
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { pageStyles, CARD_TITLE_STYLE, colors, typography } from '../utils/theme'
+import { CARD_TITLE_STYLE, colors, typography } from '../utils/theme'
+import { PageLayout } from '../components/PageLayout'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,20 +62,10 @@ const Contact = () => {
   }
 
   return (
-    <div className={pageStyles.standardPage.container}>
-      <div className={pageStyles.standardPage.wrapper}>
-        <div className={pageStyles.standardPage.header}>
-          <h1 className={pageStyles.standardPage.title}>
-            Get In Touch
-          </h1>
-          
-          <p className={pageStyles.standardPage.description}>
-            I'm always open to discussing new opportunities, collaborations, and innovative 
-            projects. Feel free to reach out!
-          </p>
-        </div>
-        
-        <div className={pageStyles.standardPage.content}>
+    <PageLayout
+      title="Get In Touch"
+      description="I'm always open to discussing new opportunities, collaborations, and innovative projects. Feel free to reach out!"
+    >
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
@@ -230,9 +221,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+    </PageLayout>
   )
 }
 

@@ -5,7 +5,8 @@ import experienceData from '../content/experience.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import BulletList from '../components/BulletList'
-import { animations, getTypeColor, pageStyles } from '../utils/theme'
+import { PageLayout } from '../components/PageLayout'
+import { animations, getTypeColor } from '../utils/theme'
 import { SECTION_TITLE_STYLE, CARD_TITLE_STYLE, SECONDARY_TEXT_STYLE } from '../utils/theme'
 
 const Publications = () => {
@@ -14,17 +15,10 @@ const Publications = () => {
   const currentResearch = publicationsExtra.currentResearch
 
   return (
-    <div className={pageStyles.standardPage.container}>
-      <div className={pageStyles.standardPage.wrapper}>
-        {/* Header Section */}
-        <div className={pageStyles.standardPage.header}>
-          <h1 className={pageStyles.standardPage.title}>
-            Publications
-          </h1>
-          <p className={pageStyles.standardPage.description}>
-            Research contributions in computational fluid dynamics, microrobotics, and machine learning applications in biomedical engineering
-          </p>
-        </div>
+    <PageLayout
+      title="Publications"
+      description="Research contributions in computational fluid dynamics, microrobotics, and machine learning applications in biomedical engineering"
+    >
 
         {/* Metrics Summary */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-12">
@@ -60,7 +54,7 @@ const Publications = () => {
         </div>
 
         {/* Publications List */}
-        <div className={pageStyles.standardPage.content}>
+        <div className="space-y-8">
           {publications.map((pub, index) => (
             <Card
               key={pub.id}
@@ -160,8 +154,7 @@ const Publications = () => {
             ))}
           </div>
         </div>
-      </div>
-    </div>
+    </PageLayout>
   )
 }
 

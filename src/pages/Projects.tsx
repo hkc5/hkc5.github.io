@@ -3,7 +3,8 @@ import projectsData from '../content/projects.json'
 import Card from '../components/Card'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, pageStyles, SUBTITLE_STYLE } from '../utils/theme'
+import { animations, SUBTITLE_STYLE } from '../utils/theme'
+import { PageLayout } from '../components/PageLayout'
 
 const Projects = () => {
   // Icon mapping for JSON data
@@ -25,20 +26,12 @@ const Projects = () => {
   }))
 
   return (
-    <div className={pageStyles.standardPage.container}>
-      <div className={pageStyles.standardPage.wrapper}>
-        {/* Header */}
-        <div className={pageStyles.standardPage.header}>
-          <h1 className={pageStyles.standardPage.title}>
-            Projects
-          </h1>
-          <p className={pageStyles.standardPage.description}>
-            A collection of research projects, production systems, and innovative solutions spanning AI, machine learning, and software engineering
-          </p>
-        </div>
-
-        {/* Projects Grid */}
-        <div className={pageStyles.standardPage.content}>
+    <PageLayout
+      title="Projects"
+      description="A collection of research projects, production systems, and innovative solutions spanning AI, machine learning, and software engineering"
+    >
+      {/* Projects Grid */}
+      <div className="space-y-8">
           {projects.map((project: any, index: number) => (
             <Card
               key={project.id}
@@ -93,9 +86,8 @@ const Projects = () => {
               </div>
             </Card>
           ))}
-        </div>
       </div>
-    </div>
+    </PageLayout>
   )
 }
 

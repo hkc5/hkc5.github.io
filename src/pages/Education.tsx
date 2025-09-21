@@ -4,26 +4,19 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, pageStyles, SECTION_TITLE_STYLE } from '../utils/theme'
+import { animations, SECTION_TITLE_STYLE } from '../utils/theme'
+import { PageLayout } from '../components/PageLayout'
 
 const Education = () => {
 
 
   return (
-    <div className={pageStyles.standardPage.container}>
-      <div className={pageStyles.standardPage.wrapper}>
-        {/* Header */}
-        <div className={pageStyles.standardPage.header}>
-          <h1 className={pageStyles.standardPage.title}>
-            Education
-          </h1>
-          <p className={pageStyles.standardPage.description}>
-            Academic journey focused on computational science, machine learning, and mechanical engineering with outstanding performance
-          </p>
-        </div>
-
-        {/* Education Cards */}
-        <div className={pageStyles.standardPage.content}>
+    <PageLayout
+      title="Education"
+      description="Academic journey focused on computational science, machine learning, and mechanical engineering with outstanding performance"
+    >
+      {/* Education Cards */}
+      <div className="space-y-8">
           {(educationData as any).educationData.map((edu: any, index: number) => (
             <Card
               key={edu.id}
@@ -63,28 +56,27 @@ const Education = () => {
               </div>
             </Card>
           ))}
-        </div>
+      </div>
 
-        {/* Teaching Experience */}
-        <div className="mt-16">
-          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
-            Teaching Experience
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {(educationData as any).teachingExperience.map((exp: any, index: number) => (
-              <SimpleCard
-                key={exp.course}
-                {...animations.fadeInWithDelay(index)}
-                icon={BookOpen}
-                title={exp.course}
-                subtitle={exp.role}
-                description={exp.description}
-              />
-            ))}
-          </div>
+      {/* Teaching Experience */}
+      <div className="mt-16">
+        <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
+          Teaching Experience
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {(educationData as any).teachingExperience.map((exp: any, index: number) => (
+            <SimpleCard
+              key={exp.course}
+              {...animations.fadeInWithDelay(index)}
+              icon={BookOpen}
+              title={exp.course}
+              subtitle={exp.role}
+              description={exp.description}
+            />
+          ))}
         </div>
       </div>
-    </div>
+    </PageLayout>
   )
 }
 

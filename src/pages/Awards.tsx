@@ -4,7 +4,8 @@ import skillsData from '../content/skills.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
-import { getPositionBadgeColor, pageStyles, SECTION_TITLE_STYLE, CARD_TITLE_STYLE } from '../utils/theme'
+import { getPositionBadgeColor, SECTION_TITLE_STYLE, CARD_TITLE_STYLE } from '../utils/theme'
+import { PageLayout } from '../components/PageLayout'
 
 const Awards = () => {
   const data = awardsData as any
@@ -22,18 +23,11 @@ const Awards = () => {
   }
 
   return (
-    <div className={pageStyles.standardPage.container}>
-      <div className={pageStyles.standardPage.wrapper}>
-        <div className={pageStyles.standardPage.header}>
-          <h1 className={pageStyles.standardPage.title}>
-            {data.awards.title}
-          </h1>
-          <p className={pageStyles.standardPage.description}>
-            {data.awards.description}
-          </p>
-        </div>
-
-        <div className={pageStyles.standardPage.content}>
+    <PageLayout
+      title={data.awards.title}
+      description={data.awards.description}
+    >
+      <div>
           {Object.entries(data.awards.categories).map(([categoryKey, category]: [string, any]) => {
             const CategoryIcon = getCategoryIcon(categoryKey)
             
@@ -116,38 +110,37 @@ const Awards = () => {
             )
           })}
 
-          {/* Test Scores Section */}
-          <section className="mt-16">
-            <div className="flex items-center mb-8 justify-center">
-              <h2 className={SECTION_TITLE_STYLE}>
-                Standardized Test Scores
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {data.testScores && data.testScores.map((score: any) => (
-                <SimpleCard
-                  key={score.name}
-                  title={score.name}
-                  subtitle={score.date}
-                  className="text-center"
-                >
-                  <div className="space-y-2 mt-3">
-                    <div className={CARD_TITLE_STYLE + ' text-blue-600 dark:text-blue-400'}>
-                      {score.score}
-                    </div>
-                    {score.detail && (
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        {score.detail}
-                      </p>
-                    )}
+        {/* Test Scores Section */}
+        <section className="mt-16">
+          <div className="flex items-center mb-8 justify-center">
+            <h2 className={SECTION_TITLE_STYLE}>
+              Standardized Test Scores
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {data.testScores && data.testScores.map((score: any) => (
+              <SimpleCard
+                key={score.name}
+                title={score.name}
+                subtitle={score.date}
+                className="text-center"
+              >
+                <div className="space-y-2 mt-3">
+                  <div className={CARD_TITLE_STYLE + ' text-blue-600 dark:text-blue-400'}>
+                    {score.score}
                   </div>
-                </SimpleCard>
-              ))}
-            </div>
-          </section>
-        </div>
+                  {score.detail && (
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {score.detail}
+                    </p>
+                  )}
+                </div>
+              </SimpleCard>
+            ))}
+          </div>
+        </section>
       </div>
-    </div>
+    </PageLayout>
   )
 }
 

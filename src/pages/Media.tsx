@@ -1,10 +1,9 @@
 import React from 'react';
 import { Card } from '../components/Card';
-import { VideoCard } from '../components/VideoCard';
-import { ImageCard } from '../components/ImageCard';
-import { TextCard } from '../components/TextCard';
-import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, pageStyles, DESCRIPTION_STYLE } from '../utils/theme';
+import { MediaCard } from '../components/MediaCard';
+import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, DESCRIPTION_STYLE } from '../utils/theme';
 import mediaData from '../content/media.json';
+import { PageLayout } from '../components/PageLayout';
 
 interface MediaItem {
   id: string;
@@ -27,49 +26,42 @@ const Media: React.FC = () => {
     const typeColor = getTypeColor(item.type);
     const typeLabel = getMediaTypeLabel(item.type);
 
+    const baseProps = {
+      key: item.id,
+      title: item.title,
+      description: item.description,
+      date: item.date,
+      venue: item.venue,
+      tags: item.tags,
+      typeColor: typeColor,
+      typeLabel: typeLabel,
+      type: item.type
+    };
+
     switch (item.cardType) {
       case 'video':
         return (
-          <VideoCard
-            key={item.id}
-            title={item.title}
-            description={item.description}
-            date={item.date}
-            venue={item.venue}
+          <MediaCard
+            {...baseProps}
+            mediaType="video"
             videoId={item.videoId || ''}
-            tags={item.tags}
-            typeColor={typeColor}
-            typeLabel={typeLabel}
           />
         );
       case 'image':
         return (
-          <ImageCard
-            key={item.id}
-            title={item.title}
-            description={item.description}
-            date={item.date}
-            venue={item.venue}
+          <MediaCard
+            {...baseProps}
+            mediaType="image"
             imageUrl={item.imageUrl || ''}
             externalUrl={item.externalUrl}
-            tags={item.tags}
-            typeColor={typeColor}
-            typeLabel={typeLabel}
           />
         );
       case 'text':
         return (
-          <TextCard
-            key={item.id}
-            title={item.title}
-            description={item.description}
-            date={item.date}
-            venue={item.venue}
+          <MediaCard
+            {...baseProps}
+            mediaType="text"
             externalUrl={item.externalUrl}
-            type={item.type}
-            tags={item.tags}
-            typeColor={typeColor}
-            typeLabel={typeLabel}
           />
         );
       default:
@@ -82,43 +74,37 @@ const Media: React.FC = () => {
   );
 
   return (
-    <div className={pageStyles.standardPage.container}>
-      <div className={pageStyles.standardPage.wrapper}>
-        {/* Header */}
-        <div className={pageStyles.standardPage.header}>
-          <h1 className={pageStyles.standardPage.title}>
-            Media & Speaking
-          </h1>
-          <p className={pageStyles.standardPage.description}>
-            A collection of my public speaking engagements, video collaborations, talks, and interviews
-            covering topics in data science, healthcare technology, and AI ethics.
-          </p>
-        </div>
-
-        {/* Media Grid */}
-        <div className={pageStyles.standardPage.content}>
-          {sortedMedia.map((item: MediaItem) => renderMediaCard(item))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <Card title="Speaking Opportunities" className={cardStyles.callToAction}>
-            <div className="py-4">
-              <p className={`${DESCRIPTION_STYLE} mb-4 max-w-2xl mx-auto`}>
-                Interested in having me speak at your event or collaborate on a project? 
-                I'd love to discuss opportunities to share insights on data science, healthcare technology, and AI ethics.
-              </p>
-              <a
-                href="/contact"
-                className={buttonStyles.primary}
-              >
-                Get in Touch
-              </a>
+    <PageLayout
+      title="Media & Speaking"
+      description="A collection of my public speaking engagements, video collaborations, talks, and interviews covering topics in data science, healthcare technology, and AI ethics."
+    >
+      {/* Media Grid */}
+      <div>
+          {sortedMedia.map((item: MediaItem, index) => (
+            <div key={item.id} className={index > 0 ? "mt-12" : ""}>
+              {renderMediaCard(item)}
             </div>
-          </Card>
-        </div>
+          ))}
       </div>
-    </div>
+
+      {/* Call to Action */}
+      <div className="mt-16 text-center">
+        <Card title="Speaking Opportunities" className={cardStyles.callToAction}>
+          <div className="py-4">
+            <p className={`${DESCRIPTION_STYLE} mb-4 max-w-2xl mx-auto`}>
+              Interested in having me speak at your event or collaborate on a project?
+              I'd love to discuss opportunities to share insights on data science, healthcare technology, and AI ethics.
+            </p>
+            <a
+              href="/contact"
+              className={buttonStyles.primary}
+            >
+              Get in Touch
+            </a>
+          </div>
+        </Card>
+      </div>
+    </PageLayout>
   );
 };
 

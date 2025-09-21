@@ -6,7 +6,8 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, pageStyles, SECTION_TITLE_STYLE } from '../utils/theme'
+import { animations, SECTION_TITLE_STYLE } from '../utils/theme'
+import { PageLayout } from '../components/PageLayout'
 
 const Experience = () => {
   // Icon mapping for JSON data
@@ -28,20 +29,12 @@ const Experience = () => {
 
 
   return (
-    <div className={pageStyles.standardPage.container}>
-      <div className={pageStyles.standardPage.wrapper}>
-        {/* Header */}
-        <div className={pageStyles.standardPage.header}>
-          <h1 className={pageStyles.standardPage.title}>
-            Professional Experience
-          </h1>
-          <p className={pageStyles.standardPage.description}>
-            Journey through software engineering, machine learning, research, and education with consistently outstanding performance
-          </p>
-        </div>
-
-        {/* Experience Cards */}
-        <div className={pageStyles.standardPage.content}>
+    <PageLayout
+      title="Professional Experience"
+      description="Journey through software engineering, machine learning, research, and education with consistently outstanding performance"
+    >
+      {/* Experience Cards */}
+      <div className="space-y-8">
           {experiences.map((exp: any, index: number) => (
             <Card
               key={exp.id}
@@ -77,39 +70,38 @@ const Experience = () => {
               </div>
             </Card>
           ))}
-        </div>
-
-        {/* Mentoring & Volunteering */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16"
-        >
-          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
-            Mentoring & Volunteering
-          </h2>
-          <div className="grid md:grid-cols-1 gap-6">
-            {volunteering.map((item, index) => (
-              <SimpleCard
-                key={item.role + index}
-                {...animations.fadeInWithDelay(index)}
-                icon={GraduationCap}
-                title={item.role}
-                subtitle={item.organization}
-                period={item.period}
-                description={item.description}
-              >
-                <BulletList
-                  title="Activities"
-                  items={item.activities}
-                />
-              </SimpleCard>
-            ))}
-          </div>
-        </motion.div>
       </div>
-    </div>
+
+      {/* Mentoring & Volunteering */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="mt-16"
+      >
+        <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
+          Mentoring & Volunteering
+        </h2>
+        <div className="grid md:grid-cols-1 gap-6">
+          {volunteering.map((item, index) => (
+            <SimpleCard
+              key={item.role + index}
+              {...animations.fadeInWithDelay(index)}
+              icon={GraduationCap}
+              title={item.role}
+              subtitle={item.organization}
+              period={item.period}
+              description={item.description}
+            >
+              <BulletList
+                title="Activities"
+                items={item.activities}
+              />
+            </SimpleCard>
+          ))}
+        </div>
+      </motion.div>
+    </PageLayout>
   )
 }
 
