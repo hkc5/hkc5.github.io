@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-      <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-full shadow-xl border border-white/20 dark:border-gray-700/40 px-8 py-3 relative">
+      <div className="bg-white/5 dark:bg-gray-900/5 backdrop-blur-2xl rounded-full shadow-2xl border border-white/30 dark:border-gray-500/20 px-8 py-3 relative before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/20 before:via-white/5 before:to-transparent before:pointer-events-none after:absolute after:inset-[1px] after:rounded-full after:bg-gradient-to-t after:from-transparent after:to-white/10 after:pointer-events-none">
         <div className="flex items-center justify-between gap-12 min-w-max">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -130,7 +130,7 @@ const Navbar = () => {
         <motion.div
           initial={false}
           animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-          className="md:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg"
+          className="md:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/5 dark:bg-gray-900/5 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-500/20 shadow-2xl"
         >
           <div className="px-4 py-3 space-y-1">
             {navigation.map((item) => (
@@ -154,7 +154,7 @@ const Navbar = () => {
         <motion.div
           initial={false}
           animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-          className="hidden md:block lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg"
+          className="hidden md:block lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/5 dark:bg-gray-900/5 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-500/20 shadow-2xl"
         >
           <div className="px-4 py-3 space-y-1">
             {navigation.slice(4).map((item) => (

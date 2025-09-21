@@ -32,7 +32,7 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ className = '' 
   }, [])
   
   return (
-    <div 
+    <div
       className={`fixed inset-0 overflow-hidden ${className}`}
       style={{ zIndex: 0 }}
     >

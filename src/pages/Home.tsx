@@ -7,19 +7,21 @@ const Home = () => {
   return (
     <>
       <SEO />
-      <div className="relative bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="relative transition-colors duration-300 bg-transparent">
       {/* Particle Background */}
       <ParticleBackground />
 
       {/* Hero Section */}
-      <section className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pt-48 sm:pb-16">
+      <section className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pt-48 sm:pb-16">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12"
+            className="bg-white/10 dark:bg-gray-900/10 backdrop-blur-sm rounded-3xl shadow-lg border border-white/30 dark:border-gray-500/20 p-8 lg:p-12"
           >
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 relative z-10"
+            >
             {/* Profile Picture */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -108,6 +110,7 @@ const Home = () => {
               >
                 <Mail size={24} />
               </motion.a>
+            </div>
             </div>
             </div>
           </motion.div>
