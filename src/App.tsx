@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
+import { useEffect, Suspense, lazy } from 'react'
 import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Education from './pages/Education'
-import Experience from './pages/Experience'
-import Projects from './pages/Projects'
-import Publications from './pages/Publications'
-import Awards from './pages/Awards'
-import Media from './pages/Media'
-import Contact from './pages/Contact'
+
+// Lazy load all pages
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Education = lazy(() => import('./pages/Education'))
+const Experience = lazy(() => import('./pages/Experience'))
+const Projects = lazy(() => import('./pages/Projects'))
+const Publications = lazy(() => import('./pages/Publications'))
+const Awards = lazy(() => import('./pages/Awards'))
+const Media = lazy(() => import('./pages/Media'))
+const Contact = lazy(() => import('./pages/Contact'))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -34,17 +36,23 @@ function App() {
           transition={{ duration: 0.5 }}
           className="pt-20 bg-transparent"
         >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/publications" element={<Publications />} />
-            <Route path="/awards" element={<Awards />} />
-            <Route path="/media" element={<Media />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={
+            <div className="flex items-center justify-center min-h-[50vh]">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/education" element={<Education />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/publications" element={<Publications />} />
+              <Route path="/awards" element={<Awards />} />
+              <Route path="/media" element={<Media />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </motion.main>
       </div>
     </Router>
