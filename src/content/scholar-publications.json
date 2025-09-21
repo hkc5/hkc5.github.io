@@ -47,13 +47,25 @@
       "citations": 0,
       "doi": "",
       "description": "Computational analysis of anisotropic surface microrollers for endovascular navigation with hepatic perfusion case study."
+    },
+    {
+      "id": 5,
+      "title": "Locomotion Behavior of Magnetic Microrollers in Confined Tubular Geometries Containing Shear-Thinning Fluids",
+      "authors": "M Yorulmaz, U Bozuyuk, M Park, B Arslan, H Ozturk, A Aghakhani, M Sitti",
+      "journal": "MARSS 2025 – International Conference on Manipulation, Automation and Robotics at Small Scales",
+      "year": "2025",
+      "type": "Conference Paper",
+      "status": "Published",
+      "citations": 0,
+      "doi": "",
+      "description": "Investigation of magnetic microroller locomotion behavior in confined tubular geometries with shear-thinning fluid properties."
     }
   ],
   "metrics": {
     "totalCitations": 27,
     "hIndex": 2,
     "i10Index": 2,
-    "publications": 4
+    "publications": 5
   },
   "lastUpdated": "2025-07-30T22:26:35.675Z"
 }

@@ -14,13 +14,13 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <div className="relative min-h-screen bg-gray-50 dark:bg-gray-900">
         <Navbar />
         <motion.main
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="pt-16"
+          className="pt-20 bg-transparent"
         >
           <Routes>
             <Route path="/" element={<Home />} />

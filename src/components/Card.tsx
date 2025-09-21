@@ -108,7 +108,7 @@ export const Card: React.FC<CardProps> = ({
           
           {/* Badges */}
           {(type || status || customBadges.length > 0) && (
-            <div className="flex gap-2 items-center flex-shrink-0">
+            <div className="flex flex-col gap-2 items-end flex-shrink-0">
               {type && (
                 <span className={`${cardStyles.badge} ${getTypeColor(type)}`}>
                   {type}

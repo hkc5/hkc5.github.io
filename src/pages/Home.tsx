@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
+import { Github, Linkedin, Mail, Download } from 'lucide-react'
 import ParticleBackground from '../components/ParticleBackground'
 import SEO from '../components/SEO'
 
@@ -114,14 +114,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="relative z-10 flex justify-center pb-8"
-      >
-        <ArrowDown className="text-gray-400 dark:text-gray-500" size={24} />
-      </motion.div>
       </div>
     </>
   )
