@@ -61,53 +61,56 @@ const Home = () => {
                 infrastructure and UI optimization at Amazon.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
-              <motion.a
-                href="/contact"
-                {...animations.hover.scale}
-                className={components.button.primary}
-              >
-                Get In Touch
-              </motion.a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-between items-center mb-8">
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <motion.a
+                    href="/contact"
+                    {...animations.hover.scale}
+                    className={components.button.primary}
+                  >
+                    Get In Touch
+                  </motion.a>
 
-              <motion.a
-                href="/resume.pdf"
-                {...animations.hover.scale}
-                className={`${components.button.outline} flex items-center gap-2`}
-              >
-                <Download size={20} />
-                Download CV
-              </motion.a>
-            </div>
+                  <motion.a
+                    href="/resume.pdf"
+                    {...animations.hover.scale}
+                    className={`${components.button.outline} flex items-center gap-2`}
+                  >
+                    <Download size={20} />
+                    Download CV
+                  </motion.a>
+                </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center lg:justify-start gap-6">
-              <motion.a
-                href="https://github.com/hkc5"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className={colors.interactive.accent}
-              >
-                <Github size={24} />
-              </motion.a>
-              <motion.a
-                href="https://linkedin.com/in/hakancan"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className={colors.interactive.accent}
-              >
-                <Linkedin size={24} />
-              </motion.a>
-              <motion.a
-                href="mailto:hakancan.ozturk23@gmail.com"
-                whileHover={{ scale: 1.1 }}
-                className={colors.interactive.accent}
-              >
-                <Mail size={24} />
-              </motion.a>
-            </div>
+                {/* Social Links */}
+                <div className="flex gap-4 pr-4">
+                  <motion.a
+                    href="https://github.com/hkc5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className={colors.interactive.accent}
+                  >
+                    <Github size={24} />
+                  </motion.a>
+                  <motion.a
+                    href="https://linkedin.com/in/hakancan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className={colors.interactive.accent}
+                  >
+                    <Linkedin size={24} />
+                  </motion.a>
+                  <motion.a
+                    href="mailto:hakancan.ozturk23@gmail.com"
+                    whileHover={{ scale: 1.1 }}
+                    className={colors.interactive.accent}
+                  >
+                    <Mail size={24} />
+                  </motion.a>
+                </div>
+              </div>
             </div>
             </div>
           </motion.div>

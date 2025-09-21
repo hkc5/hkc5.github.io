@@ -32,7 +32,10 @@ interface CardProps {
   
   // Content sections
   children?: ReactNode
-  
+
+  // Header action (like buttons)
+  headerAction?: ReactNode
+
   // Styling
   className?: string
 }
@@ -53,6 +56,7 @@ export const Card: React.FC<CardProps> = ({
   status,
   customBadges = [],
   children,
+  headerAction,
   className = ''
 }) => {
   return (
@@ -64,7 +68,7 @@ export const Card: React.FC<CardProps> = ({
     >
       {/* Header */}
       <div className={cardStyles.header}>
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-4">
             {IconComponent && (
               <IconComponent size={32} className="text-blue-600 dark:text-blue-400" />
@@ -74,12 +78,12 @@ export const Card: React.FC<CardProps> = ({
                 {title}
               </h3>
               {subtitle && (
-                <div className="flex items-center gap-3">
-                  <p className="text-lg font-medium text-gray-800 dark:text-gray-300">
+                <div className="flex items-end gap-3 flex-wrap">
+                  <p className="text-lg font-medium text-gray-800 dark:text-gray-300 leading-tight">
                     {subtitle}
                   </p>
                   {subtitleBadge && (
-                    <span className={`${cardStyles.badge} ${subtitleBadge.className}`}>
+                    <span className={`${cardStyles.badge} ${subtitleBadge.className} flex-shrink-0`}>
                       {subtitleBadge.label}
                     </span>
                   )}
@@ -124,6 +128,13 @@ export const Card: React.FC<CardProps> = ({
                   {badge.label}
                 </span>
               ))}
+
+              {/* Header Action within badges area */}
+              {headerAction && (
+                <div className="mt-2">
+                  {headerAction}
+                </div>
+              )}
             </div>
           )}
         </div>

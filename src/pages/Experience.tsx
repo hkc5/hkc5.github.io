@@ -38,7 +38,7 @@ const Experience = () => {
           {experiences.map((exp: any, index: number) => (
             <Card
               key={exp.id}
-              {...animations.fadeInWithDelay(index)}
+              {...animations.staggeredFadeIn(index)}
               icon={exp.icon}
               title={exp.title}
               subtitle={exp.company}
@@ -86,7 +86,7 @@ const Experience = () => {
           {volunteering.map((item, index) => (
             <SimpleCard
               key={item.role + index}
-              {...animations.fadeInWithDelay(index)}
+              {...animations.staggeredFadeIn(index)}
               icon={GraduationCap}
               title={item.role}
               subtitle={item.organization}

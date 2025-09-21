@@ -35,7 +35,7 @@ const Projects = () => {
           {projects.map((project: any, index: number) => (
             <Card
               key={project.id}
-              {...animations.fadeInWithDelay(index)}
+              {...animations.staggeredFadeIn(index)}
               icon={project.icon}
               title={project.title}
               organization={project.organization}

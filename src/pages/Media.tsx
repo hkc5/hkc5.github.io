@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '../components/Card';
 import { MediaCard } from '../components/MediaCard';
-import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, DESCRIPTION_STYLE } from '../utils/theme';
+import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, DESCRIPTION_STYLE, animations } from '../utils/theme';
 import mediaData from '../content/media.json';
 import { PageLayout } from '../components/PageLayout';
 
@@ -22,7 +22,7 @@ interface MediaItem {
 
 // Sample media data - replace with actual content
 const Media: React.FC = () => {
-  const renderMediaCard = (item: MediaItem) => {
+  const renderMediaCard = (item: MediaItem, index: number) => {
     const typeColor = getTypeColor(item.type);
     const typeLabel = getMediaTypeLabel(item.type);
 
@@ -35,7 +35,8 @@ const Media: React.FC = () => {
       tags: item.tags,
       typeColor: typeColor,
       typeLabel: typeLabel,
-      type: item.type
+      type: item.type,
+      ...animations.fadeInWithDelay(index)
     };
 
     switch (item.cardType) {
@@ -82,7 +83,7 @@ const Media: React.FC = () => {
       <div>
           {sortedMedia.map((item: MediaItem, index) => (
             <div key={item.id} className={index > 0 ? "mt-12" : ""}>
-              {renderMediaCard(item)}
+              {renderMediaCard(item, index)}
             </div>
           ))}
       </div>

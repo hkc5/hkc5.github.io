@@ -67,7 +67,7 @@ const Education = () => {
           {(educationData as any).teachingExperience.map((exp: any, index: number) => (
             <SimpleCard
               key={exp.course}
-              {...animations.fadeInWithDelay(index)}
+              {...animations.staggeredFadeIn(index)}
               icon={BookOpen}
               title={exp.course}
               subtitle={exp.role}

@@ -1,0 +1,11 @@
+{
+  "pageInfo": {
+    "title": "About Me",
+    "description": "Hi! I'm Hakancan Ozturk, a Software Development Engineer at Amazon with a background in machine learning and computational science. I specialize in Retrieval-Augmented Generation (RAG), computational fluid dynamics (CFD), and generative AI."
+  },
+  "background": {
+    "title": "Background",
+    "content": "I am a machine learning engineer with a background in applied computational science and mechanical engineering. My expertise spans AI, computational modeling, and data-driven solutions, with a focus on fluid dynamics and information retrieval. I have extensive hands-on experience with both research and production environments, working on projects involving Retrieval-Augmented Generation (RAG) frameworks, AI-driven flow simulations, and innovative engineering designs.",
+    "quote": "My work is guided by a passion for leveraging AI to solve complex, real-world problems and a commitment to continuous learning."
+  }
+}

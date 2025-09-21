@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, TargetAndTransition, VariantLabels, Transition } from 'framer-motion';
 import { TagList } from './TagList';
 import { YouTubeEmbed } from './YouTubeEmbed';
 import { ExternalLink } from 'lucide-react';
@@ -15,6 +16,10 @@ interface BaseMediaCardProps {
   typeColor: string;
   typeLabel: string;
   type?: string;
+  // Animation props
+  initial?: boolean | TargetAndTransition | VariantLabels;
+  animate?: boolean | TargetAndTransition | VariantLabels;
+  transition?: Transition;
 }
 
 interface ImageMediaCardProps extends BaseMediaCardProps {
@@ -45,7 +50,10 @@ export const MediaCard: React.FC<MediaCardProps> = (props) => {
     typeColor,
     typeLabel,
     mediaType,
-    type
+    type,
+    initial,
+    animate,
+    transition
   } = props;
 
   const renderMedia = () => {
@@ -131,7 +139,12 @@ export const MediaCard: React.FC<MediaCardProps> = (props) => {
   const externalUrl = getExternalUrl();
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+    <motion.div
+      initial={initial}
+      animate={animate}
+      transition={transition}
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+    >
       <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 p-6">
         <div className="order-2 lg:order-1">
           {renderMedia()}
@@ -176,6 +189,6 @@ export const MediaCard: React.FC<MediaCardProps> = (props) => {
           <TagList title="Topics" tags={tags} defaultType="technology" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -47,7 +47,9 @@ const Publications = () => {
                 className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
               >
                 <div className="text-3xl mb-1">🎓</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Scholar Profile</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Scholar Profile <ExternalLink size={12} className="inline ml-1" />
+                </p>
               </a>
             </div>
           </div>
@@ -58,13 +60,23 @@ const Publications = () => {
           {publications.map((pub, index) => (
             <Card
               key={pub.id}
-              {...animations.fadeInWithDelay(index)}
+              {...animations.staggeredFadeIn(index)}
               icon={BookOpen}
               title={pub.title}
               subtitle={pub.journal}
               subtitleBadge={{
-                label: pub.type,
-                className: getTypeColor(pub.type)
+                label: (
+                  <a
+                    href={pub.doi}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 hover:underline"
+                  >
+                    {pub.type}
+                    <ExternalLink size={12} />
+                  </a>
+                ),
+                className: `${getTypeColor(pub.type)} hover:opacity-80 transition-opacity cursor-pointer`
               }}
               customBadges={[
                 {
@@ -82,22 +94,10 @@ const Publications = () => {
                   <Users size={16} />
                   <span className="text-sm">{pub.authors}</span>
                 </div>
-                
+
                 <p className="text-gray-700 dark:text-gray-300">
                   {pub.description}
                 </p>
-                
-                <div className="flex justify-end">
-                  <a
-                    href={pub.doi}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors"
-                  >
-                    <ExternalLink size={16} />
-                    View Paper
-                  </a>
-                </div>
               </div>
             </Card>
           ))}
@@ -140,7 +140,7 @@ const Publications = () => {
             {(experienceData as any).researchHighlights.map((research: any, index: number) => (
               <SimpleCard
                 key={research.title}
-                {...animations.fadeInWithDelay(index)}
+                {...animations.staggeredFadeIn(index)}
                 icon={BookOpen}
                 title={research.title}
                 subtitle={`${research.institution} | ${research.year}`}

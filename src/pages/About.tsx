@@ -1,5 +1,6 @@
 import { Code, Database, Cloud, Cpu, Award, Target } from 'lucide-react'
 import skillsData from '../content/skills.json'
+import aboutData from '../content/about.json'
 import SimpleCard from '../components/SimpleCard'
 import { PageLayout } from '../components/PageLayout'
 import { animations } from '../utils/theme'
@@ -16,18 +17,18 @@ const About = () => {
 
   return (
     <PageLayout
-      title="About Me"
-      description="Hi! I'm Hakancan Ozturk, a Software Development Engineer at Amazon with a background in machine learning and computational science. I specialize in Retrieval-Augmented Generation (RAG), computational fluid dynamics (CFD), and generative AI."
+      title={aboutData.pageInfo.title}
+      description={aboutData.pageInfo.description}
     >
 
       {/* Background Section */}
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-12">
-        <h2 className={`${SECTION_TITLE_ACCENT_STYLE} mb-6`}>Background</h2>
+        <h2 className={`${SECTION_TITLE_ACCENT_STYLE} mb-6`}>{aboutData.background.title}</h2>
         <p className={`${BODY_STYLE} leading-relaxed mb-6`}>
-          I am a machine learning engineer with a background in applied computational science and mechanical engineering. My expertise spans AI, computational modeling, and data-driven solutions, with a focus on fluid dynamics and information retrieval. I have extensive hands-on experience with both research and production environments, working on projects involving Retrieval-Augmented Generation (RAG) frameworks, AI-driven flow simulations, and innovative engineering designs.
+          {aboutData.background.content}
         </p>
         <blockquote className={`border-l-4 border-blue-500 pl-6 italic ${SECONDARY_TEXT_STYLE}`}>
-          "My work is guided by a passion for leveraging AI to solve complex, real-world problems and a commitment to continuous learning."
+          "{aboutData.background.quote}"
         </blockquote>
       </div>
 
