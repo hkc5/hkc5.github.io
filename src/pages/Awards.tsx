@@ -4,7 +4,7 @@ import skillsData from '../content/skills.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
-import { getPositionColor, pageStyles } from '../utils/theme'
+import { getPositionBadgeColor, pageStyles, SECTION_TITLE_STYLE, CARD_TITLE_STYLE } from '../utils/theme'
 
 const Awards = () => {
   const data = awardsData as any
@@ -47,7 +47,7 @@ const Awards = () => {
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg mr-4">
                     <CategoryIcon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                  <h2 className={SECTION_TITLE_STYLE}>
                     {category.title}
                   </h2>
                 </div>
@@ -64,11 +64,11 @@ const Awards = () => {
                       customBadges={[
                         ...(item.position ? [{
                           label: item.position,
-                          className: `text-sm font-semibold ${getPositionColor(item.position)}`
+                          className: `px-3 py-1 rounded-full text-xs font-medium ${getPositionBadgeColor()}`
                         }] : []),
                         ...(item.score ? [{
                           label: item.score,
-                          className: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
+                          className: 'px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
                         }] : [])
                       ]}
                     >
@@ -119,7 +119,7 @@ const Awards = () => {
           {/* Test Scores Section */}
           <section className="mt-16">
             <div className="flex items-center mb-8 justify-center">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <h2 className={SECTION_TITLE_STYLE}>
                 Standardized Test Scores
               </h2>
             </div>
@@ -132,7 +132,7 @@ const Awards = () => {
                   className="text-center"
                 >
                   <div className="space-y-2 mt-3">
-                    <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                    <div className={CARD_TITLE_STYLE + ' text-blue-600 dark:text-blue-400'}>
                       {score.score}
                     </div>
                     {score.detail && (

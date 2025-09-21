@@ -2,6 +2,7 @@ import { Code, Database, Cloud, Cpu, Award, Target } from 'lucide-react'
 import skillsData from '../content/skills.json'
 import SimpleCard from '../components/SimpleCard'
 import { animations, pageStyles } from '../utils/theme'
+import { SECTION_TITLE_ACCENT_STYLE, BODY_STYLE, SECONDARY_TEXT_STYLE, colors, typography } from '../utils/theme'
 
 const About = () => {
   const skillCategories = skillsData.skillCategories
@@ -27,18 +28,18 @@ const About = () => {
 
         {/* Background Section */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-12">
-          <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-6">Background</h2>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+          <h2 className={`${SECTION_TITLE_ACCENT_STYLE} mb-6`}>Background</h2>
+          <p className={`${BODY_STYLE} leading-relaxed mb-6`}>
             I am a machine learning engineer with a background in applied computational science and mechanical engineering. My expertise spans AI, computational modeling, and data-driven solutions, with a focus on fluid dynamics and information retrieval. I have extensive hands-on experience with both research and production environments, working on projects involving Retrieval-Augmented Generation (RAG) frameworks, AI-driven flow simulations, and innovative engineering designs.
           </p>
-          <blockquote className="border-l-4 border-blue-500 pl-6 italic text-gray-600 dark:text-gray-400">
+          <blockquote className={`border-l-4 border-blue-500 pl-6 italic ${SECONDARY_TEXT_STYLE}`}>
             "My work is guided by a passion for leveraging AI to solve complex, real-world problems and a commitment to continuous learning."
           </blockquote>
         </div>
 
         {/* Research Interests */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-8 text-center">Research Interests</h2>
+          <h2 className={`${SECTION_TITLE_ACCENT_STYLE} mb-8 text-center`}>Research Interests</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {researchInterests.map((interest, index) => {
               const IconComponent = iconMap[interest.icon as keyof typeof iconMap]
@@ -57,7 +58,7 @@ const About = () => {
 
         {/* Technical Skills */}
         <div>
-          <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-8 text-center">Technical Skills</h2>
+          <h2 className={`${SECTION_TITLE_ACCENT_STYLE} mb-8 text-center`}>Technical Skills</h2>
           <div className="grid lg:grid-cols-2 gap-8">
             {skillCategories.map((category, categoryIndex) => {
               const IconComponent = iconMap[category.icon as keyof typeof iconMap]
@@ -71,8 +72,8 @@ const About = () => {
                   <div className="space-y-4">
                     {category.skills.map((skill) => (
                       <div key={skill.name} className="border-l-2 border-blue-100 dark:border-blue-800 pl-4">
-                        <h4 className="font-semibold text-gray-950 dark:text-white">{skill.name}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">{skill.description}</p>
+                        <h4 className={`${typography.fontWeight.semibold} ${colors.text.primary}`}>{skill.name}</h4>
+                        <p className={SECONDARY_TEXT_STYLE}>{skill.description}</p>
                       </div>
                     ))}
                   </div>

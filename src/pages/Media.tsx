@@ -3,7 +3,7 @@ import { Card } from '../components/Card';
 import { VideoCard } from '../components/VideoCard';
 import { ImageCard } from '../components/ImageCard';
 import { TextCard } from '../components/TextCard';
-import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, pageStyles } from '../utils/theme';
+import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, pageStyles, DESCRIPTION_STYLE } from '../utils/theme';
 import mediaData from '../content/media.json';
 
 interface MediaItem {
@@ -82,21 +82,21 @@ const Media: React.FC = () => {
   );
 
   return (
-    <div className={pageStyles.mediaPage.container}>
-      <div className={pageStyles.mediaPage.wrapper}>
+    <div className={pageStyles.standardPage.container}>
+      <div className={pageStyles.standardPage.wrapper}>
         {/* Header */}
-        <div className={pageStyles.mediaPage.header}>
-          <h1 className={pageStyles.mediaPage.title}>
+        <div className={pageStyles.standardPage.header}>
+          <h1 className={pageStyles.standardPage.title}>
             Media & Speaking
           </h1>
-          <p className={pageStyles.mediaPage.description}>
-            A collection of my public speaking engagements, video collaborations, talks, and interviews 
+          <p className={pageStyles.standardPage.description}>
+            A collection of my public speaking engagements, video collaborations, talks, and interviews
             covering topics in data science, healthcare technology, and AI ethics.
           </p>
         </div>
 
         {/* Media Grid */}
-        <div className={pageStyles.mediaPage.content}>
+        <div className={pageStyles.standardPage.content}>
           {sortedMedia.map((item: MediaItem) => renderMediaCard(item))}
         </div>
 
@@ -104,7 +104,7 @@ const Media: React.FC = () => {
         <div className="mt-16 text-center">
           <Card title="Speaking Opportunities" className={cardStyles.callToAction}>
             <div className="py-4">
-              <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
+              <p className={`${DESCRIPTION_STYLE} mb-4 max-w-2xl mx-auto`}>
                 Interested in having me speak at your event or collaborate on a project? 
                 I'd love to discuss opportunities to share insights on data science, healthcare technology, and AI ethics.
               </p>

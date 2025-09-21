@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, pageStyles } from '../utils/theme'
+import { animations, pageStyles, SECTION_TITLE_STYLE } from '../utils/theme'
 
 const Experience = () => {
   // Icon mapping for JSON data
@@ -86,7 +86,7 @@ const Experience = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-16"
         >
-          <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">
+          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
             Mentoring & Volunteering
           </h2>
           <div className="grid md:grid-cols-1 gap-6">

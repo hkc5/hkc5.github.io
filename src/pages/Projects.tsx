@@ -3,7 +3,7 @@ import projectsData from '../content/projects.json'
 import Card from '../components/Card'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, pageStyles } from '../utils/theme'
+import { animations, pageStyles, SUBTITLE_STYLE } from '../utils/theme'
 
 const Projects = () => {
   // Icon mapping for JSON data
@@ -68,7 +68,7 @@ const Projects = () => {
                   {/* Links */}
                   {project.links && (
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-950 dark:text-white mb-4">
+                      <h4 className={`${SUBTITLE_STYLE} mb-4`}>
                         Links
                       </h4>
                       <div className="flex flex-wrap gap-3">

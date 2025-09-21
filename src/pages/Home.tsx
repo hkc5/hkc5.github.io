@@ -2,30 +2,29 @@ import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Download } from 'lucide-react'
 import ParticleBackground from '../components/ParticleBackground'
 import SEO from '../components/SEO'
+import { HERO_TITLE_STYLE, HERO_SUBTITLE_STYLE, HERO_DESCRIPTION_STYLE, colors, pageTemplates, components, animations } from '../utils/theme'
 
 const Home = () => {
   return (
     <>
       <SEO />
-      <div className="relative transition-colors duration-300 bg-transparent">
+      <div className={pageTemplates.home.container}>
       {/* Particle Background */}
       <ParticleBackground />
 
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pt-48 sm:pb-16">
-        <div className="max-w-6xl mx-auto">
+      <section className={pageTemplates.home.hero}>
+        <div className={pageTemplates.home.heroContent}>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            {...animations.fadeInUp}
             transition={{ duration: 0.8 }}
-            className="bg-white/10 dark:bg-gray-900/10 backdrop-blur-sm rounded-3xl shadow-lg border border-white/30 dark:border-gray-500/20 p-8 lg:p-12"
+            className={pageTemplates.home.heroCard}
           >
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 relative z-10"
             >
             {/* Profile Picture */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              {...animations.fadeInWithDelay(1)}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex-shrink-0"
             >
@@ -45,38 +44,36 @@ const Home = () => {
 
             {/* Content */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className={`${HERO_TITLE_STYLE} mb-6`}>
                 Hi, I'm{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   Hakancan Ozturk
                 </span>
               </h1>
-              
-              <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+
+              <p className={`${HERO_SUBTITLE_STYLE} mb-8`}>
                 Software Development Engineer at Amazon
               </p>
-              
-              <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl lg:max-w-none">
-                Machine learning engineer with expertise in Retrieval-Augmented Generation (RAG), 
-                computational fluid dynamics (CFD), and generative AI. Currently working on Prime Video 
+
+              <p className={`${HERO_DESCRIPTION_STYLE} mb-8 max-w-2xl lg:max-w-none`}>
+                Machine learning engineer with expertise in Retrieval-Augmented Generation (RAG),
+                computational fluid dynamics (CFD), and generative AI. Currently working on Prime Video
                 infrastructure and UI optimization at Amazon.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                {...animations.hover.scale}
+                className={components.button.primary}
               >
                 Get In Touch
               </motion.a>
-              
+
               <motion.a
                 href="/resume.pdf"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-3 rounded-lg font-medium transition-colors flex items-center gap-2"
+                {...animations.hover.scale}
+                className={`${components.button.outline} flex items-center gap-2`}
               >
                 <Download size={20} />
                 Download CV
@@ -90,7 +87,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                className={colors.interactive.accent}
               >
                 <Github size={24} />
               </motion.a>
@@ -99,14 +96,14 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                className={colors.interactive.accent}
               >
                 <Linkedin size={24} />
               </motion.a>
               <motion.a
                 href="mailto:hakancan.ozturk23@gmail.com"
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                className={colors.interactive.accent}
               >
                 <Mail size={24} />
               </motion.a>

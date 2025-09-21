@@ -1,7 +1,7 @@
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { pageStyles } from '../utils/theme'
+import { pageStyles, CARD_TITLE_STYLE, colors, typography } from '../utils/theme'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className={`${CARD_TITLE_STYLE} mb-6`}>
                 Contact Information
               </h2>
               
@@ -88,8 +88,8 @@ const Contact = () => {
                     <Mail className="text-blue-600 dark:text-blue-400" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
-                    <p className="text-gray-600 dark:text-gray-300">hakancan.ozturk23@gmail.com</p>
+                    <h3 className={`${typography.fontWeight.semibold} ${colors.text.primary}`}>Email</h3>
+                    <p className={colors.text.secondary}>hakancan.ozturk23@gmail.com</p>
                   </div>
                 </div>
                 
@@ -98,8 +98,8 @@ const Contact = () => {
                     <MapPin className="text-purple-600 dark:text-purple-400" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Location</h3>
-                    <p className="text-gray-600 dark:text-gray-300">London, UK</p>
+                    <h3 className={`${typography.fontWeight.semibold} ${colors.text.primary}`}>Location</h3>
+                    <p className={colors.text.secondary}>London, UK</p>
                   </div>
                 </div>
               </div>
@@ -122,7 +122,7 @@ const Contact = () => {
             
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className={`${CARD_TITLE_STYLE} mb-6`}>
                 Send a Message
               </h2>
               

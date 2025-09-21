@@ -6,6 +6,7 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import BulletList from '../components/BulletList'
 import { animations, getTypeColor, pageStyles } from '../utils/theme'
+import { SECTION_TITLE_STYLE, CARD_TITLE_STYLE, SECONDARY_TEXT_STYLE } from '../utils/theme'
 
 const Publications = () => {
   const publications = scholarData.publications
@@ -29,20 +30,20 @@ const Publications = () => {
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-12">
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 text-center">
             <div>
-              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.totalCitations}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Total Citations</p>
+              <p className={`${CARD_TITLE_STYLE} mb-1`}>{metrics.totalCitations}</p>
+              <p className={SECONDARY_TEXT_STYLE}>Total Citations</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.hIndex}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">h-index</p>
+              <p className={`${CARD_TITLE_STYLE} mb-1`}>{metrics.hIndex}</p>
+              <p className={SECONDARY_TEXT_STYLE}>h-index</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.i10Index}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">i10-index</p>
+              <p className={`${CARD_TITLE_STYLE} mb-1`}>{metrics.i10Index}</p>
+              <p className={SECONDARY_TEXT_STYLE}>i10-index</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gray-950 dark:text-white mb-1">{metrics.publications}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Publications</p>
+              <p className={`${CARD_TITLE_STYLE} mb-1`}>{metrics.publications}</p>
+              <p className={SECONDARY_TEXT_STYLE}>Publications</p>
             </div>
             <div>
               <a
@@ -110,7 +111,7 @@ const Publications = () => {
 
         {/* Current Research Section */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">Current Research</h2>
+          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>Current Research</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <SimpleCard
               icon={BookOpen}
@@ -138,7 +139,7 @@ const Publications = () => {
 
         {/* Research Highlights */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">
+          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
             Research Highlights
           </h2>
           <div className="grid md:grid-cols-2 gap-8">

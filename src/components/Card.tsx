@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { motion, TargetAndTransition, VariantLabels, Transition } from 'framer-motion'
 import { Calendar, MapPin } from 'lucide-react'
-import { cardStyles, getTypeColor, getStatusColor } from '../utils/theme'
+import { cardStyles, getTypeColor } from '../utils/theme'
 
 interface CardProps {
   // Animation
@@ -118,9 +118,6 @@ export const Card: React.FC<CardProps> = ({
                 <span className={`${cardStyles.badge} bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200`}>
                   Current
                 </span>
-              )}
-              {status && status !== 'current' && (
-                <div className={`w-3 h-3 ${getStatusColor(status)} rounded-full`}></div>
               )}
               {customBadges.map((badge, index) => (
                 <span key={index} className={`${cardStyles.badge} ${badge.className}`}>

@@ -4,7 +4,7 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, pageStyles } from '../utils/theme'
+import { animations, pageStyles, SECTION_TITLE_STYLE } from '../utils/theme'
 
 const Education = () => {
 
@@ -67,7 +67,7 @@ const Education = () => {
 
         {/* Teaching Experience */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 text-center">
+          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
             Teaching Experience
           </h2>
           <div className="grid md:grid-cols-3 gap-8">

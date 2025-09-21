@@ -63,6 +63,20 @@
         "title": "Academic Excellence",
         "items": [
           {
+            "name": "Y Combinator AI Startup School",
+            "position": "Selected Participant",
+            "year": "2025",
+            "description": "Handpicked as one of the top 2000 CS/AI students globally to attend Y Combinator's AI Startup School in San Francisco. Flight and accommodations provided by Y Combinator.",
+            "details": "Intensive program covering AI entrepreneurship, startup fundamentals, and cutting-edge AI technologies",
+            "recognition": "Top 2000 CS/AI Students Globally",
+            "technologies": [
+              "AI/ML",
+              "Startup Development",
+              "Entrepreneurship",
+              "Silicon Valley Network"
+            ]
+          },
+          {
             "name": "Merit Scholarship",
             "type": "Scholarship",
             "year": "2020-2023",
