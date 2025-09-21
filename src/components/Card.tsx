@@ -14,7 +14,7 @@ interface CardProps {
   title: string
   subtitle?: string
   subtitleBadge?: {
-    label: string
+    label: string | React.ReactNode
     className: string
   }
   organization?: string
