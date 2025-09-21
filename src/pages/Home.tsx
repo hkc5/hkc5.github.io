@@ -13,14 +13,14 @@ const Home = () => {
       <ParticleBackground />
 
       {/* Hero Section */}
-      <section className={pageTemplates.home.hero}>
+      <section className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-12 sm:pt-36 sm:pb-16">
         <div className={pageTemplates.home.heroContent}>
           <motion.div
             {...animations.fadeInUp}
             transition={{ duration: 0.8 }}
             className={pageTemplates.home.heroCard}
           >
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 relative z-10"
+            <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12 relative z-10"
             >
             {/* Profile Picture */}
             <motion.div
@@ -28,7 +28,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex-shrink-0"
             >
-              <div className="w-48 h-60 lg:w-56 lg:h-72 relative mt-4 sm:mt-0">
+              <div className="w-56 h-70 lg:w-64 lg:h-80 relative">
                 <picture>
                   <source srcSet="/profile.webp" type="image/webp" />
                   <img
@@ -43,10 +43,10 @@ const Home = () => {
             </motion.div>
 
             {/* Content */}
-            <div className="flex-1 text-center lg:text-left">
+            <div className="flex-1 text-center lg:text-left flex flex-col justify-center">
               <h1 className={`${HERO_TITLE_STYLE} mb-6`}>
                 Hi, I'm{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
                   Hakancan Ozturk
                 </span>
               </h1>
