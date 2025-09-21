@@ -7,18 +7,18 @@ const Home = () => {
   return (
     <>
       <SEO />
-      <div className="relative min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="relative bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Particle Background */}
       <ParticleBackground />
-      
+
       {/* Hero Section */}
-      <section className="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-0">
+      <section className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pt-48 sm:pb-16">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 mt-8 sm:mt-0"
+            className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12"
           >
             {/* Profile Picture */}
             <motion.div
@@ -54,13 +54,13 @@ const Home = () => {
                 Software Development Engineer at Amazon
               </p>
               
-              <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl lg:max-w-none">
+              <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl lg:max-w-none">
                 Machine learning engineer with expertise in Retrieval-Augmented Generation (RAG), 
                 computational fluid dynamics (CFD), and generative AI. Currently working on Prime Video 
                 infrastructure and UI optimization at Amazon.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
               <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
