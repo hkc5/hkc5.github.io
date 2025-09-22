@@ -130,7 +130,7 @@ const Navbar = () => {
         <motion.div
           initial={false}
           animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-          className="md:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/5 dark:bg-gray-900/5 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-500/20 shadow-2xl"
+          className="md:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-500/20 shadow-2xl"
         >
           <div className="px-4 py-3 space-y-1">
             {navigation.map((item) => (
@@ -154,7 +154,7 @@ const Navbar = () => {
         <motion.div
           initial={false}
           animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-          className="hidden md:block lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/5 dark:bg-gray-900/5 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-500/20 shadow-2xl"
+          className="hidden md:block lg:hidden overflow-hidden absolute top-full left-0 right-0 mt-2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-500/20 shadow-2xl"
         >
           <div className="px-4 py-3 space-y-1">
             {navigation.slice(4).map((item) => (

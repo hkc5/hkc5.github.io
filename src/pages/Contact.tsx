@@ -1,7 +1,7 @@
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { CARD_TITLE_STYLE, colors, typography } from '../utils/theme'
+import { CARD_TITLE_STYLE, colors, typography, pageStyles } from '../utils/theme'
 import { PageLayout } from '../components/PageLayout'
 
 const Contact = () => {
@@ -103,7 +103,7 @@ const Contact = () => {
                 </p>
                 <a
                   href="mailto:hakancan.ozturk23@gmail.com"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className={pageStyles.primaryButtonSmall}
                 >
                   <Mail size={16} />
                   Send Email

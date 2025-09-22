@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import BulletList from '../components/BulletList'
 import { PageLayout } from '../components/PageLayout'
-import { animations, getTypeColor } from '../utils/theme'
+import { animations, getTypeColor, pageStyles } from '../utils/theme'
 import { SECTION_TITLE_STYLE, CARD_TITLE_STYLE, SECONDARY_TEXT_STYLE } from '../utils/theme'
 
 const Publications = () => {
@@ -22,7 +22,7 @@ const Publications = () => {
 
         {/* Metrics Summary */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-12">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 text-center">
+          <div className={pageStyles.metricsGrid}>
             <div>
               <p className={`${CARD_TITLE_STYLE} mb-1`}>{metrics.totalCitations}</p>
               <p className={SECONDARY_TEXT_STYLE}>Total Citations</p>
@@ -56,7 +56,7 @@ const Publications = () => {
         </div>
 
         {/* Publications List */}
-        <div className="space-y-8">
+        <div className={pageStyles.cardContainer}>
           {publications.map((pub, index) => (
             <Card
               key={pub.id}
@@ -104,9 +104,9 @@ const Publications = () => {
         </div>
 
         {/* Current Research Section */}
-        <div className="mt-16">
-          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>Current Research</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className={pageStyles.sectionSpacing}>
+          <h2 className={`${SECTION_TITLE_STYLE} ${pageStyles.sectionHeaderCentered}`}>Current Research</h2>
+          <div className={pageStyles.gridTwoCol}>
             <SimpleCard
               icon={BookOpen}
               title={currentResearch.thesis.title}
@@ -132,11 +132,11 @@ const Publications = () => {
         </div>
 
         {/* Research Highlights */}
-        <div className="mt-16">
-          <h2 className={`${SECTION_TITLE_STYLE} mb-8 text-center`}>
+        <div className={pageStyles.sectionSpacing}>
+          <h2 className={`${SECTION_TITLE_STYLE} ${pageStyles.sectionHeaderCentered}`}>
             Research Highlights
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className={pageStyles.gridTwoCol}>
             {(experienceData as any).researchHighlights.map((research: any, index: number) => (
               <SimpleCard
                 key={research.title}

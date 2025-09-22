@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '../components/Card';
 import { MediaCard } from '../components/MediaCard';
-import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, DESCRIPTION_STYLE, animations } from '../utils/theme';
+import { getTypeColor, getMediaTypeLabel, buttonStyles, cardStyles, DESCRIPTION_STYLE, animations, pageStyles } from '../utils/theme';
 import mediaData from '../content/media.json';
 import { PageLayout } from '../components/PageLayout';
 
@@ -82,14 +82,14 @@ const Media: React.FC = () => {
       {/* Media Grid */}
       <div>
           {sortedMedia.map((item: MediaItem, index) => (
-            <div key={item.id} className={index > 0 ? "mt-12" : ""}>
+            <div key={item.id} className={index > 0 ? pageStyles.cardSpacing : ""}>
               {renderMediaCard(item, index)}
             </div>
           ))}
       </div>
 
       {/* Call to Action */}
-      <div className="mt-16 text-center">
+      <div className={pageStyles.callToActionSection}>
         <Card title="Speaking Opportunities" className={cardStyles.callToAction}>
           <div className="py-4">
             <p className={`${DESCRIPTION_STYLE} mb-4 max-w-2xl mx-auto`}>

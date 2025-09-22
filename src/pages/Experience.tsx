@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, SECTION_TITLE_STYLE } from '../utils/theme'
+import { animations, SECTION_TITLE_STYLE, pageStyles } from '../utils/theme'
 import { PageLayout } from '../components/PageLayout'
 
 const Experience = () => {
@@ -34,7 +34,7 @@ const Experience = () => {
       description="Journey through software engineering, machine learning, research, and education with consistently outstanding performance"
     >
       {/* Experience Cards */}
-      <div className="space-y-8">
+      <div className={pageStyles.cardContainer}>
           {experiences.map((exp: any, index: number) => (
             <Card
               key={exp.id}

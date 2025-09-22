@@ -3,7 +3,7 @@ import projectsData from '../content/projects.json'
 import Card from '../components/Card'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, SUBTITLE_STYLE } from '../utils/theme'
+import { animations, SUBTITLE_STYLE, pageStyles } from '../utils/theme'
 import { PageLayout } from '../components/PageLayout'
 
 const Projects = () => {
@@ -31,7 +31,7 @@ const Projects = () => {
       description="A collection of research projects, production systems, and innovative solutions spanning AI, machine learning, and software engineering"
     >
       {/* Projects Grid */}
-      <div className="space-y-8">
+      <div className={pageStyles.cardContainer}>
           {projects.map((project: any, index: number) => (
             <Card
               key={project.id}

@@ -4,7 +4,7 @@ import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
 import BulletList from '../components/BulletList'
-import { animations, SECTION_TITLE_STYLE } from '../utils/theme'
+import { animations, SECTION_TITLE_STYLE, pageStyles } from '../utils/theme'
 import { PageLayout } from '../components/PageLayout'
 
 const Education = () => {
@@ -16,7 +16,7 @@ const Education = () => {
       description="Academic journey focused on computational science, machine learning, and mechanical engineering with outstanding performance"
     >
       {/* Education Cards */}
-      <div className="space-y-8">
+      <div className={pageStyles.cardContainer}>
           {(educationData as any).educationData.map((edu: any, index: number) => (
             <Card
               key={edu.id}

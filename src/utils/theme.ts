@@ -283,6 +283,29 @@ export const pageTemplates = {
 export const pageStyles = {
   // Container backgrounds
   container: 'min-h-screen bg-gray-50 dark:bg-gray-900 py-8',
+
+  // Common spacing patterns
+  cardContainer: 'space-y-8',
+  sectionSpacing: 'mt-16',
+  gridTwoCol: 'grid md:grid-cols-2 gap-8',
+  cardSpacing: 'mt-12',
+
+  // Section headers
+  sectionHeaderCentered: 'mb-8 text-center',
+  callToActionSection: 'mt-16 text-center',
+
+  // Common flex patterns
+  flexCenter: 'flex items-center justify-center',
+  flexCenterGap2: 'flex items-center gap-2',
+  flexCenterGap4: 'flex items-center gap-4',
+
+  // Content containers
+  centeredContent: 'text-center',
+  metricsGrid: 'grid grid-cols-2 lg:grid-cols-5 gap-6 text-center',
+
+  // Button variants (complementing existing buttonStyles)
+  primaryButtonInline: 'inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium',
+  primaryButtonSmall: 'inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors',
   containerWithTransition: 'min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300',
 
   // Width variations

@@ -4,7 +4,7 @@ import skillsData from '../content/skills.json'
 import Card from '../components/Card'
 import SimpleCard from '../components/SimpleCard'
 import TagList from '../components/TagList'
-import { getPositionBadgeColor, SECTION_TITLE_STYLE, CARD_TITLE_STYLE } from '../utils/theme'
+import { getPositionBadgeColor, SECTION_TITLE_STYLE, CARD_TITLE_STYLE, pageStyles } from '../utils/theme'
 import { PageLayout } from '../components/PageLayout'
 
 const Awards = () => {
@@ -47,7 +47,7 @@ const Awards = () => {
                 </div>
 
                 {/* Category Items */}
-                <div className="space-y-8">
+                <div className={pageStyles.cardContainer}>
                   {category.items.map((item: any, index: number) => (
                     <Card
                       key={index}
