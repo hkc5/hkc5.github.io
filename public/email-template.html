@@ -1,91 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EmailJS Template - Clean Version</title>
-</head>
-<body style="margin: 0; padding: 20px; background-color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif;">
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 20px;
+      background-color: #f3f4f6;
+      font-family: system-ui, -apple-system, sans-serif;
+    "
+  >
+    <!-- Copy everything below this line for EmailJS -->
+    <div
+      style="
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        overflow: hidden;
+      "
+    >
+      <!-- Header -->
+      <div
+        style="
+          background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+          padding: 24px;
+          text-align: center;
+          color: white;
+        "
+      >
+        <h1 style="margin: 0; font-size: 24px; font-weight: 600">
+          📧 New Contact Message
+        </h1>
+        <p style="margin: 8px 0 0 0; opacity: 0.9; font-size: 14px">
+          From your personal website
+        </p>
+      </div>
 
-<!-- Copy everything below this line for EmailJS -->
-<div style="font-family: system-ui, -apple-system, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden;">
-  
-  <!-- Header -->
-  <div style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); padding: 24px; text-align: center; color: white;">
-    <h1 style="margin: 0; font-size: 24px; font-weight: 600;">📧 New Contact Message</h1>
-    <p style="margin: 8px 0 0 0; opacity: 0.9; font-size: 14px;">From your personal website</p>
-  </div>
-  
-  <!-- Content -->
-  <div style="padding: 32px 24px;">
-    
-    <!-- Sender Info -->
-    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
-      <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600; color: #1e293b;">{{name}}</h3>
-      <p style="margin: 0; color: #64748b; font-size: 14px;">{{email}}</p>
-    </div>
-    
-    <!-- Subject -->
-    <div style="margin-bottom: 20px;">
-      <h4 style="margin: 0 0 8px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; font-weight: 500;">Subject</h4>
-      <p style="margin: 0; font-size: 16px; font-weight: 600; color: #1e293b;">{{subject}}</p>
-    </div>
-    
-    <!-- Message -->
-    <div style="margin-bottom: 24px;">
-      <h4 style="margin: 0 0 12px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; font-weight: 500;">Message</h4>
-      <div style="background-color: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 6px; padding: 20px;">
-        <p style="margin: 0; white-space: pre-wrap; line-height: 1.6; color: #374151; font-size: 15px;">{{message}}</p>
+      <!-- Content -->
+      <div style="padding: 32px 24px">
+        <!-- Sender Info -->
+        <div
+          style="
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+          "
+        >
+          <h3
+            style="
+              margin: 0 0 8px 0;
+              font-size: 18px;
+              font-weight: 600;
+              color: #1e293b;
+            "
+          >
+            {{name}}
+          </h3>
+          <p style="margin: 0; color: #64748b; font-size: 14px">{{email}}</p>
+        </div>
+
+        <!-- Subject -->
+        <div style="margin-bottom: 20px">
+          <h4
+            style="
+              margin: 0 0 8px 0;
+              font-size: 12px;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              color: #64748b;
+              font-weight: 500;
+            "
+          >
+            Subject
+          </h4>
+          <p
+            style="margin: 0; font-size: 16px; font-weight: 600; color: #1e293b"
+          >
+            {{subject}}
+          </p>
+        </div>
+
+        <!-- Message -->
+        <div style="margin-bottom: 24px">
+          <h4
+            style="
+              margin: 0 0 12px 0;
+              font-size: 12px;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              color: #64748b;
+              font-weight: 500;
+            "
+          >
+            Message
+          </h4>
+          <div
+            style="
+              background-color: #f8fafc;
+              border-left: 4px solid #3b82f6;
+              border-radius: 6px;
+              padding: 20px;
+            "
+          >
+            <p
+              style="
+                margin: 0;
+                white-space: pre-wrap;
+                line-height: 1.6;
+                color: #374151;
+                font-size: 15px;
+              "
+            >
+              {{message}}
+            </p>
+          </div>
+        </div>
+
+        <!-- Timestamp -->
+        <div
+          style="
+            background-color: #f1f5f9;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+          "
+        >
+          <p style="margin: 0; color: #64748b; font-size: 12px">
+            📅 Received on {{time}}
+          </p>
+        </div>
+
+        <!-- Reply Button -->
+        <div style="text-align: center">
+          <a
+            href="mailto:{{email}}?subject=Re: {{subject}}"
+            style="
+              display: inline-block;
+              background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+              color: white;
+              text-decoration: none;
+              padding: 12px 24px;
+              border-radius: 8px;
+              font-weight: 600;
+              font-size: 14px;
+            "
+          >
+            📧 Reply to {{name}}
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div
+        style="
+          background-color: #f8fafc;
+          padding: 16px 24px;
+          text-align: center;
+          border-top: 1px solid #e2e8f0;
+        "
+      >
+        <p style="margin: 0; color: #64748b; font-size: 12px">
+          Sent via contact form • hakancan.io
+        </p>
       </div>
     </div>
-    
-    <!-- Timestamp -->
-    <div style="background-color: #f1f5f9; border-radius: 6px; padding: 12px 16px; margin-bottom: 24px;">
-      <p style="margin: 0; color: #64748b; font-size: 12px;">
-        📅 Received on {{time}}
-      </p>
-    </div>
-    
-    <!-- Reply Button -->
-    <div style="text-align: center;">
-      <a href="mailto:{{email}}?subject=Re: {{subject}}" 
-         style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px;">
-        📧 Reply to {{name}}
-      </a>
-    </div>
-    
-  </div>
-  
-  <!-- Footer -->
-  <div style="background-color: #f8fafc; padding: 16px 24px; text-align: center; border-top: 1px solid #e2e8f0;">
-    <p style="margin: 0; color: #64748b; font-size: 12px;">
-      Sent via contact form • hakancanozturk.com
-    </p>
-  </div>
-  
-</div>
-<!-- Copy everything above this line for EmailJS -->
+    <!-- Copy everything above this line for EmailJS -->
 
-<div style="max-width: 600px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 8px; border: 1px solid #e5e7eb;">
-  <h2 style="margin-top: 0; color: #1e293b;">Instructions:</h2>
-  <ol style="color: #64748b; line-height: 1.6;">
-    <li>Go to your EmailJS dashboard</li>
-    <li>Edit your template (<code>template_bsjj5zo</code>)</li>
-    <li>Copy the HTML from the template above (between the comment lines)</li>
-    <li>Paste it into the EmailJS template editor</li>
-    <li>Save the template</li>
-    <li>Test it with your contact form</li>
-  </ol>
-  
-  <h3 style="color: #1e293b;">Template Variables:</h3>
-  <ul style="color: #64748b; line-height: 1.6;">
-    <li><code>{{name}}</code> - Sender's name</li>
-    <li><code>{{email}}</code> - Sender's email</li>
-    <li><code>{{subject}}</code> - Message subject</li>
-    <li><code>{{message}}</code> - Message content</li>
-    <li><code>{{time}}</code> - Formatted timestamp</li>
-  </ul>
-</div>
+    <div
+      style="
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+      "
+    >
+      <h2 style="margin-top: 0; color: #1e293b">Instructions:</h2>
+      <ol style="color: #64748b; line-height: 1.6">
+        <li>Go to your EmailJS dashboard</li>
+        <li>Edit your template (<code>template_bsjj5zo</code>)</li>
+        <li>
+          Copy the HTML from the template above (between the comment lines)
+        </li>
+        <li>Paste it into the EmailJS template editor</li>
+        <li>Save the template</li>
+        <li>Test it with your contact form</li>
+      </ol>
 
-</body>
+      <h3 style="color: #1e293b">Template Variables:</h3>
+      <ul style="color: #64748b; line-height: 1.6">
+        <li><code>{{name}}</code> - Sender's name</li>
+        <li><code>{{email}}</code> - Sender's email</li>
+        <li><code>{{subject}}</code> - Message subject</li>
+        <li><code>{{message}}</code> - Message content</li>
+        <li><code>{{time}}</code> - Formatted timestamp</li>
+      </ul>
+    </div>
+  </body>
 </html>

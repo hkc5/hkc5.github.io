@@ -1,17 +1,20 @@
 # Current Website Architecture Analysis
 
 ## Overview
-Your website (`hakancanozturk.com`) is currently a **static React application** built with Vite and deployed via GitHub Pages.
+
+Your website (`hakancan.io`) is currently a **static React application** built with Vite and deployed via GitHub Pages.
 
 ## How It's Being Served
 
 ### Build Process (Vite)
+
 - **Framework**: React 19.1.0 with TypeScript
 - **Build Tool**: Vite 6.3.5
 - **Output**: Static files in `./dist` directory
 - **Build Command**: `tsc && vite build`
 
 ### What Vite Does
+
 1. **Bundles** your React/TypeScript code into optimized JavaScript
 2. **Processes** Tailwind CSS and other assets
 3. **Minifies** code using Terser (drops console.logs, debuggers)
@@ -19,17 +22,19 @@ Your website (`hakancanozturk.com`) is currently a **static React application** 
 5. **Creates** a completely static website (HTML, CSS, JS files)
 
 ### GitHub Pages Deployment
+
 - **Trigger**: Automatic on push to `main` branch
-- **Process**: 
+- **Process**:
   1. GitHub Actions runs `npm ci && npm run build`
   2. Uploads `./dist` folder contents
   3. Serves static files from GitHub's CDN
-- **Domain**: Custom domain `hakancanozturk.com` (via CNAME file)
+- **Domain**: Custom domain `hakancan.io` (via CNAME file)
 - **HTTPS**: Automatically handled by GitHub Pages
 
 ## Current Limitations
 
 ### ✅ What Works
+
 - Client-side routing (React Router)
 - Static content serving
 - Fast loading (CDN delivery)
@@ -37,6 +42,7 @@ Your website (`hakancanozturk.com`) is currently a **static React application** 
 - Custom domain with HTTPS
 
 ### ❌ What Doesn't Work
+
 - **Server-side rendering (SSR)**
 - **API routes/endpoints**
 - **Server-side functions**
@@ -73,6 +79,6 @@ Frontend: React 19 + TypeScript + Tailwind CSS
 Build: Vite 6.3.5
 Routing: React Router 7.6.1
 Hosting: GitHub Pages (Static CDN)
-Domain: hakancanozturk.com
+Domain: hakancan.io
 Deployment: GitHub Actions
 ```

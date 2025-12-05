@@ -2,7 +2,7 @@
 
 Modern personal portfolio website built with React, TypeScript, and Tailwind CSS. Features interactive particle background, optimized performance, and comprehensive SEO implementation.
 
-🌐 **Live Site**: [hakancanozturk.com](https://hakancanozturk.com)
+🌐 **Live Site**: [hakancan.io](https://hakancan.io)
 
 ## ✨ **Key Features**
 
@@ -112,4 +112,4 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE.md) 
 ---
 
 **Hakancan Ozturk** - Software Development Engineer at Amazon  
-🔗 [LinkedIn](https://linkedin.com/in/hakancan) • [GitHub](https://github.com/hkc5) • [Website](https://hakancanozturk.com)
+🔗 [LinkedIn](https://linkedin.com/in/hakancan) • [GitHub](https://github.com/hkc5) • [Website](https://hakancan.io)

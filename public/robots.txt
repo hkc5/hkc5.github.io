@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://hakancanozturk.com/sitemap.xml
+Sitemap: https://hakancan.io/sitemap.xml
 
 # Block development files
 Disallow: /src/
