@@ -52,13 +52,14 @@ const Home = () => {
               </h1>
 
               <p className={`${HERO_SUBTITLE_STYLE} mb-8`}>
-                Software Development Engineer at Amazon
+                AI Engineer @ Amazon
               </p>
 
               <p className={`${HERO_DESCRIPTION_STYLE} mb-8 max-w-2xl lg:max-w-none`}>
-                Machine learning engineer with expertise in Retrieval-Augmented Generation (RAG),
-                computational fluid dynamics (CFD), and generative AI. Currently working on Prime Video
-                infrastructure and UI optimization at Amazon.
+                Building AI-powered developer platforms at Amazon — from Claude-powered agentic systems
+                analyzing millions of metrics to LLM-based UI defect detection running in CI/CD pipelines.
+                Previously founded the AI engineering efforts at Albus Technologies and conducted
+                computational research at the Max Planck Institute.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-between items-center">

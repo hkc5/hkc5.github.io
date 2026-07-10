@@ -7,25 +7,28 @@
       "location": "London, UK",
       "period": "January 2025 - Present",
       "type": "Full-time",
-      "description": "Working on Prime Video infrastructure and user interface optimization.",
+      "description": "Building AI-powered developer tooling — from Claude-powered agentic platforms to LLM-based defect detection systems running at scale across Prime Video.",
       "responsibilities": [
-        "Migrating Prime Video UI elements from React to SolidJS to enhance performance",
-        "Leveraging LLM-powered automation pipelines for efficient component refactoring",
-        "Developing features for Prime Video Client Software Development Kit (SDK)",
-        "Collaborating with cross-functional teams on scalable video streaming solutions"
+        "Built a Claude-powered agentic platform (won London-wide hackathon) analyzing 10M+ Prime Video metrics via MCP for real-time oncall investigation and CI/CD fix suggestions",
+        "Leading development of an LLM-based visual and functional UI defect detection system running 100s of times daily, catching bugs before production with 99% accuracy",
+        "Migrated metric reporting subsystem from client-side to backend using Rust and AWS Lambda, processing 10K+ metrics per second while reducing app memory usage by 2%",
+        "Drove AI tooling advocacy across the org with multiple presentations and internal wikis reaching 40K+ views"
       ],
       "technologies": [
-        "SolidJS",
-        "React",
         "TypeScript",
-        "AWS",
-        "LLM automation"
+        "Rust",
+        "Python",
+        "AWS Lambda",
+        "Claude/MCP",
+        "LLMs",
+        "React"
       ],
       "icon": "Code",
       "achievements": [
-        "Leading UI migration project",
-        "Implementing LLM automation",
-        "SDK development"
+        "London-wide hackathon winner",
+        "99% defect detection accuracy",
+        "7-figure annual cost savings",
+        "40K+ wiki views"
       ]
     },
     {
@@ -143,7 +146,7 @@
       "year": "2024",
       "highlights": [
         "Novel Grid-Invariant AI architecture",
-        "1000+ GPU hours of optimization",
+        "2000+ GPU hours of optimization",
         "35% improvement in stability",
         "50% increase in accuracy"
       ],

@@ -7,6 +7,21 @@
         "title": "Hackathon Victories",
         "items": [
           {
+            "name": "Amazon Prime Video Hackathon",
+            "position": "1st Place (London-wide)",
+            "year": "2025",
+            "description": "Built a Claude-powered agentic platform analyzing 10M+ Prime Video metrics via MCP for real-time oncall investigation and CI/CD fix suggestions, auto-raising PRs.",
+            "teamSize": 4,
+            "technologies": [
+              "Claude/MCP",
+              "Agentic AI",
+              "AWS",
+              "TypeScript"
+            ],
+            "prize": "London-wide Winner",
+            "achievement": "Won London-wide Amazon hackathon with an agentic platform that saves 100s of engineer-hours monthly"
+          },
+          {
             "name": "Riverflex Augmented Intelligence Hackathon",
             "position": "Participant (Handpicked)",
             "year": "2025",
