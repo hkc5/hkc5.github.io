@@ -28,12 +28,12 @@
       "type": "MSc Dissertation",
       "organization": "Imperial College London",
       "period": "2024",
-      "description": "Discovered a novel Grid-Invariant AI architecture combining convolutional autoencoders and adversarial networks to simulate high-fidelity turbulent flows, achieving unprecedented grid independence and scalability.",
+      "description": "Discovered a novel Grid-Invariant AI architecture combining convolutional autoencoders and adversarial networks to simulate high-fidelity turbulent flows, achieving unprecedented grid independence and scalability (PyTorch). Conducted 2000+ GPU hours of HPC for model optimization.",
       "achievements": [
         "Novel Grid-Invariant AI architecture",
         "35% enhanced long-term stability",
         "50% improved prediction accuracy",
-        "1000+ GPU hours of HPC optimization"
+        "2000+ GPU hours of HPC optimization"
       ],
       "technologies": [
         "Python",
