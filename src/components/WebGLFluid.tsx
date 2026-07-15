@@ -619,7 +619,7 @@ function HSVtoRGB(h: number, s: number, v: number) {
 
 function generateColor(): [number, number, number] {
   const c = HSVtoRGB(Math.random(), 1.0, 1.0)
-  return [c.r * 0.15, c.g * 0.15, c.b * 0.15]
+  return [c.r * 0.25, c.g * 0.25, c.b * 0.25]
 }
 
 // ─── The React Component ─────────────────────────────────────────────────────
