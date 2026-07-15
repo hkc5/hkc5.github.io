@@ -546,7 +546,7 @@ function createDoubleFBO(
 
 // ─── Configuration ───────────────────────────────────────────────────────────
 
-interface FluidConfig {
+export interface FluidConfig {
   SIM_RESOLUTION: number
   DYE_RESOLUTION: number
   DENSITY_DISSIPATION: number
@@ -559,6 +559,7 @@ interface FluidConfig {
   SHADING: boolean
   COLORFUL: boolean
   COLOR_UPDATE_SPEED: number
+  COLOR_INTENSITY: number
   BLOOM: boolean
   BLOOM_ITERATIONS: number
   BLOOM_RESOLUTION: number
@@ -587,6 +588,7 @@ const DEFAULT_CONFIG: FluidConfig = {
   SHADING: true,
   COLORFUL: true,
   COLOR_UPDATE_SPEED: 10,
+  COLOR_INTENSITY: 0.25,
   BLOOM: true,
   BLOOM_ITERATIONS: 6,
   BLOOM_RESOLUTION: 192,
@@ -617,9 +619,9 @@ function HSVtoRGB(h: number, s: number, v: number) {
   return { r, g, b }
 }
 
-function generateColor(): [number, number, number] {
+function generateColor(intensity = 0.25): [number, number, number] {
   const c = HSVtoRGB(Math.random(), 1.0, 1.0)
-  return [c.r * 0.25, c.g * 0.25, c.b * 0.25]
+  return [c.r * intensity, c.g * intensity, c.b * intensity]
 }
 
 // ─── The React Component ─────────────────────────────────────────────────────
@@ -976,7 +978,7 @@ const WebGLFluid: React.FC<WebGLFluidProps> = ({ config: userConfig, className =
 
     function multipleSplats(amount: number) {
       for (let i = 0; i < amount; i++) {
-        const color = generateColor()
+        const color = generateColor(cfg.COLOR_INTENSITY)
         const c: [number, number, number] = [color[0] * 10.0, color[1] * 10.0, color[2] * 10.0]
         const x = Math.random()
         const y = Math.random()
@@ -1018,7 +1020,7 @@ const WebGLFluid: React.FC<WebGLFluidProps> = ({ config: userConfig, className =
       pointer.prevTexcoordY = pointer.texcoordY
       pointer.deltaX = 0
       pointer.deltaY = 0
-      pointer.color = generateColor()
+      pointer.color = generateColor(cfg.COLOR_INTENSITY)
     }
 
     function updatePointerMoveData(pointer: Pointer, posX: number, posY: number) {
@@ -1153,7 +1155,7 @@ const WebGLFluid: React.FC<WebGLFluidProps> = ({ config: userConfig, className =
         colorUpdateTimer += dt * cfg.COLOR_UPDATE_SPEED
         if (colorUpdateTimer >= 1) {
           colorUpdateTimer = wrap(colorUpdateTimer, 0, 1)
-          pointers.forEach(p => { p.color = generateColor() })
+          pointers.forEach(p => { p.color = generateColor(cfg.COLOR_INTENSITY) })
         }
       }
 
