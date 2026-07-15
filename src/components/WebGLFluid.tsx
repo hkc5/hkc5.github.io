@@ -588,11 +588,11 @@ const DEFAULT_CONFIG: FluidConfig = {
   SHADING: true,
   COLORFUL: true,
   COLOR_UPDATE_SPEED: 10,
-  COLOR_INTENSITY: 0.25,
+  COLOR_INTENSITY: 0.1,
   BLOOM: true,
   BLOOM_ITERATIONS: 6,
   BLOOM_RESOLUTION: 192,
-  BLOOM_INTENSITY: 0.6,
+  BLOOM_INTENSITY: 0.4,
   BLOOM_THRESHOLD: 0.6,
   BLOOM_SOFT_KNEE: 0.7,
   PAUSED: false,
@@ -619,7 +619,7 @@ function HSVtoRGB(h: number, s: number, v: number) {
   return { r, g, b }
 }
 
-function generateColor(intensity = 0.25): [number, number, number] {
+function generateColor(intensity = 0.1): [number, number, number] {
   const c = HSVtoRGB(Math.random(), 1.0, 1.0)
   return [c.r * intensity, c.g * intensity, c.b * intensity]
 }
