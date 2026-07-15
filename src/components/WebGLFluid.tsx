@@ -560,6 +560,7 @@ export interface FluidConfig {
   COLORFUL: boolean
   COLOR_UPDATE_SPEED: number
   COLOR_INTENSITY: number
+  COLOR_SATURATION: number
   BLOOM: boolean
   BLOOM_ITERATIONS: number
   BLOOM_RESOLUTION: number
@@ -589,6 +590,7 @@ const DEFAULT_CONFIG: FluidConfig = {
   COLORFUL: true,
   COLOR_UPDATE_SPEED: 10,
   COLOR_INTENSITY: 0.1,
+  COLOR_SATURATION: 0.5,
   BLOOM: true,
   BLOOM_ITERATIONS: 6,
   BLOOM_RESOLUTION: 192,
@@ -619,8 +621,8 @@ function HSVtoRGB(h: number, s: number, v: number) {
   return { r, g, b }
 }
 
-function generateColor(intensity = 0.1): [number, number, number] {
-  const c = HSVtoRGB(Math.random(), 1.0, 1.0)
+function generateColor(intensity = 0.1, saturation = 0.5): [number, number, number] {
+  const c = HSVtoRGB(Math.random(), saturation, 1.0)
   return [c.r * intensity, c.g * intensity, c.b * intensity]
 }
 
@@ -978,7 +980,7 @@ const WebGLFluid: React.FC<WebGLFluidProps> = ({ config: userConfig, className =
 
     function multipleSplats(amount: number) {
       for (let i = 0; i < amount; i++) {
-        const color = generateColor(cfg.COLOR_INTENSITY)
+        const color = generateColor(cfg.COLOR_INTENSITY, cfg.COLOR_SATURATION)
         const c: [number, number, number] = [color[0] * 10.0, color[1] * 10.0, color[2] * 10.0]
         const x = Math.random()
         const y = Math.random()
@@ -1020,7 +1022,7 @@ const WebGLFluid: React.FC<WebGLFluidProps> = ({ config: userConfig, className =
       pointer.prevTexcoordY = pointer.texcoordY
       pointer.deltaX = 0
       pointer.deltaY = 0
-      pointer.color = generateColor(cfg.COLOR_INTENSITY)
+      pointer.color = generateColor(cfg.COLOR_INTENSITY, cfg.COLOR_SATURATION)
     }
 
     function updatePointerMoveData(pointer: Pointer, posX: number, posY: number) {
@@ -1155,7 +1157,7 @@ const WebGLFluid: React.FC<WebGLFluidProps> = ({ config: userConfig, className =
         colorUpdateTimer += dt * cfg.COLOR_UPDATE_SPEED
         if (colorUpdateTimer >= 1) {
           colorUpdateTimer = wrap(colorUpdateTimer, 0, 1)
-          pointers.forEach(p => { p.color = generateColor(cfg.COLOR_INTENSITY) })
+          pointers.forEach(p => { p.color = generateColor(cfg.COLOR_INTENSITY, cfg.COLOR_SATURATION) })
         }
       }
 
