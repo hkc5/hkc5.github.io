@@ -29,11 +29,11 @@ const Fluid = () => {
         config={{
           SIM_RESOLUTION: 128,
           DYE_RESOLUTION: 768,
-          CURL: 4,
-          SPLAT_FORCE: 3000,
+          CURL: 6,
+          SPLAT_FORCE: 5000,
           SPLAT_RADIUS: 0.25,
-          DENSITY_DISSIPATION: 1,
-          VELOCITY_DISSIPATION: 0.3,
+          DENSITY_DISSIPATION: 0.5,
+          VELOCITY_DISSIPATION: 0.1,
           BLOOM: true,
           BLOOM_INTENSITY: 0.5,
           BLOOM_THRESHOLD: 0.6,
@@ -113,17 +113,6 @@ const Fluid = () => {
               </div>
             </div>
 
-            <div className="mt-4 pt-3 border-t border-white/10 text-xs text-white/30">
-              Built with WebGL ·{' '}
-              <a
-                href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300"
-              >
-                PavelDoGreat
-              </a>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
