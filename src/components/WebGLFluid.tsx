@@ -589,12 +589,12 @@ const DEFAULT_CONFIG: FluidConfig = {
   SHADING: true,
   COLORFUL: true,
   COLOR_UPDATE_SPEED: 10,
-  COLOR_INTENSITY: 0.08,
-  COLOR_SATURATION: 0.4,
+  COLOR_INTENSITY: 0.25,
+  COLOR_SATURATION: 1.0,
   BLOOM: true,
   BLOOM_ITERATIONS: 6,
   BLOOM_RESOLUTION: 192,
-  BLOOM_INTENSITY: 0.25,
+  BLOOM_INTENSITY: 0.5,
   BLOOM_THRESHOLD: 0.6,
   BLOOM_SOFT_KNEE: 0.7,
   PAUSED: false,
@@ -621,7 +621,7 @@ function HSVtoRGB(h: number, s: number, v: number) {
   return { r, g, b }
 }
 
-function generateColor(intensity = 0.08, saturation = 0.4): [number, number, number] {
+function generateColor(intensity = 0.25, saturation = 1.0): [number, number, number] {
   const c = HSVtoRGB(Math.random(), saturation, 1.0)
   return [c.r * intensity, c.g * intensity, c.b * intensity]
 }
@@ -981,7 +981,7 @@ const WebGLFluid: React.FC<WebGLFluidProps> = ({ config: userConfig, className =
     function multipleSplats(amount: number) {
       for (let i = 0; i < amount; i++) {
         const color = generateColor(cfg.COLOR_INTENSITY, cfg.COLOR_SATURATION)
-        const c: [number, number, number] = [color[0] * 5.0, color[1] * 5.0, color[2] * 5.0]
+        const c: [number, number, number] = [color[0] * 10.0, color[1] * 10.0, color[2] * 10.0]
         const x = Math.random()
         const y = Math.random()
         const dx = 1000 * (Math.random() - 0.5)
